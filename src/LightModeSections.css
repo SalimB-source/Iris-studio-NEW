@@ -1,0 +1,254 @@
+/* Thème clair : toutes les sections papier sont blanches, le texte graphite reste lisible.
+   Le héros photographique et les univers Let’s Play / 7ouma Arena ne sont pas aplatis. */
+
+html:not(.dark) body,
+html:not(.dark) .page-shell {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .art-home {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
+  background: #fff !important;
+  background-color: #fff !important;
+  color: #202020 !important;
+}
+
+/* Manifesto, projets, contact accueil : étaient graphite / rouge avec texte blanc. */
+html:not(.dark) .art-manifesto .art-kicker,
+html:not(.dark) .art-projects .art-kicker,
+html:not(.dark) .art-contact .art-kicker,
+html:not(.dark) .art-manifesto h2,
+html:not(.dark) .art-projects h2,
+html:not(.dark) .art-contact h2,
+html:not(.dark) .art-project,
+html:not(.dark) .art-project h3,
+html:not(.dark) .art-project > div > b,
+html:not(.dark) .art-manifesto-copy .art-text-link {
+  color: #202020 !important;
+}
+
+html:not(.dark) .art-manifesto h2 em,
+html:not(.dark) .art-projects h2 em,
+html:not(.dark) .art-contact h2 em,
+html:not(.dark) .art-field h2 em,
+html:not(.dark) .art-proof h2 em,
+html:not(.dark) .art-episodes-heading h2 em {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .art-manifesto-copy > p:not(.art-kicker),
+html:not(.dark) .art-project em {
+  color: #5f5955 !important;
+}
+
+html:not(.dark) .art-project p {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .art-manifesto-word {
+  color: rgba(32, 32, 32, 0.06) !important;
+}
+
+html:not(.dark) .art-manifesto::after {
+  background: rgba(32, 32, 32, 0.14) !important;
+}
+
+html:not(.dark) .art-project-media {
+  border-color: rgba(32, 32, 32, 0.22);
+}
+
+html:not(.dark) .art-project-media::after {
+  border-color: rgba(32, 32, 32, 0.12);
+}
+
+html:not(.dark) .art-proof,
+html:not(.dark) .art-field,
+html:not(.dark) .art-episodes {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .art-contact .iris-import-atmosphere {
+  display: none;
+}
+
+html:not(.dark) .art-contact .art-button-light {
+  border-color: #e7433a;
+  background: #e7433a;
+  color: #fff;
+}
+
+html:not(.dark) .art-contact .art-button-light:hover {
+  border-color: #202020;
+  background: #202020;
+  color: #fff;
+}
+
+html:not(.dark) .art-contact-orbit {
+  border-color: rgba(231, 67, 58, 0.35);
+}
+
+html:not(.dark) .art-contact-orbit i {
+  border-color: rgba(32, 32, 32, 0.16);
+}
+
+/* Agence — chiffres, valeurs. */
+html:not(.dark) .iris-figures-header h2,
+html:not(.dark) .iris-figures-grid span {
+  color: #202020 !important;
+}
+
+html:not(.dark) .iris-figures-header > p,
+html:not(.dark) .iris-figures-note {
+  color: #5f5955 !important;
+}
+
+html:not(.dark) .iris-figures-header h2 em,
+html:not(.dark) .iris-figures-grid strong,
+html:not(.dark) .iris-figures-header .eyebrow {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .iris-figures-grid,
+html:not(.dark) .iris-figures-grid article {
+  border-color: rgba(32, 32, 32, 0.16) !important;
+}
+
+html:not(.dark) .values-section,
+html:not(.dark) .expertise-field,
+html:not(.dark) .proof-section,
+html:not(.dark) .agency-manifesto {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+/* À propos — principes, coulisses, équipe, CTA. */
+html:not(.dark) .about-principles .eyebrow,
+html:not(.dark) .about-principles .display-title,
+html:not(.dark) .about-principles-list h3,
+html:not(.dark) .about-backstage-gallery .display-title,
+html:not(.dark) .about-studio-team .display-title,
+html:not(.dark) .about-studio-team-heading > p:last-child,
+html:not(.dark) .about-contact h2,
+html:not(.dark) .about-contact-link {
+  color: #202020 !important;
+}
+
+html:not(.dark) .about-principles .display-title em,
+html:not(.dark) .about-backstage-gallery .display-title em,
+html:not(.dark) .about-studio-team .display-title em,
+html:not(.dark) .about-contact h2 em,
+html:not(.dark) .about-principles .eyebrow,
+html:not(.dark) .about-backstage-gallery .eyebrow,
+html:not(.dark) .about-studio-team .eyebrow {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .about-principles-heading > p,
+html:not(.dark) .about-principles-list p,
+html:not(.dark) .about-backstage-gallery-heading > div:last-child p,
+html:not(.dark) .about-studio-team-note {
+  color: #5f5955 !important;
+}
+
+html:not(.dark) .about-principles-list,
+html:not(.dark) .about-principles-list article {
+  border-color: rgba(32, 32, 32, 0.16) !important;
+}
+
+html:not(.dark) .about-studio-team-grid {
+  border-color: rgba(32, 32, 32, 0.16);
+  background: rgba(32, 32, 32, 0.16);
+}
+
+html:not(.dark) .about-contact-link {
+  border-bottom-color: rgba(32, 32, 32, 0.35);
+}
+
+html:not(.dark) .about-contact-eye,
+html:not(.dark) .about-contact-eye i {
+  border-color: rgba(231, 67, 58, 0.35);
+}
+
+html:not(.dark) .about-origin,
+html:not(.dark) .about-ecosystem,
+html:not(.dark) .about-hero,
+html:not(.dark) .about-proof,
+html:not(.dark) .about-leadership,
+html:not(.dark) .about-letsplay-team {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+/* Projets / contact / opérations. */
+html:not(.dark) .profile-contact-cta,
+html:not(.dark) .contact-note,
+html:not(.dark) .operational-detail-next,
+html:not(.dark) .page-next {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .profile-contact-cta h2,
+html:not(.dark) .profile-contact-cta .eyebrow,
+html:not(.dark) .contact-note h2,
+html:not(.dark) .operational-detail-next h2,
+html:not(.dark) .operational-detail-next .eyebrow,
+html:not(.dark) .page-next > p,
+html:not(.dark) .page-next a > span {
+  color: #202020 !important;
+}
+
+html:not(.dark) .profile-contact-cta h2 em,
+html:not(.dark) .contact-note em,
+html:not(.dark) .operational-detail-next h2 em,
+html:not(.dark) .page-next a em {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .operational-detail-next-link,
+html:not(.dark) .operational-detail-next-link strong {
+  color: #202020 !important;
+}
+
+html:not(.dark) .operational-detail-next-link em {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .operational-detail-next-grid,
+html:not(.dark) .operational-detail-next-link {
+  border-color: rgba(32, 32, 32, 0.16) !important;
+}
+
+html:not(.dark) .profile-contact-cta .button-light {
+  border: 1px solid #e7433a;
+  background: #e7433a;
+  color: #fff;
+}
+
+html:not(.dark) .contact-page-hero,
+html:not(.dark) .contact-message-section,
+html:not(.dark) .portfolio-page-intro,
+html:not(.dark) .portfolio-directory,
+html:not(.dark) .projects-cards,
+html:not(.dark) .operations-ledger,
+html:not(.dark) .social-gallery {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .contact-page-hero h1,
+html:not(.dark) .contact-page-hero p,
+html:not(.dark) .contact-page-coordinate {
+  color: #202020 !important;
+}
+
+html:not(.dark) .contact-page-hero h1 em,
+html:not(.dark) .contact-page-hero .light-eyebrow {
+  color: #e7433a !important;
+}
