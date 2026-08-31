@@ -10,8 +10,8 @@ export default function LaunchScreen({ onComplete }: LaunchScreenProps) {
 
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealTimer = window.setTimeout(() => setExiting(true), reducedMotion ? 120 : 700);
-    const completeTimer = window.setTimeout(onComplete, reducedMotion ? 180 : 1150);
+    const revealTimer = window.setTimeout(() => setExiting(true), reducedMotion ? 120 : 980);
+    const completeTimer = window.setTimeout(onComplete, reducedMotion ? 180 : 1500);
     return () => {
       window.clearTimeout(revealTimer);
       window.clearTimeout(completeTimer);
