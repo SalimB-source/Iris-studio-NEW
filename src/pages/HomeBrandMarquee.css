@@ -15,3 +15,32 @@
 @keyframes art-brand-marquee-scroll { to { transform: translateX(-50%); } }
 @media (max-width: 640px) { .art-brand-marquee { grid-template-columns: 1fr; }.art-brand-marquee::before { left: 1.3rem; }.art-brand-marquee-intro { min-height: auto; padding: 1rem 1.3rem .9rem calc(1.3rem + 1.15rem); border-right: 0; border-bottom: 1px solid rgba(32,32,32,.18); }.art-brand-marquee-intro span { max-width: none; font-size: .5rem; }.art-brand-marquee-set { gap: 1.6rem; padding: 1rem 1.1rem; }.art-brand-marquee-set span { width: 10.3rem; height: 5.1rem; }.art-brand-marquee-set img { max-width: 9rem; height: 3.8rem; }.art-brand-marquee-set span.is-egor-logo img { width: 4.5rem; max-width: 4.5rem; height: 4.5rem; }.art-brand-marquee-track { animation-duration: 29s; } }
 @media (prefers-reduced-motion: reduce) { .art-brand-marquee-window { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }.art-brand-marquee-track { animation: none; }.art-brand-marquee-set[aria-hidden="true"] { display: none; } }
+
+/* La frise logos reste un bandeau blanc, y compris en thème sombre. */
+.dark .page-shell main > section.art-brand-marquee,
+.dark .art-brand-marquee {
+  background: #fff !important;
+  color: #202020 !important;
+  border-top-color: rgba(32,32,32,.2);
+  border-bottom-color: rgba(32,32,32,.2);
+}
+.dark .art-brand-marquee-intro {
+  border-right-color: rgba(32,32,32,.18);
+}
+.dark .page-shell main > section.art-brand-marquee :is(p,span,strong),
+.dark .art-brand-marquee-intro p {
+  color: #202020 !important;
+}
+.dark .art-brand-marquee-intro span {
+  color: #77706a !important;
+}
+.dark .art-brand-marquee-set img,
+.dark .art-brand-marquee .mon-logo {
+  filter: none !important;
+}
+@media (max-width: 640px) {
+  .dark .art-brand-marquee-intro { border-bottom-color: rgba(32,32,32,.18); }
+  .dark .art-brand-marquee-window::after {
+    background: linear-gradient(90deg, #fff 0, #fff calc(1.3rem - 1px), #e7433a calc(1.3rem - 1px), #e7433a 1.3rem, rgba(255,255,255,.98) 1.3rem, rgba(255,255,255,0) 100%);
+  }
+}

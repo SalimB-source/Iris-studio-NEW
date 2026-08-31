@@ -73,4 +73,4 @@
 @media (prefers-reduced-motion: reduce) { .art-brand-marquee-window { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }.art-brand-marquee-track { animation: none; }.art-brand-marquee-set[aria-hidden="true"] { display: none; } }
 
 /* Le cache qui masque les logos avant le repère rouge doit reprendre la surface active du bandeau. */
-@media (max-width: 640px) { .dark .art-brand-marquee-window::after { background:linear-gradient(90deg,#1c1a19 0,#1c1a19 calc(1.3rem - 1px),#e7433a calc(1.3rem - 1px),#e7433a 1.3rem,rgba(28,26,25,.98) 1.3rem,rgba(28,26,25,0) 100%); } }
+@media (max-width: 640px) { .dark .art-brand-marquee-window::after { background:linear-gradient(90deg,#fff 0,#fff calc(1.3rem - 1px),#e7433a calc(1.3rem - 1px),#e7433a 1.3rem,rgba(255,255,255,.98) 1.3rem,rgba(255,255,255,0) 100%); } }
