@@ -46,7 +46,16 @@ export function ThemeProvider({
 
   const toggleTheme = switchable
     ? () => {
+        const root = document.documentElement;
+        if (root.classList.contains("is-theme-switching")) return;
+
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        root.classList.add("is-theme-switching");
         setTheme(prev => (prev === "light" ? "dark" : "light"));
+
+        window.setTimeout(() => {
+          root.classList.remove("is-theme-switching");
+        }, reducedMotion ? 0 : 1200);
       }
     : undefined;
 

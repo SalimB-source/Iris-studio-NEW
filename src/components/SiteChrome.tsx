@@ -58,7 +58,7 @@ export function SiteHeader() {
         <nav className="desktop-nav" aria-label="Navigation principale">
           {navigation.map((item) => renderNavigationLink(item))}
         </nav>
-        <div className="header-actions"><button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"} aria-pressed={theme === "dark"} title={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}>{theme === "dark" ? <Sun size={16} aria-hidden="true" /> : <Moon size={16} aria-hidden="true" />}</button></div>
+        <div className="header-actions"><button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"} aria-pressed={theme === "dark"} title={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}><span className="theme-toggle-glyphs" aria-hidden="true"><Moon className="theme-toggle-glyph theme-toggle-glyph--moon" size={16} /><Sun className="theme-toggle-glyph theme-toggle-glyph--sun" size={16} /></span></button></div>
         <button className="mobile-toggle profile-menu-button" type="button" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           <span>{open ? "Fermer" : "Menu"}</span>{open ? <X size={20} /> : <Menu size={20} />}
         </button>

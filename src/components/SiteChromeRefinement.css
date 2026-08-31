@@ -17,6 +17,56 @@
 .site-header .desktop-nav .is-letsplay-link.is-active { color: #e7433a !important; }
 .dark .site-header .desktop-nav .is-letsplay-link { color: #f7f2ec !important; }
 .dark .site-header .desktop-nav .is-letsplay-link.is-active { color: #f28a43 !important; }
+
+/* Passage clair / sombre : le glyphe tourne, les surfaces se fondent. */
+.theme-toggle-glyphs {
+  position: relative;
+  display: grid;
+  width: 1rem;
+  height: 1rem;
+  place-items: center;
+}
+.theme-toggle-glyph {
+  grid-area: 1 / 1;
+  display: block;
+  transform-origin: center;
+}
+.theme-toggle-glyph--sun {
+  opacity: 0;
+  transform: rotate(-80deg) scale(.45);
+}
+.dark .theme-toggle-glyph--moon {
+  opacity: 0;
+  transform: rotate(80deg) scale(.45);
+}
+.dark .theme-toggle-glyph--sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .theme-toggle-glyph {
+    transition: opacity 700ms cubic-bezier(.22,1,.36,1), transform 900ms cubic-bezier(.22,1,.36,1);
+  }
+  .page-shell,
+  .site-header,
+  .site-footer,
+  .page-shell main > section {
+    transition:
+      background-color 700ms cubic-bezier(.22,1,.36,1),
+      color 700ms cubic-bezier(.22,1,.36,1),
+      border-color 700ms cubic-bezier(.22,1,.36,1),
+      box-shadow 700ms cubic-bezier(.22,1,.36,1);
+  }
+  html.is-theme-switching,
+  html.is-theme-switching body {
+    transition: background-color 700ms cubic-bezier(.22,1,.36,1), color 700ms cubic-bezier(.22,1,.36,1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-glyph {
+    transition: none;
+  }
+}
 @media (max-width: 980px) {
   .mobile-menu > a.is-letsplay-link,
   .mobile-menu > a.is-letsplay-link:hover,
