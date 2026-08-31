@@ -295,3 +295,26 @@ html:not(.dark) .gallery-item span,
 html:not(.dark) .gallery-item span i {
   color: #fff !important;
 }
+
+/* Rythme : moins d’air entre les sections papier, filet unique de séparation. */
+html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
+  padding-top: clamp(3.1rem, 5.6vw, 5.25rem) !important;
+  padding-bottom: clamp(3.1rem, 5.6vw, 5.25rem) !important;
+  min-height: 0 !important;
+  border-top: 1px solid rgba(32, 32, 32, 0.12);
+  border-bottom: 0 !important;
+}
+
+html:not(.dark) .art-home main > section.art-brand-marquee {
+  border-bottom: 0 !important;
+}
+
+html:not(.dark) .art-episodes::before,
+html:not(.dark) .art-proof::before {
+  display: none;
+}
+
+html:not(.dark) .art-manifesto,
+html:not(.dark) .art-field {
+  min-height: 0 !important;
+}
