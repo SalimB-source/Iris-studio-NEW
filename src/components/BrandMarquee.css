@@ -1,0 +1,129 @@
+/* Frises partenaires : même gabarit, bandeau blanc, couleurs de marque. */
+.art-brand-marquee-set,
+.agency-trust-marquee-set,
+.about-client-marquee-set {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(1.5rem, 3.2vw, 3.6rem);
+  padding: 1.2rem clamp(1.3rem, 2.6vw, 3rem);
+}
+
+.art-brand-marquee-set span,
+.agency-trust-logo,
+.about-client-marquee-set span {
+  display: grid;
+  width: clamp(12rem, 16vw, 17rem);
+  height: 6.7rem;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.art-brand-marquee-set img,
+.agency-trust-logo img,
+.about-client-marquee-set img,
+.art-brand-marquee .mon-logo,
+.agency-trust-marquee .mon-logo,
+.about-client-marquee .mon-logo,
+.agency-trust-logo--ferrero img,
+.agency-trust-logo--tcl img {
+  display: block;
+  width: 100%;
+  max-width: min(100%, 14.6rem);
+  height: 5.1rem;
+  object-fit: contain;
+  opacity: 0.94;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.art-brand-marquee-set span.is-egor-logo img,
+.agency-trust-logo.is-egor-logo img,
+.about-client-marquee-set span.is-egor-logo img {
+  width: 5.7rem;
+  max-width: 5.7rem;
+  height: 5.7rem;
+}
+
+.art-brand-marquee-track,
+.agency-trust-marquee-track,
+.about-client-marquee-track {
+  animation-duration: 38s;
+}
+
+.art-brand-marquee,
+.agency-trust-marquee,
+.about-client-marquee,
+.art-brand-marquee-intro,
+.art-brand-marquee-window,
+.art-brand-marquee-track,
+.art-brand-marquee-set,
+.agency-trust-marquee-window,
+.agency-trust-marquee-track,
+.agency-trust-marquee-set,
+.about-client-marquee-track,
+.about-client-marquee-set,
+.dark .art-brand-marquee,
+.dark .agency-trust-marquee,
+.dark .about-client-marquee,
+.dark .art-brand-marquee-intro,
+.dark .art-brand-marquee-window,
+.dark .art-brand-marquee-track,
+.dark .art-brand-marquee-set,
+.dark .agency-trust-marquee-window,
+.dark .agency-trust-marquee-track,
+.dark .agency-trust-marquee-set,
+.dark .about-client-marquee-track,
+.dark .about-client-marquee-set {
+  background: #fff !important;
+  background-color: #fff !important;
+}
+
+.dark .art-brand-marquee-set img,
+.dark .agency-trust-logo img,
+.dark .about-client-marquee-set img,
+.dark .art-brand-marquee .mon-logo,
+.dark .agency-trust-marquee .mon-logo,
+.dark .about-client-marquee .mon-logo,
+.dark .art-brand-marquee:hover img,
+.dark .agency-trust-marquee:hover img,
+.dark .about-client-marquee:hover img {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+@media (max-width: 720px) {
+  .art-brand-marquee-set,
+  .agency-trust-marquee-set,
+  .about-client-marquee-set {
+    gap: 1.6rem;
+    padding: 1rem 1.1rem;
+  }
+  .art-brand-marquee-set span,
+  .agency-trust-logo,
+  .about-client-marquee-set span {
+    width: 10.3rem;
+    height: 5.1rem;
+  }
+  .art-brand-marquee-set img,
+  .agency-trust-logo img,
+  .about-client-marquee-set img,
+  .agency-trust-logo--ferrero img,
+  .agency-trust-logo--tcl img {
+    max-width: 9rem;
+    height: 3.8rem;
+  }
+  .art-brand-marquee-set span.is-egor-logo img,
+  .agency-trust-logo.is-egor-logo img,
+  .about-client-marquee-set span.is-egor-logo img {
+    width: 4.5rem;
+    max-width: 4.5rem;
+    height: 4.5rem;
+  }
+  .art-brand-marquee-track,
+  .agency-trust-marquee-track,
+  .about-client-marquee-track {
+    animation-duration: 32s;
+  }
+}

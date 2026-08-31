@@ -6,14 +6,13 @@
 .agency-trust-marquee-heading > p { max-width:28rem; margin:0; color:#625c56; font-size:.9rem; line-height:1.75; }
 .agency-trust-marquee-window { position:relative; overflow:hidden; border-top:1px solid rgba(32,32,32,.16); border-bottom:1px solid rgba(32,32,32,.16); -webkit-mask-image:linear-gradient(90deg,transparent,black 5%,black 95%,transparent); mask-image:linear-gradient(90deg,transparent,black 5%,black 95%,transparent); }
 .agency-trust-marquee-track { display:flex; width:max-content; animation:agency-trust-scroll 30s linear infinite; will-change:transform; }
-.agency-trust-marquee-set { display:flex; flex:0 0 auto; align-items:center; gap:clamp(2.2rem,5vw,5.4rem); padding:1.5rem clamp(1.8rem,4vw,4.6rem); }
-.agency-trust-logo { display:grid; width:clamp(10rem,14vw,15rem); height:5.5rem; flex:0 0 auto; place-items:center; }
-.agency-trust-logo img { display:block; width:100%; max-width:13rem; height:4.6rem; filter:none !important; object-fit:contain; opacity:.9; transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 180ms cubic-bezier(.23,1,.32,1); }
-.agency-trust-logo--ferrero img { max-width:14.6rem; }
-.agency-trust-logo--tcl img { max-width:10.1rem; }
+.agency-trust-marquee-set { display:flex; flex:0 0 auto; align-items:center; gap:clamp(1.5rem,3.2vw,3.6rem); padding:1.2rem clamp(1.3rem,2.6vw,3rem); }
+.agency-trust-logo { display:grid; width:clamp(12rem,16vw,17rem); height:6.7rem; flex:0 0 auto; place-items:center; }
+.agency-trust-logo img { display:block; width:100%; max-width:min(100%,14.6rem); height:5.1rem; filter:none !important; object-fit:contain; opacity:.94; transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 180ms cubic-bezier(.23,1,.32,1); }
+.agency-trust-logo.is-egor-logo img { width:5.7rem; max-width:5.7rem; height:5.7rem; }
 .agency-trust-marquee:hover .agency-trust-marquee-track { animation-play-state:paused; }
 .agency-trust-logo:hover img { opacity:1; transform:scale(1.055); }
 @keyframes agency-trust-scroll { to { transform:translateX(-50%); } }
-.dark .agency-trust-marquee { background:#1c1a19; color:#f7f2ec; }.dark .agency-trust-marquee-heading > p { color:#c8c0b9; }.dark .agency-trust-marquee-window { border-color:rgba(247,242,236,.2); }.dark .agency-trust-marquee::before { background:#f28a43; }
-@media (max-width:720px) { .agency-trust-marquee::before { left:1.3rem; }.agency-trust-marquee-heading { grid-template-columns:1fr; gap:1.2rem; padding-top:4.8rem; padding-bottom:2.5rem; }.agency-trust-marquee-heading .display-title { max-width:11ch; }.agency-trust-marquee-heading > p { padding-left:1.15rem; font-size:.82rem; }.agency-trust-marquee-set { gap:2rem; padding:1.05rem 1.3rem; }.agency-trust-logo { width:9.7rem; height:4.5rem; }.agency-trust-logo img { max-width:8.4rem; height:3.8rem; }.agency-trust-logo--ferrero img { max-width:9.4rem; }.agency-trust-logo--tcl img { max-width:7.5rem; }.agency-trust-marquee-track { animation-duration:22s; } }
+.dark .agency-trust-marquee { background:#fff; color:#202020; }.dark .agency-trust-marquee-heading > p { color:#625c56; }.dark .agency-trust-marquee-window { border-color:rgba(32,32,32,.16); }.dark .agency-trust-marquee::before { background:#e7433a; }
+@media (max-width:720px) { .agency-trust-marquee::before { left:1.3rem; }.agency-trust-marquee-heading { grid-template-columns:1fr; gap:1.2rem; padding-top:4.8rem; padding-bottom:2.5rem; }.agency-trust-marquee-heading .display-title { max-width:11ch; }.agency-trust-marquee-heading > p { padding-left:1.15rem; font-size:.82rem; }.agency-trust-marquee-set { gap:1.6rem; padding:1rem 1.1rem; }.agency-trust-logo { width:10.3rem; height:5.1rem; }.agency-trust-logo img { max-width:9rem; height:3.8rem; }.agency-trust-logo.is-egor-logo img { width:4.5rem; max-width:4.5rem; height:4.5rem; }.agency-trust-marquee-track { animation-duration:32s; } }
 @media (prefers-reduced-motion:reduce) { .agency-trust-marquee-window { overflow-x:auto; -webkit-mask-image:none; mask-image:none; }.agency-trust-marquee-track { animation:none; }.agency-trust-marquee-set[aria-hidden="true"] { display:none; } }

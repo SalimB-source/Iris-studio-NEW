@@ -17,6 +17,7 @@ import "./HomeArtisticResponsive.css";
 import "./HomeBrandMarquee.css";
 import "./HomeHeroCinematic.css";
 import "./HomeProofFigures.css";
+import "@/components/BrandMarquee.css";
 
 const heroVisuals = {
   day: "assets/iris-hero-director-day-windowed.webp",

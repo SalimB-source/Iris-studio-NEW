@@ -41,11 +41,11 @@
 .about-client-marquee-track { display: flex; width: max-content; animation: about-client-marquee-scroll 34s linear infinite; will-change: transform; }
 .about-client-marquee-set { display: flex; flex: 0 0 auto; gap: clamp(1.5rem,4vw,4rem); padding: 1.25rem clamp(.8rem,2vw,2rem) 1.15rem; }
 .about-client-marquee-set span { display: grid; width: clamp(7.2rem,11vw,10rem); height: 4.25rem; flex: 0 0 auto; place-items: center; }
-.about-client-marquee-set img { display: block; width: 100%; max-width: 8.3rem; height: 3rem; filter: grayscale(100%) saturate(0%) contrast(48%) brightness(145%) !important; object-fit: contain; opacity: .88; transition: filter 180ms cubic-bezier(.23,1,.32,1), opacity 180ms cubic-bezier(.23,1,.32,1), transform 180ms cubic-bezier(.23,1,.32,1); }
+.about-client-marquee-set img { display: block; width: 100%; max-width: 8.3rem; height: 3rem; filter: none !important; object-fit: contain; opacity: .88; transition: opacity 180ms cubic-bezier(.23,1,.32,1), transform 180ms cubic-bezier(.23,1,.32,1); }
 .about-client-marquee:hover .about-client-marquee-track { animation-play-state: paused; }
-.about-client-marquee:hover img { filter: grayscale(100%) saturate(0%) contrast(60%) brightness(150%) !important; opacity: 1; transform: scale(1.05); }
+.about-client-marquee:hover img { filter: none !important; opacity: 1; transform: scale(1.05); }
 @keyframes about-client-marquee-scroll { to { transform: translateX(-50%); } }
-.dark .about-client-marquee { border-color: rgba(247,242,236,.25); }.dark .about-client-marquee-set img { filter: grayscale(100%) saturate(0%) brightness(0) invert(1) !important; opacity: .9; }.dark .about-client-marquee:hover img { filter: grayscale(100%) saturate(0%) brightness(0) invert(1) !important; opacity: 1; }
+.dark .about-client-marquee { border-color: rgba(32,32,32,.18); background: #fff; }.dark .about-client-marquee-set img { filter: none !important; opacity: .9; }.dark .about-client-marquee:hover img { filter: none !important; opacity: 1; }
 @media (max-width: 640px) { .about-client-marquee-set { gap: 1.65rem; padding-block: .9rem; }.about-client-marquee-set span { width: 6.5rem; height: 3.4rem; }.about-client-marquee-set img { max-width: 6rem; height: 2.35rem; }.about-client-marquee-track { animation-duration: 26s; } }
 @media (prefers-reduced-motion: reduce) { .about-client-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }.about-client-marquee-track { width: max-content; animation: none; }.about-client-marquee-set[aria-hidden="true"] { display: none; } }
 

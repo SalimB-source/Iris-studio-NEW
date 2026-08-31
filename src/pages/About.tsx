@@ -9,6 +9,7 @@ import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Clapperboard, Linked
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
+import { brandPartners } from "@/components/brandPartners";
 import { letsPlayTeam } from "./letsPlayContent";
 import "./About.css";
 import "./AboutRefinement.css";
@@ -16,6 +17,7 @@ import "./AboutPortraitPlaceholders.css";
 import "./AboutLetsPlayLayout.css";
 import "./AboutTeamCardSystem.css";
 import "./AboutLetsPlayGaming.css";
+import "@/components/BrandMarquee.css";
 
 const roleIcons = {
   direction: BriefcaseBusiness,
@@ -110,18 +112,6 @@ export const backstageGallery = [
     source: "Djezzy · archive LinkedIn Iris Studio fournie",
     layout: "activation",
   },
-] as const;
-
-export const brandPartners = [
-  { name: "Coca-Cola", logo: "assets/coca-cola-logo_5889a27b.png" },
-  { name: "Henkel", logo: "assets/henkel-logo-transparent-provided_47000655.png" },
-  { name: "Ooredoo", logo: "assets/ooredoo-logo-provided_5e9d03a0.png" },
-  { name: "Philip Morris International", logo: "assets/philip-morris-logo_9da5a02d.png" },
-  { name: "Bel", logo: "assets/bel-logo-officiel-2019.webp" },
-  { name: "Danone", logo: "assets/danone-logo-fourni.png" },
-  { name: "Algérie Télécom", logo: "assets/algerie-telecom-logo_58b44931.png" },
-  { name: "Djezzy", logo: "assets/djezzy-logo_827e6b0c.svg" },
-  { name: "Lafarge", logo: "assets/lafarge-logo_cd94104e.png" },
 ] as const;
 
 export const leadership = [
@@ -444,7 +434,7 @@ export default function About() {
               <div className="about-client-marquee" aria-label="Logos des marques citées par Iris Studio">
                 <div className="about-client-marquee-track">
                   {[0, 1].map((setIndex) => <div className="about-client-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
-                    {brandPartners.map((client) => <span key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
+                    {brandPartners.map((client) => <span className={client.name === "EGOR" ? "is-egor-logo" : undefined} key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
                   </div>)}
                 </div>
               </div>
