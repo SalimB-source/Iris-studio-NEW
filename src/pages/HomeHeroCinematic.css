@@ -1,5 +1,6 @@
 /* Direction IRIS : ouverture cinématographique éditoriale et repères de terrain ; le voile de contraste est intégré aux portraits, sans calque CSS supplémentaire. */
-.art-home:has(.art-hero--cinematic) { background:#070707; }
+.art-home:has(.art-hero--cinematic) { background:#fff; }
+.dark .art-home:has(.art-hero--cinematic) { background:#151515; }
 .art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero { border-bottom-color:rgba(255,255,255,.18); background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.34) 58%,rgba(0,0,0,0) 100%) !important; box-shadow:none; color:#fff !important; backdrop-filter:blur(2px); }
 .art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero :is(.desktop-nav a,.brand-coordinate,.theme-toggle,.mobile-toggle) { color:#fff !important; }
 .art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .brand-coordinate { border-left-color:rgba(255,255,255,.4); }

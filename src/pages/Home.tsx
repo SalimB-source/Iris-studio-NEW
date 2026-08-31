@@ -165,7 +165,7 @@ export default function Home() {
           <a className="art-scroll-cue" href="#trajectory" aria-label="Découvrir la trajectoire Iris"><span>Défiler</span><ArrowDown size={18} /></a>
         </section>
 
-        <section className="art-brand-marquee" aria-labelledby="home-brands-title">
+        <section className="art-brand-marquee" aria-labelledby="home-brands-title" style={{ backgroundColor: "#fff", color: "#202020" }}>
           <div className="art-brand-marquee-intro">
             <p id="home-brands-title">Marques partenaires</p>
             <span>Un écosystème qui prend le terrain</span>
