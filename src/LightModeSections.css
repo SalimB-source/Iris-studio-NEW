@@ -252,3 +252,46 @@ html:not(.dark) .contact-page-hero h1 em,
 html:not(.dark) .contact-page-hero .light-eyebrow {
   color: #e7433a !important;
 }
+
+/* Titres : graphite sur papier blanc. L’em reste rouge Iris. */
+html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title, .art-kicker) {
+  color: #202020 !important;
+}
+html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title) em {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .art-proof .art-kicker,
+html:not(.dark) .art-proof h2 {
+  color: #202020 !important;
+}
+html:not(.dark) .art-proof h2 em {
+  color: #e7433a !important;
+}
+html:not(.dark) .art-proof-intro {
+  color: #5f5955 !important;
+}
+html:not(.dark) .art-proof-numbers {
+  border-color: rgba(32, 32, 32, 0.16);
+  background: rgba(32, 32, 32, 0.16);
+}
+html:not(.dark) .art-proof-numbers article {
+  background: #fff !important;
+}
+html:not(.dark) .art-proof-numbers span,
+html:not(.dark) .art-proof-numbers strong {
+  color: #e7433a !important;
+}
+html:not(.dark) .art-proof-numbers p {
+  color: #202020 !important;
+}
+
+/* Titres posés sur une image ou une carte sombre : restent clairs. */
+html:not(.dark) .about-backstage-gallery-item h3,
+html:not(.dark) .home-project-card h3,
+html:not(.dark) .project-case-copy,
+html:not(.dark) .project-case-copy :is(h2, p, span, em),
+html:not(.dark) .gallery-item span,
+html:not(.dark) .gallery-item span i {
+  color: #fff !important;
+}
