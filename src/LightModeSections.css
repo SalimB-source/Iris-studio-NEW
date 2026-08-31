@@ -2,7 +2,8 @@
    Le héros photographique et les univers Let’s Play / 7ouma Arena ne sont pas aplatis. */
 
 html:not(.dark) body,
-html:not(.dark) .page-shell {
+html:not(.dark) .page-shell,
+html:not(.dark) .site-shell {
   background: #fff !important;
   color: #202020 !important;
 }
@@ -12,7 +13,7 @@ html:not(.dark) .art-home {
   color: #202020 !important;
 }
 
-html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
   background: #fff !important;
   background-color: #fff !important;
   color: #202020 !important;
@@ -254,10 +255,10 @@ html:not(.dark) .contact-page-hero .light-eyebrow {
 }
 
 /* Titres : graphite sur papier blanc. L’em reste rouge Iris. */
-html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title, .art-kicker) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title, .art-kicker) {
   color: #202020 !important;
 }
-html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title) em {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title) em {
   color: #e7433a !important;
 }
 
@@ -297,7 +298,7 @@ html:not(.dark) .gallery-item span i {
 }
 
 /* Rythme : moins d’air entre les sections papier, filet unique de séparation. */
-html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
   padding-top: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   padding-bottom: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   min-height: 0 !important;
@@ -320,7 +321,7 @@ html:not(.dark) .art-field {
 }
 
 /* Première section des pages internes : laisser la place au header fixe. */
-html:not(.dark) .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:first-child:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:first-child:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
   padding-top: clamp(7.4rem, 12vw, 9.2rem) !important;
   border-top: 0;
 }
@@ -372,7 +373,7 @@ html:not(.dark) .operation-record h3 em {
 }
 
 /* Thème sombre : même rythme, filet clair, texte ivoire lisible. */
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
   padding-top: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   padding-bottom: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   min-height: 0 !important;
@@ -380,7 +381,7 @@ html:not(.dark) .operation-record h3 em {
   border-bottom: 0 !important;
 }
 
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:first-child:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:first-child:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
   padding-top: clamp(7.4rem, 12vw, 9.2rem) !important;
   border-top: 0;
 }
@@ -395,16 +396,16 @@ html:not(.dark) .operation-record h3 em {
   opacity: 0;
 }
 
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) {
   color: #f7f2ec !important;
 }
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) em {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) em {
   color: #f28a43 !important;
 }
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(p, small, li) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(p, small, li) {
   color: #d6cec7 !important;
 }
-.dark .page-shell:not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker, .art-kicker span) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker, .art-kicker span) {
   color: #f28a43 !important;
 }
 .dark .art-project p {
@@ -493,4 +494,112 @@ html:not(.dark) .operation-record h3 em {
 .dark .page-hero h1 em,
 .dark .art-hero--cinematic h1 em {
   color: #e7433a !important;
+}
+
+/* Pages À propos / dossiers : site-shell n’héritait pas du papier blanc. */
+html:not(.dark) .about-principles,
+html:not(.dark) .about-backstage-gallery,
+html:not(.dark) .about-studio-team,
+html:not(.dark) .about-contact,
+html:not(.dark) .about-page .about-letsplay-team,
+html:not(.dark) .operational-detail-context,
+html:not(.dark) .operational-detail-focus,
+html:not(.dark) .operational-detail-hero,
+html:not(.dark) .operational-project-detail {
+  background: #fff !important;
+  color: #202020 !important;
+}
+
+html:not(.dark) .about-page .about-letsplay-team-heading .display-title,
+html:not(.dark) .about-page .about-letsplay-team-heading .display-title em,
+html:not(.dark) .about-page .about-letsplay-member h3,
+html:not(.dark) .operational-detail-context .display-title,
+html:not(.dark) .operational-detail-copy h1 {
+  color: #202020 !important;
+}
+html:not(.dark) .about-page .about-letsplay-team-heading .display-title em,
+html:not(.dark) .about-page .about-letsplay-team-heading .eyebrow,
+html:not(.dark) .about-page .about-letsplay-team-route,
+html:not(.dark) .operational-detail-context .display-title em,
+html:not(.dark) .operational-detail-copy h1 em,
+html:not(.dark) .operational-detail-copy .eyebrow {
+  color: #e7433a !important;
+}
+html:not(.dark) .about-page .about-letsplay-team-heading > p:last-child,
+html:not(.dark) .about-page .about-letsplay-source-note,
+html:not(.dark) .operational-detail-context-copy > p,
+html:not(.dark) .operational-detail-copy > p:last-child {
+  color: #5f5955 !important;
+}
+html:not(.dark) .operational-detail-source,
+html:not(.dark) .about-contact-link {
+  color: #202020 !important;
+  border-bottom-color: rgba(32, 32, 32, 0.35) !important;
+}
+html:not(.dark) .about-page .about-letsplay-brand-stamp {
+  background: #fff !important;
+  border-color: rgba(32, 32, 32, 0.18) !important;
+  box-shadow: none;
+}
+
+html:not(.dark) .about-principles-list article > span,
+html:not(.dark) .about-studio-member-index,
+html:not(.dark) .about-role-badge,
+html:not(.dark) .about-person-archive {
+  color: #e7433a !important;
+}
+
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(p, small, li, figcaption):not(.eyebrow):not(.art-kicker):not(.light-eyebrow) {
+  color: #5f5955;
+}
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker) {
+  color: #e7433a !important;
+}
+
+html:not(.dark) .about-backstage-gallery-item :is(h3, p, span, small),
+html:not(.dark) .operational-detail-media figcaption {
+  color: #fff !important;
+}
+
+/* Sombre : fonds sombres + texte ivoire, y compris site-shell. */
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-contact):not(.art-brand-marquee) {
+  background: #1c1a19 !important;
+  color: #f7f2ec !important;
+}
+
+.dark .about-contact {
+  background: #d73e35 !important;
+  color: #fff !important;
+}
+.dark .about-contact :is(h2, p, a, .eyebrow) {
+  color: #fff !important;
+}
+.dark .about-contact h2 em {
+  color: #202020 !important;
+}
+
+.dark .operational-detail-specs article,
+.dark .operational-detail-focus-list article {
+  background: transparent !important;
+  color: #f7f2ec !important;
+}
+.dark .operational-detail-specs strong,
+.dark .operational-detail-focus-list h3,
+.dark .operational-detail-context .display-title,
+.dark .operational-detail-copy h1 {
+  color: #f7f2ec !important;
+}
+.dark .operational-detail-specs p,
+.dark .operational-detail-context-copy > p,
+.dark .operational-detail-copy > p:last-child {
+  color: #c8c0b9 !important;
+}
+.dark .operational-detail-source {
+  color: #f7f2ec !important;
+  border-bottom-color: rgba(247, 242, 236, 0.45) !important;
+}
+
+.dark .about-page .about-letsplay-team-heading .eyebrow,
+.dark .about-page .about-letsplay-team-route {
+  color: #f28a43 !important;
 }
