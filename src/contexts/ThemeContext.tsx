@@ -71,6 +71,7 @@ export function ThemeProvider({
           cancelPixelate.current = null;
           root.classList.remove("is-theme-switching");
           root.classList.remove("is-theme-pixelating");
+          document.querySelectorAll<HTMLElement>(".art-hero-image").forEach((el) => el.style.removeProperty("filter"));
           document.getElementById("root")?.style.removeProperty("filter");
         };
 

@@ -1,4 +1,4 @@
-/* Passage clair / sombre : mosaicisation, bascule au grain max, puis retour net. */
+/* Pixelisation limitée aux portraits du héros, pas à la page. */
 .iris-theme-pixelate-svg {
   position: absolute;
   width: 0;
@@ -7,16 +7,8 @@
   pointer-events: none;
 }
 
-html.is-theme-pixelating,
-html.is-theme-pixelating body {
-  cursor: wait;
-}
-
-html.is-theme-pixelating #root {
-  will-change: filter;
-}
-
 html.is-theme-pixelating .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+  will-change: filter;
   transition: none !important;
   animation: none !important;
 }

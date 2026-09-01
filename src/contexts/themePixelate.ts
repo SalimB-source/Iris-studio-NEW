@@ -2,6 +2,7 @@ const FILTER_ID = "iris-theme-pixelate";
 const FLOOD_ID = "iris-pixel-flood";
 const TILE_ID = "iris-pixel-tile";
 const MORPH_ID = "iris-pixel-morph";
+const TARGET_SELECTOR = ".art-hero-image";
 
 const DURATION_IN = 280;
 const DURATION_OUT = 720;
@@ -23,6 +24,10 @@ function filterUrl() {
   return `url("${page}#${FILTER_ID}")`;
 }
 
+function pixelTargets() {
+  return Array.from(document.querySelectorAll<HTMLElement>(TARGET_SELECTOR));
+}
+
 function ensureFilter() {
   if (document.getElementById(FILTER_ID)) return;
 
@@ -42,16 +47,19 @@ function ensureFilter() {
   document.body.appendChild(document.importNode(parsed, true));
 }
 
-function setCellSize(cell: number) {
-  const root = document.getElementById("root");
+function clearTargets(targets: HTMLElement[]) {
+  targets.forEach((el) => el.style.removeProperty("filter"));
+}
+
+function setCellSize(cell: number, targets: HTMLElement[]) {
   const flood = document.getElementById(FLOOD_ID);
   const tile = document.getElementById(TILE_ID);
   const morph = document.getElementById(MORPH_ID);
-  if (!root || !flood || !tile || !morph) return;
+  if (!flood || !tile || !morph || !targets.length) return;
 
   const size = Math.max(1, cell);
   if (size <= 1.35) {
-    root.style.removeProperty("filter");
+    clearTargets(targets);
     return;
   }
 
@@ -61,16 +69,24 @@ function setCellSize(cell: number) {
   tile.setAttribute("width", String(size));
   tile.setAttribute("height", String(size));
   morph.setAttribute("radius", String(Math.max(0.5, size * 0.5)));
-  root.style.filter = filterUrl();
+  const url = filterUrl();
+  targets.forEach((el) => el.style.setProperty("filter", url, "important"));
 }
 
 export function runThemePixelate(onPeak: () => void, onDone: () => void) {
+  const targets = pixelTargets();
+  if (!targets.length) {
+    onPeak();
+    onDone();
+    return () => undefined;
+  }
+
   ensureFilter();
 
   const rootHtml = document.documentElement;
   const peak = peakCell();
   rootHtml.classList.add("is-theme-pixelating");
-  setCellSize(2);
+  setCellSize(2, targets);
 
   let flipped = false;
   let frame = 0;
@@ -78,7 +94,7 @@ export function runThemePixelate(onPeak: () => void, onDone: () => void) {
 
   const stop = () => {
     window.cancelAnimationFrame(frame);
-    setCellSize(1);
+    clearTargets(targets);
     rootHtml.classList.remove("is-theme-pixelating");
   };
 
@@ -87,21 +103,21 @@ export function runThemePixelate(onPeak: () => void, onDone: () => void) {
 
     if (elapsed < DURATION_IN) {
       const progress = easeOutCubic(elapsed / DURATION_IN);
-      setCellSize(1 + (peak - 1) * progress);
+      setCellSize(1 + (peak - 1) * progress, targets);
       frame = window.requestAnimationFrame(step);
       return;
     }
 
     if (!flipped) {
       flipped = true;
-      setCellSize(peak);
+      setCellSize(peak, targets);
       onPeak();
     }
 
     const outElapsed = elapsed - DURATION_IN;
     if (outElapsed < DURATION_OUT) {
       const progress = easeInCubic(outElapsed / DURATION_OUT);
-      setCellSize(1 + (peak - 1) * (1 - progress));
+      setCellSize(1 + (peak - 1) * (1 - progress), targets);
       frame = window.requestAnimationFrame(step);
       return;
     }
