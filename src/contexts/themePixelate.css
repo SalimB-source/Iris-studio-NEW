@@ -1,10 +1,10 @@
-/* Nuée de chauves-souris : overlay du héros uniquement, sous le titre. */
+/* Nuée de chauves-souris : overlay viewport, au-dessus de la section. */
 .iris-theme-pixelate-svg {
   display: none;
 }
 
-.art-hero--cinematic .iris-theme-bats {
-  position: absolute;
+.iris-theme-bats {
+  position: fixed;
   inset: 0;
   z-index: 1;
   width: 100%;
