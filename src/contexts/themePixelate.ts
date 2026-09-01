@@ -75,89 +75,60 @@ function makeBats(originX: number, originY: number, count: number): Bat[] {
   return bats;
 }
 
-function createNoiseBuffer(ctx: AudioContext, seconds: number) {
-  const length = Math.max(1, Math.floor(ctx.sampleRate * seconds));
-  const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
-  const data = buffer.getChannelData(0);
-  for (let i = 0; i < length; i += 1) data[i] = Math.random() * 2 - 1;
-  return buffer;
+function pigeonAsset(file: string) {
+  const base = import.meta.env.BASE_URL || "/";
+  return `${base}assets/${file}`;
 }
 
-function scheduleWingFlap(
-  ctx: AudioContext,
-  noise: AudioBuffer,
-  dest: AudioNode,
-  time: number,
-  size: number,
-) {
-  const source = ctx.createBufferSource();
-  source.buffer = noise;
-  source.playbackRate.value = 0.72 + Math.random() * 0.7;
-
-  const filter = ctx.createBiquadFilter();
-  filter.type = "bandpass";
-  filter.Q.value = 1.6 + Math.random() * 1.4;
-  const startFreq = 420 + size * 280 + Math.random() * 260;
-  filter.frequency.setValueAtTime(startFreq, time);
-  filter.frequency.exponentialRampToValueAtTime(Math.max(180, startFreq * 0.45), time + 0.11);
-
-  const panner = ctx.createStereoPanner();
-  panner.pan.setValueAtTime((Math.random() - 0.5) * 1.6, time);
-
-  const gain = ctx.createGain();
-  const peak = 0.18 + size * 0.16;
-  gain.gain.setValueAtTime(0.0001, time);
-  gain.gain.exponentialRampToValueAtTime(peak, time + 0.012);
-  gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.07 + size * 0.08);
-
-  source.connect(filter);
-  filter.connect(panner);
-  panner.connect(gain);
-  gain.connect(dest);
-  source.start(time, Math.random() * 0.4, 0.22);
+function playClip(file: string, volume: number, delayMs: number, rate: number) {
+  const audio = new Audio(pigeonAsset(file));
+  audio.preload = "auto";
+  audio.playbackRate = rate;
+  audio.volume = 0;
+  let startTimer = 0;
+  const start = () => {
+    audio.currentTime = 0;
+    audio.volume = volume;
+    void audio.play().catch(() => undefined);
+  };
+  if (delayMs <= 0) start();
+  else startTimer = window.setTimeout(start, delayMs);
+  return { audio, startTimer };
 }
 
 function playWingFlaps(durationMs: number) {
-  const Ctor = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-  if (!Ctor) return () => undefined;
+  const voices = [
+    playClip("iris-pigeon-takeoff.mp3", 0.78, 0, 1),
+    playClip("iris-pigeon-takeoff.mp3", 0.46, 90, 1.07),
+    playClip("iris-pigeon-takeoff.mp3", 0.4, 170, 0.93),
+    playClip("iris-pigeon-flock.mp3", 0.32, 40, 1),
+  ];
 
-  const ctx = new Ctor();
-  void ctx.resume();
-  const master = ctx.createGain();
-  master.connect(ctx.destination);
+  const fadeTimer = window.setTimeout(() => {
+    const from = voices.map(({ audio }) => audio.volume);
+    const started = performance.now();
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - started) / 280);
+      voices.forEach(({ audio }, index) => {
+        audio.volume = Math.max(0, from[index] * (1 - t));
+      });
+      if (t < 1) window.requestAnimationFrame(tick);
+      else voices.forEach(({ audio }) => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    };
+    window.requestAnimationFrame(tick);
+  }, Math.max(180, durationMs - 280));
 
-  const now = ctx.currentTime;
-  const duration = Math.max(0.4, durationMs / 1000);
-  master.gain.setValueAtTime(0.0001, now);
-  master.gain.exponentialRampToValueAtTime(0.7, now + 0.06);
-  master.gain.setValueAtTime(0.7, now + duration - 0.32);
-  master.gain.exponentialRampToValueAtTime(0.0001, now + duration);
-
-  const noise = createNoiseBuffer(ctx, 1.2);
-  const flaps = 26;
-  for (let i = 0; i < flaps; i += 1) {
-    const t = i / flaps;
-    const time = now + t * (duration * 0.78) + Math.random() * 0.05;
-    scheduleWingFlap(ctx, noise, master, time, 0.45 + Math.random() * 0.9);
-  }
-
-  let closed = false;
-  const stop = () => {
-    if (closed) return;
-    closed = true;
-    try {
-      const at = ctx.currentTime;
-      master.gain.cancelScheduledValues(at);
-      master.gain.setValueAtTime(Math.max(0.0001, master.gain.value), at);
-      master.gain.exponentialRampToValueAtTime(0.0001, at + 0.09);
-    } catch {
-      /* already closing */
-    }
-    window.setTimeout(() => {
-      void ctx.close();
-    }, 140);
+  return () => {
+    window.clearTimeout(fadeTimer);
+    voices.forEach(({ audio, startTimer }) => {
+      window.clearTimeout(startTimer);
+      audio.pause();
+      audio.currentTime = 0;
+    });
   };
-  return stop;
 }
 
 function ensureCanvas() {
