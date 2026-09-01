@@ -69,6 +69,22 @@
 .art-home .art-hero--cinematic .art-scroll-cue svg { color:#f28a43; }
 @media (prefers-reduced-motion:no-preference) { .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { animation:iris-cinematic-breathe 15s cubic-bezier(.45,0,.2,1) infinite alternate; } }
 @keyframes iris-cinematic-breathe { from { transform:scale(1); } to { transform:scale(1.035); } }
-@media (max-width:760px) { .art-home .art-hero--cinematic { min-height:46rem; align-items:end; padding:8rem 1.3rem 5.8rem; }.art-home .art-hero--cinematic .art-hero-visual .art-hero-image { object-position:64% 34%; }.art-home .art-hero--cinematic .art-hero-copy { max-width:100%; margin:0; }.art-home .art-hero--cinematic .art-hero-copy h1 { max-width:none; font-size:clamp(1.78rem,7.4vw,2.55rem); }.art-home .art-hero--cinematic .art-hero-manifesto { margin:1.2rem 0 .75rem; }.art-home .art-hero--cinematic .art-hero-intro { max-width:21rem; font-size:.82rem; }.art-home .art-hero--cinematic .art-hero-actions { gap:.7rem; margin-top:1.5rem; }.art-home .art-hero--cinematic .art-hero-socials { margin-top:1.1rem; }.art-home .art-hero--cinematic .art-hero-coordinate { top:6.2rem; left:1.3rem; font-size:.42rem; }.art-home .art-hero--cinematic .art-hero-orbit { right:-4rem; bottom:11rem; width:12rem; height:6rem; }.art-home .art-hero--cinematic .art-hero-visual figcaption { display:none; }.art-home .art-hero--cinematic .art-hero-protocol { right:1.3rem; bottom:1.55rem; }.art-home .art-hero--cinematic .art-hero-protocol span:first-child { display:none; }.art-home .art-hero--cinematic .art-scroll-cue { bottom:1.45rem; left:1.3rem; } }
+@media (max-width:760px) {
+  .art-home .art-hero--cinematic { min-height:46rem; align-items:end; padding:8rem 1.3rem 5.8rem; }
+  .art-home .art-hero--cinematic::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.12) 24%,rgba(0,0,0,.28) 48%,rgba(0,0,0,.78) 74%,rgba(0,0,0,.94) 100%); }
+  .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { object-position:64% 34%; }
+  .art-home .art-hero--cinematic .art-hero-copy { max-width:100%; margin:0; }
+  .art-home .art-hero--cinematic .art-hero-copy h1 { max-width:none; font-size:clamp(1.78rem,7.4vw,2.55rem); text-shadow:0 .06em .28em rgba(0,0,0,.88),0 0 .08em rgba(0,0,0,.95); }
+  .art-home .art-hero--cinematic .art-hero-manifesto { margin:1.2rem 0 .75rem; color:rgba(255,255,255,.88); }
+  .art-home .art-hero--cinematic .art-hero-intro { max-width:21rem; font-size:.82rem; color:rgba(255,255,255,.92); }
+  .art-home .art-hero--cinematic .art-hero-actions { gap:.7rem; margin-top:1.5rem; }
+  .art-home .art-hero--cinematic .art-hero-socials { margin-top:1.1rem; color:rgba(255,255,255,.78); }
+  .art-home .art-hero--cinematic .art-hero-coordinate { top:6.2rem; left:1.3rem; font-size:.42rem; }
+  .art-home .art-hero--cinematic .art-hero-orbit { right:-4rem; bottom:11rem; width:12rem; height:6rem; }
+  .art-home .art-hero--cinematic .art-hero-visual figcaption { display:none; }
+  .art-home .art-hero--cinematic .art-hero-protocol { right:1.3rem; bottom:1.55rem; }
+  .art-home .art-hero--cinematic .art-hero-protocol span:first-child { display:none; }
+  .art-home .art-hero--cinematic .art-scroll-cue { bottom:1.45rem; left:1.3rem; }
+}
 @media (prefers-reduced-motion:reduce) { .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { transition:none; animation:none; } }
 
