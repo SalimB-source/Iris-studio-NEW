@@ -1,0 +1,29 @@
+/* Passage clair / sombre : mosaicisation, bascule au grain max, puis retour net. */
+.iris-theme-pixelate-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+html.is-theme-pixelating,
+html.is-theme-pixelating body {
+  cursor: wait;
+}
+
+html.is-theme-pixelating #root {
+  will-change: filter;
+}
+
+html.is-theme-pixelating .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+  transition: none !important;
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-theme-pixelating .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+    transition: none !important;
+    animation: none !important;
+  }
+}

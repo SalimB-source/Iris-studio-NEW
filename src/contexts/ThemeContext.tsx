@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useRef, useState } from "react";
+import { runThemePixelate, themePixelateDuration } from "./themePixelate";
+import "./themePixelate.css";
 
 type Theme = "light" | "dark";
 
@@ -16,6 +18,10 @@ interface ThemeProviderProps {
   switchable?: boolean;
 }
 
+function applyThemeClass(next: Theme) {
+  document.documentElement.classList.toggle("dark", next === "dark");
+}
+
 export function ThemeProvider({
   children,
   defaultTheme = "light",
@@ -30,19 +36,18 @@ export function ThemeProvider({
     }
     return defaultTheme;
   });
+  const cancelPixelate = useRef<(() => void) | null>(null);
+  const safetyTimer = useRef<number>(0);
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-
-    if (switchable) {
-      localStorage.setItem("theme", theme);
-    }
+    applyThemeClass(theme);
+    if (switchable) localStorage.setItem("theme", theme);
   }, [theme, switchable]);
+
+  useEffect(() => () => {
+    cancelPixelate.current?.();
+    window.clearTimeout(safetyTimer.current);
+  }, []);
 
   const toggleTheme = switchable
     ? () => {
@@ -51,11 +56,32 @@ export function ThemeProvider({
 
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         root.classList.add("is-theme-switching");
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
 
-        window.setTimeout(() => {
+        const flip = () => {
+          setTheme((prev) => {
+            const next = prev === "light" ? "dark" : "light";
+            applyThemeClass(next);
+            return next;
+          });
+        };
+
+        const finish = (cancelRunning = false) => {
+          window.clearTimeout(safetyTimer.current);
+          if (cancelRunning) cancelPixelate.current?.();
+          cancelPixelate.current = null;
           root.classList.remove("is-theme-switching");
-        }, reducedMotion ? 0 : 1200);
+          root.classList.remove("is-theme-pixelating");
+          document.getElementById("root")?.style.removeProperty("filter");
+        };
+
+        if (reducedMotion) {
+          flip();
+          root.classList.remove("is-theme-switching");
+          return;
+        }
+
+        cancelPixelate.current = runThemePixelate(flip, () => finish(false));
+        safetyTimer.current = window.setTimeout(() => finish(true), themePixelateDuration + 120);
       }
     : undefined;
 
