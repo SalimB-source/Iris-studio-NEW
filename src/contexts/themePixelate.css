@@ -12,14 +12,44 @@
   pointer-events: none;
 }
 
+/* Pendant la nuée : on coupe la respiration, le fondu jour/nuit reste. */
 html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
-  transition: none !important;
   animation: none !important;
 }
 
+html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image,
+html.is-theme-switching .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+  transition: opacity 900ms cubic-bezier(.22, 1, .36, 1) !important;
+}
+
+/* Voile de fondu sous les chauves-souris, au moment du bascule. */
+html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: #070707;
+  animation: iris-theme-dissolve 1.18s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes iris-theme-dissolve {
+  0% { opacity: 0; }
+  22% { opacity: 0.12; }
+  32% { opacity: 0.58; }
+  52% { opacity: 0.16; }
+  100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+  html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image,
+  html.is-theme-switching .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
     transition: none !important;
     animation: none !important;
+  }
+
+  html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual::after {
+    content: none;
+    animation: none;
   }
 }
