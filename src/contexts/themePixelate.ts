@@ -1,6 +1,6 @@
 const DURATION_IN = 360;
 const DURATION_OUT = 820;
-const BAT_COUNT = 56;
+const BAT_COUNT = 36;
 
 type Bat = {
   x: number;
@@ -55,18 +55,20 @@ function drawBat(ctx: CanvasRenderingContext2D, flap: number) {
 function makeBats(originX: number, originY: number, count: number): Bat[] {
   const bats: Bat[] = [];
   for (let i = 0; i < count; i += 1) {
-    const angle = (-Math.PI * 0.15) + Math.random() * Math.PI * 1.3 + (i / count) * Math.PI * 0.2;
-    const speed = 1.6 + Math.random() * 4.8;
+    const t = i / count;
+    const angle = t * Math.PI * 2 + (Math.random() - 0.5) * 0.7;
+    const radius = 70 + t * 160 + Math.random() * 220;
+    const speed = 2.4 + Math.random() * 6.8;
     bats.push({
-      x: originX + (Math.random() - 0.5) * 48,
-      y: originY + (Math.random() - 0.5) * 56,
+      x: originX + Math.cos(angle) * radius,
+      y: originY + Math.sin(angle) * radius,
       vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed - 0.8,
+      vy: Math.sin(angle) * speed - 0.35,
       size: 1.15 + Math.random() * 2.05,
       rot: angle,
       flap: Math.random() * Math.PI * 2,
       flapSpeed: 0.35 + Math.random() * 0.55,
-      delay: Math.random() * 180,
+      delay: t * 260 + Math.random() * 220,
       spin: (Math.random() - 0.5) * 0.08,
     });
   }
