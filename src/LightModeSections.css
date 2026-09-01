@@ -662,29 +662,20 @@ html:not(.dark) .art-home main > section.art-proof .art-proof-line i {
   background: rgba(255, 255, 255, 0.35);
 }
 
-/* À propos / 06 : cartes blanches, texte graphite — le aplat rouge ne doit pas blanchir le texte. */
-html:not(.dark) .about-studio-member {
+/* À propos / 06 : cartes blanches. Même spécificité que l’aplat rouge, sinon le texte reste blanc. */
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) .about-studio-member {
   background: #fff !important;
   color: #202020 !important;
 }
-html:not(.dark) .about-studio-member:hover {
-  background: #f8f7f4 !important;
-}
-html:not(.dark) .about-studio-member :is(h3, a, strong, b) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) .about-studio-member :is(h1, h2, h3, h4, p, small, li, a, strong, b, em, span) {
   color: #202020 !important;
 }
-html:not(.dark) .about-studio-member small {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) .about-studio-member small {
   color: #5f5955 !important;
 }
-html:not(.dark) .about-studio-member :is(.about-studio-member-index, .about-role-badge, .about-role-badge span) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) .about-studio-member :is(.about-studio-member-index, .about-role-badge, .about-role-badge span) {
   color: #e7433a !important;
 }
-html:not(.dark) .about-studio-member-link {
-  color: #202020 !important;
-}
-html:not(.dark) .about-studio-member-link:hover {
-  color: #e7433a !important;
-}
-html:not(.dark) .about-studio-member-link svg:last-child {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) .about-studio-member-link:hover {
   color: #e7433a !important;
 }
