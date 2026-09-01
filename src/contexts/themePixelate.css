@@ -1,20 +1,24 @@
-/* Pixelisation limitée aux portraits du héros, pas à la page. */
+/* Nuée de chauves-souris : overlay du héros uniquement, sous le titre. */
 .iris-theme-pixelate-svg {
+  display: none;
+}
+
+.art-hero--cinematic .iris-theme-bats {
   position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 
-html.is-theme-pixelating .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
-  will-change: filter;
+html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
   transition: none !important;
   animation: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html.is-theme-pixelating .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
+  html.is-theme-swarming .art-home .art-hero--cinematic .art-hero-visual .art-hero-image {
     transition: none !important;
     animation: none !important;
   }

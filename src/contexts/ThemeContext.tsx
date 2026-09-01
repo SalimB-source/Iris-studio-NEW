@@ -71,6 +71,8 @@ export function ThemeProvider({
           cancelPixelate.current = null;
           root.classList.remove("is-theme-switching");
           root.classList.remove("is-theme-pixelating");
+          root.classList.remove("is-theme-swarming");
+          document.querySelectorAll(".iris-theme-bats").forEach((node) => node.remove());
           document.querySelectorAll<HTMLElement>(".art-hero-image").forEach((el) => el.style.removeProperty("filter"));
           document.getElementById("root")?.style.removeProperty("filter");
         };

@@ -1,123 +1,176 @@
-const FILTER_ID = "iris-theme-pixelate";
-const FLOOD_ID = "iris-pixel-flood";
-const TILE_ID = "iris-pixel-tile";
-const MORPH_ID = "iris-pixel-morph";
-const TARGET_SELECTOR = ".art-hero-image";
+const DURATION_IN = 360;
+const DURATION_OUT = 820;
+const BAT_COUNT = 72;
 
-const DURATION_IN = 280;
-const DURATION_OUT = 720;
+type Bat = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  rot: number;
+  flap: number;
+  flapSpeed: number;
+  delay: number;
+  spin: number;
+};
 
-function peakCell() {
-  return Math.round(Math.min(24, Math.max(12, window.innerWidth / 80)));
+function drawBat(ctx: CanvasRenderingContext2D, flap: number) {
+  const beat = Math.sin(flap);
+  const wingY = beat * 7;
+  const span = 23 + beat * 5;
+
+  ctx.beginPath();
+  ctx.moveTo(0, -2);
+  ctx.lineTo(3.4, -12);
+  ctx.lineTo(1.1, -6.8);
+  ctx.lineTo(0, -8.2);
+  ctx.lineTo(-1.1, -6.8);
+  ctx.lineTo(-3.4, -12);
+  ctx.closePath();
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.ellipse(0, -1.2, 3.3, 3.7, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.ellipse(0, 6.2, 2.15, 6.4, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  const wing = (dir: number) => {
+    ctx.beginPath();
+    ctx.moveTo(dir * 1.8, 0.2);
+    ctx.bezierCurveTo(dir * 9, -11 + wingY, dir * (span - 3), -7 + wingY, dir * span, 3 + wingY);
+    ctx.quadraticCurveTo(dir * span * 0.74, 5 + wingY * 0.35, dir * span * 0.6, 9);
+    ctx.quadraticCurveTo(dir * span * 0.46, 3.2, dir * span * 0.34, 7.5);
+    ctx.quadraticCurveTo(dir * 9.5, 2.4, dir * 1.8, 4);
+    ctx.closePath();
+    ctx.fill();
+  };
+  wing(1);
+  wing(-1);
 }
 
-function easeOutCubic(t: number) {
-  return 1 - (1 - t) ** 3;
-}
-
-function easeInCubic(t: number) {
-  return t * t * t;
-}
-
-function filterUrl() {
-  const page = window.location.href.split("#")[0];
-  return `url("${page}#${FILTER_ID}")`;
-}
-
-function pixelTargets() {
-  return Array.from(document.querySelectorAll<HTMLElement>(TARGET_SELECTOR));
-}
-
-function ensureFilter() {
-  if (document.getElementById(FILTER_ID)) return;
-
-  const parsed = new DOMParser().parseFromString(
-    `<svg xmlns="http://www.w3.org/2000/svg" class="iris-theme-pixelate-svg" aria-hidden="true" focusable="false" width="0" height="0">
-      <filter id="${FILTER_ID}" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
-        <feFlood id="${FLOOD_ID}" x="8" y="8" width="1" height="1" flood-color="#ffffff" flood-opacity="1" />
-        <feComposite id="${TILE_ID}" width="16" height="16" />
-        <feTile result="irisPixelTiles" />
-        <feComposite in="SourceGraphic" in2="irisPixelTiles" operator="in" />
-        <feMorphology id="${MORPH_ID}" operator="dilate" radius="8" />
-      </filter>
-    </svg>`,
-    "image/svg+xml",
-  ).documentElement;
-
-  document.body.appendChild(document.importNode(parsed, true));
-}
-
-function clearTargets(targets: HTMLElement[]) {
-  targets.forEach((el) => el.style.removeProperty("filter"));
-}
-
-function setCellSize(cell: number, targets: HTMLElement[]) {
-  const flood = document.getElementById(FLOOD_ID);
-  const tile = document.getElementById(TILE_ID);
-  const morph = document.getElementById(MORPH_ID);
-  if (!flood || !tile || !morph || !targets.length) return;
-
-  const size = Math.max(1, cell);
-  if (size <= 1.35) {
-    clearTargets(targets);
-    return;
+function makeBats(originX: number, originY: number, count: number): Bat[] {
+  const bats: Bat[] = [];
+  for (let i = 0; i < count; i += 1) {
+    const angle = (-Math.PI * 0.15) + Math.random() * Math.PI * 1.3 + (i / count) * Math.PI * 0.2;
+    const speed = 1.6 + Math.random() * 4.8;
+    bats.push({
+      x: originX + (Math.random() - 0.5) * 28,
+      y: originY + (Math.random() - 0.5) * 36,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 0.8,
+      size: 0.55 + Math.random() * 1.35,
+      rot: angle,
+      flap: Math.random() * Math.PI * 2,
+      flapSpeed: 0.35 + Math.random() * 0.55,
+      delay: Math.random() * 180,
+      spin: (Math.random() - 0.5) * 0.08,
+    });
   }
+  return bats;
+}
 
-  const sample = Math.max(0.5, size * 0.5);
-  flood.setAttribute("x", String(sample));
-  flood.setAttribute("y", String(sample));
-  tile.setAttribute("width", String(size));
-  tile.setAttribute("height", String(size));
-  morph.setAttribute("radius", String(Math.max(0.5, size * 0.5)));
-  const url = filterUrl();
-  targets.forEach((el) => el.style.setProperty("filter", url, "important"));
+function ensureCanvas(host: HTMLElement) {
+  document.querySelectorAll(".iris-theme-bats").forEach((node) => node.remove());
+  const canvas = document.createElement("canvas");
+  canvas.className = "iris-theme-bats";
+  canvas.setAttribute("aria-hidden", "true");
+  host.appendChild(canvas);
+  return canvas;
+}
+
+function fitCanvas(canvas: HTMLCanvasElement, host: HTMLElement) {
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  const width = host.clientWidth;
+  const height = host.clientHeight;
+  canvas.width = Math.max(1, Math.floor(width * ratio));
+  canvas.height = Math.max(1, Math.floor(height * ratio));
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+  const ctx = canvas.getContext("2d");
+  if (ctx) ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  return { ctx, width, height };
 }
 
 export function runThemePixelate(onPeak: () => void, onDone: () => void) {
-  const targets = pixelTargets();
-  if (!targets.length) {
+  const host = document.querySelector<HTMLElement>(".art-hero--cinematic");
+  if (!host) {
     onPeak();
     onDone();
     return () => undefined;
   }
 
-  ensureFilter();
-
   const rootHtml = document.documentElement;
-  const peak = peakCell();
-  rootHtml.classList.add("is-theme-pixelating");
-  setCellSize(2, targets);
+  rootHtml.classList.add("is-theme-swarming");
 
+  const canvas = ensureCanvas(host);
+  let { ctx, width, height } = fitCanvas(canvas, host);
+  if (!ctx) {
+    rootHtml.classList.remove("is-theme-swarming");
+    onPeak();
+    onDone();
+    return () => undefined;
+  }
+
+  const originX = width * 0.62;
+  const originY = height * 0.44;
+  const bats = makeBats(originX, originY, BAT_COUNT);
   let flipped = false;
   let frame = 0;
   const started = performance.now();
 
   const stop = () => {
     window.cancelAnimationFrame(frame);
-    clearTargets(targets);
-    rootHtml.classList.remove("is-theme-pixelating");
+    canvas.remove();
+    rootHtml.classList.remove("is-theme-swarming");
   };
 
   const step = (now: number) => {
     const elapsed = now - started;
-
-    if (elapsed < DURATION_IN) {
-      const progress = easeOutCubic(elapsed / DURATION_IN);
-      setCellSize(1 + (peak - 1) * progress, targets);
-      frame = window.requestAnimationFrame(step);
+    const surface = canvas.getContext("2d");
+    if (!surface) {
+      stop();
+      onDone();
       return;
     }
+    ctx = surface;
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = "#0b0b0d";
 
-    if (!flipped) {
+    for (const bat of bats) {
+      if (elapsed < bat.delay) continue;
+      const local = elapsed - bat.delay;
+      bat.flap += bat.flapSpeed;
+      bat.vx *= 1.012;
+      bat.vy = bat.vy * 1.01 - 0.035;
+      bat.x += bat.vx;
+      bat.y += bat.vy;
+      bat.rot += bat.spin;
+      const fadeIn = Math.min(1, local / 90);
+      const fadeOut = elapsed > DURATION_IN + 280
+        ? Math.max(0, 1 - (elapsed - DURATION_IN - 280) / (DURATION_OUT - 280))
+        : 1;
+      const alpha = fadeIn * fadeOut;
+      if (alpha <= 0.02) continue;
+
+      ctx.save();
+      ctx.translate(bat.x, bat.y);
+      ctx.rotate(bat.rot + Math.atan2(bat.vy, bat.vx) * 0.25);
+      ctx.scale(bat.size * (0.7 + fadeIn * 0.3), bat.size * (0.7 + fadeIn * 0.3));
+      ctx.globalAlpha = alpha;
+      drawBat(ctx, bat.flap);
+      ctx.restore();
+    }
+
+    if (!flipped && elapsed >= DURATION_IN) {
       flipped = true;
-      setCellSize(peak, targets);
       onPeak();
     }
 
-    const outElapsed = elapsed - DURATION_IN;
-    if (outElapsed < DURATION_OUT) {
-      const progress = easeInCubic(outElapsed / DURATION_OUT);
-      setCellSize(1 + (peak - 1) * (1 - progress), targets);
+    if (elapsed < DURATION_IN + DURATION_OUT) {
       frame = window.requestAnimationFrame(step);
       return;
     }
