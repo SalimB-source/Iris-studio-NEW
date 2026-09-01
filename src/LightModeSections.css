@@ -603,3 +603,61 @@ html:not(.dark) .operational-detail-media figcaption {
 .dark .about-page .about-letsplay-team-route {
   color: #f28a43 !important;
 }
+
+/* Thème clair : une section sur deux en rouge Iris, texte blanc.
+   Héros photo, frises logos, Let’s Play / 7ouma restent hors de cet aplat. */
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) {
+  background: #e7433a !important;
+  background-color: #e7433a !important;
+  color: #fff !important;
+  border-top-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span) {
+  color: #fff !important;
+}
+
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em {
+  color: #fff !important;
+}
+
+html:not(.dark) .art-home main > section:nth-of-type(even):not(.art-brand-marquee) :is(.art-text-link, .art-text-link:hover) {
+  color: #fff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+html:not(.dark) .art-proof-numbers {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+html:not(.dark) .art-home main > section.art-proof .art-proof-numbers article {
+  background: transparent !important;
+}
+html:not(.dark) .art-home main > section.art-proof .art-proof-numbers :is(span, strong, p) {
+  color: #fff !important;
+}
+
+html:not(.dark) .art-home main > section.art-projects .art-project :is(p, h3, em, b) {
+  color: #fff !important;
+}
+html:not(.dark) .art-home main > section.art-projects .art-project-media {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+html:not(.dark) .art-home main > section.art-contact .art-button-light {
+  border-color: #fff !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+html:not(.dark) .art-home main > section.art-contact .art-button-light:hover {
+  background: #fff !important;
+  color: #e7433a !important;
+}
+
+html:not(.dark) .art-home main > section:nth-of-type(even):not(.art-brand-marquee) :is(.art-manifesto-word, .art-field-oversize) {
+  color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html:not(.dark) .art-home main > section.art-proof .art-proof-line i {
+  background: rgba(255, 255, 255, 0.35);
+}
