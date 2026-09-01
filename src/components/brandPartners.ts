@@ -14,6 +14,7 @@ export const brandPartners = [
   { name: "Ferrero", logo: "assets/ferrero-logo-provided.webp" },
   { name: "Epiroc", logo: "assets/epiroc-logo.png" },
   { name: "Ifri", logo: "assets/ifri-logo.png" },
+  { name: "Hamoud Boualem", logo: "assets/hamoud-boualem-logo.png" },
   { name: "TCL", logo: "assets/tcl-logo-provided.webp" },
   { name: "Amir Clean", logo: "assets/amir-clean-logo.png" },
 ] as const;
