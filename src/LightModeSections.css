@@ -661,3 +661,30 @@ html:not(.dark) .art-home main > section:nth-of-type(even):not(.art-brand-marque
 html:not(.dark) .art-home main > section.art-proof .art-proof-line i {
   background: rgba(255, 255, 255, 0.35);
 }
+
+/* À propos / 06 : cartes blanches, texte graphite — le aplat rouge ne doit pas blanchir le texte. */
+html:not(.dark) .about-studio-member {
+  background: #fff !important;
+  color: #202020 !important;
+}
+html:not(.dark) .about-studio-member:hover {
+  background: #f8f7f4 !important;
+}
+html:not(.dark) .about-studio-member :is(h3, a, strong, b) {
+  color: #202020 !important;
+}
+html:not(.dark) .about-studio-member small {
+  color: #5f5955 !important;
+}
+html:not(.dark) .about-studio-member :is(.about-studio-member-index, .about-role-badge, .about-role-badge span) {
+  color: #e7433a !important;
+}
+html:not(.dark) .about-studio-member-link {
+  color: #202020 !important;
+}
+html:not(.dark) .about-studio-member-link:hover {
+  color: #e7433a !important;
+}
+html:not(.dark) .about-studio-member-link svg:last-child {
+  color: #e7433a !important;
+}
