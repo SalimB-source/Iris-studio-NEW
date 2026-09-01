@@ -151,9 +151,22 @@ export default function Home() {
           <div className="art-hero-copy">
             <p className="art-kicker art-hero-kicker"><span>01</span> COMMUNICATION AUTREMENT</p>
             <p className="art-hero-manifesto">[ LE TERRAIN, SANS RACCOURCI ]</p>
-            <h1 id="home-title" className="impact-title-lines" data-impact-reveal data-impact-stage="1"><span className="art-hero-title-day">L’agence qui fait vivre</span><span className="art-hero-title-day">vos campagnes sur <em>le terrain.</em></span><span className="art-hero-title-night">Un coup d’avance</span><span className="art-hero-title-night">sur <em>votre marché.</em></span></h1>
-            <p className="art-hero-intro art-hero-intro-day">Du concept à la production, nous créons des expériences de marque immersives et percutantes.</p>
-            <p className="art-hero-intro art-hero-intro-night">Analyse des tendances, surveillance de la concurrence et insights stratégiques pour anticiper les mouvements avant vos adversaires.</p>
+            <h1 id="home-title" className="impact-title-lines art-hero-title-swap" data-impact-reveal data-impact-stage="1">
+              <span className="art-hero-title art-hero-title-day">
+                <b>L’agence qui</b>
+                <b>fait vivre vos</b>
+                <b>campagnes sur <em>le terrain.</em></b>
+              </span>
+              <span className="art-hero-title art-hero-title-night">
+                <b>Un coup</b>
+                <b>d’avance</b>
+                <b>sur <em>votre marché.</em></b>
+              </span>
+            </h1>
+            <div className="art-hero-intro-swap">
+              <p className="art-hero-intro art-hero-intro-day">Du concept à la production, nous créons des expériences de marque immersives et percutantes.</p>
+              <p className="art-hero-intro art-hero-intro-night">Analyse des tendances, surveillance de la concurrence et insights stratégiques pour anticiper les mouvements avant vos adversaires.</p>
+            </div>
             <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact">Ouvrir un projet <ArrowUpRight size={17} /></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
             <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
