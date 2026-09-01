@@ -151,8 +151,9 @@ export default function Home() {
           <div className="art-hero-copy">
             <p className="art-kicker art-hero-kicker"><span>01</span> COMMUNICATION AUTREMENT</p>
             <p className="art-hero-manifesto">[ LE TERRAIN, SANS RACCOURCI ]</p>
-            <h1 id="home-title" className="impact-title-lines" data-impact-reveal data-impact-stage="1"><span>Les idées</span><span>prennent <em>le terrain.</em></span></h1>
-            <p className="art-hero-intro">Stratégies, campagnes et formats de marque conçus pour devenir des expériences vécues — dans les lieux, les usages et les communautés qui comptent.</p>
+            <h1 id="home-title" className="impact-title-lines" data-impact-reveal data-impact-stage="1"><span className="art-hero-title-day">Les idées</span><span className="art-hero-title-day">prennent <em>le terrain.</em></span><span className="art-hero-title-night">Un coup d’avance</span><span className="art-hero-title-night">sur <em>votre marché.</em></span></h1>
+            <p className="art-hero-intro art-hero-intro-day">Stratégies, campagnes et formats de marque conçus pour devenir des expériences vécues — dans les lieux, les usages et les communautés qui comptent.</p>
+            <p className="art-hero-intro art-hero-intro-night">Analyse des tendances, surveillance de la concurrence et insights stratégiques pour anticiper les mouvements avant vos adversaires.</p>
             <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact">Ouvrir un projet <ArrowUpRight size={17} /></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
             <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
