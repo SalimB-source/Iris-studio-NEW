@@ -17,8 +17,7 @@
 .dark .art-home .art-hero--cinematic .art-hero-visual .art-hero-image--day { opacity:0; }
 .dark .art-home .art-hero--cinematic .art-hero-visual .art-hero-image--night { opacity:1; }
 @media (prefers-reduced-motion: no-preference) {
-  .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { transition: opacity 1100ms cubic-bezier(.22,1,.36,1); }
-  .art-home .art-hero--cinematic .art-hero-visual .art-hero-image--night { transition-duration: 1250ms; }
+  .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { transition: opacity 1100ms ease-in-out; }
   html.is-theme-switching .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { will-change: opacity; }
 }
 .art-home .art-hero--cinematic .art-hero-visual figcaption { position:absolute; z-index:3; right:clamp(1.5rem,7vw,7rem); bottom:clamp(2rem,4.5vw,4.5rem); left:auto; width:min(17rem,24vw); padding:.7rem 0 0; border-top:1px solid rgba(255,255,255,.45); background:transparent; color:#fff; }
@@ -34,13 +33,13 @@
 .art-home .art-hero--cinematic .impact-title-lines > .art-hero-title > b { display:block; font-weight:400; white-space:nowrap; }
 .art-home .art-hero--cinematic .impact-title-lines.impact-reveal-armed > .art-hero-title { transform:none; filter:none; }
 .art-home .art-hero--cinematic .art-hero-title-day,
-.art-home .art-hero--cinematic .art-hero-title-night { transition:opacity 520ms cubic-bezier(.22,1,.36,1); }
+.art-home .art-hero--cinematic .art-hero-title-night { transition:opacity 1100ms ease-in-out; }
 .art-home .art-hero--cinematic .art-hero-title-day { opacity:1 !important; }
 .art-home .art-hero--cinematic .art-hero-title-night { opacity:0 !important; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-title-day { opacity:0 !important; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-title-night { opacity:1 !important; pointer-events:auto; }
 .art-home .art-hero--cinematic .art-hero-intro-swap { display:grid; max-width:32rem; }
-.art-home .art-hero--cinematic .art-hero-intro { grid-area:1 / 1; max-width:32rem; margin:0; color:#fff; font-size:clamp(.95rem,1.22vw,1.12rem); line-height:1.65; text-shadow:0 .08em .24em rgba(0,0,0,.8); transition:opacity 520ms cubic-bezier(.22,1,.36,1); }
+.art-home .art-hero--cinematic .art-hero-intro { grid-area:1 / 1; max-width:32rem; margin:0; color:#fff; font-size:clamp(.95rem,1.22vw,1.12rem); line-height:1.65; text-shadow:0 .08em .24em rgba(0,0,0,.8); transition:opacity 1100ms ease-in-out; }
 .art-home .art-hero--cinematic .art-hero-intro-night { opacity:0; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-intro-day { opacity:0; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-intro-night { opacity:1; pointer-events:auto; }
