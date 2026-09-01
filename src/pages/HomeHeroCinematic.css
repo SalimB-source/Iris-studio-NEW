@@ -8,6 +8,7 @@
 .art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .desktop-nav a:not(.is-active):hover { color:#f28a43 !important; }
 .art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .desktop-nav a.is-active { border-color:#e7433a; color:#fff !important; }
 .art-home .art-hero--cinematic { position:relative; display:grid; min-height:max(46rem,100svh); grid-template-columns:minmax(0,1fr); align-items:center; overflow:hidden; padding:clamp(8.8rem,13vw,11rem) max(1.5rem,7vw) clamp(5.4rem,9vw,8rem); background:#070707; color:#fff; isolation:isolate; }
+.art-home .art-hero--cinematic::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 26%,rgba(0,0,0,.22) 48%,rgba(0,0,0,.06) 68%,rgba(0,0,0,0) 82%),linear-gradient(180deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,.08) 28%,rgba(0,0,0,.1) 62%,rgba(0,0,0,.42) 100%); }
 .art-home .art-hero--cinematic .art-hero-visual { position:absolute; z-index:-2; inset:0; width:100%; height:100%; margin:0; padding:0; background:#070707; box-shadow:none; }
 .art-home .art-hero--cinematic .art-hero-visual::before { top:auto; right:clamp(1.5rem,4vw,4.5rem); bottom:clamp(2rem,4vw,4.5rem); left:auto; width:clamp(4rem,7vw,7rem); height:clamp(4rem,7vw,7rem); border-color:rgba(255,255,255,.35); }
 .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { position:absolute; inset:0; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:58% 44%; opacity:1; }
@@ -23,10 +24,11 @@
 .art-home .art-hero--cinematic .art-hero-visual figcaption { position:absolute; z-index:3; right:clamp(1.5rem,7vw,7rem); bottom:clamp(2rem,4.5vw,4.5rem); left:auto; width:min(17rem,24vw); padding:.7rem 0 0; border-top:1px solid rgba(255,255,255,.45); background:transparent; color:#fff; }
 .art-home .art-hero--cinematic .art-hero-visual figcaption span { color:#f28a43; }
 .art-home .art-hero--cinematic .art-hero-visual figcaption b { max-width:11rem; font-size:clamp(1.1rem,1.45vw,1.45rem); line-height:.92; text-align:right; }
-.art-home .art-hero--cinematic .art-hero-copy { z-index:2; max-width:min(48rem,64vw); margin:clamp(1rem,5vw,5rem) 0 0 clamp(0rem,7vw,8rem); color:#fff; }
+.art-home .art-hero--cinematic .art-hero-copy { position:relative; z-index:2; max-width:min(48rem,64vw); margin:clamp(1rem,5vw,5rem) 0 0 clamp(0rem,7vw,8rem); color:#fff; }
+.art-home .art-hero--cinematic .art-hero-copy::before { content:""; position:absolute; z-index:-1; inset:-2rem -4.5rem -2.8rem -2.6rem; pointer-events:none; background:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.32) 58%,rgba(0,0,0,0) 100%); }
 .art-home .art-hero--cinematic .art-hero-kicker { color:#fff; }
 .art-home .art-hero--cinematic .art-hero-kicker span { border-color:#e7433a; color:#fff; }
-.art-home .art-hero--cinematic .art-hero-manifesto { margin:clamp(1.6rem,3vw,3.2rem) 0 1rem; color:rgba(255,255,255,.7); font-size:.56rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.art-home .art-hero--cinematic .art-hero-manifesto { margin:clamp(1.6rem,3vw,3.2rem) 0 1rem; color:rgba(255,255,255,.88); font-size:.56rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
 .art-home .art-hero--cinematic .art-hero-copy h1 { display:grid; max-width:none; margin:0 0 1.5rem; color:#fff; font-family:"DM Serif Display",Georgia,serif; font-size:clamp(3.05rem,6.2vw,6.15rem); letter-spacing:-.09em; line-height:.86; text-shadow:0 .08em .38em rgba(0,0,0,.72),0 0 .05em rgba(0,0,0,.92); }
 .art-home .art-hero--cinematic .art-hero-copy h1 em { color:#e7433a; }
 .art-home .art-hero--cinematic .impact-title-lines > .art-hero-title { display:grid; grid-area:1 / 1; }
@@ -39,7 +41,7 @@
 .dark .art-home .art-hero--cinematic .art-hero-title-day { opacity:0 !important; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-title-night { opacity:1 !important; pointer-events:auto; }
 .art-home .art-hero--cinematic .art-hero-intro-swap { display:grid; max-width:32rem; }
-.art-home .art-hero--cinematic .art-hero-intro { grid-area:1 / 1; max-width:32rem; margin:0; color:rgba(255,255,255,.76); font-size:clamp(.86rem,1.12vw,1rem); line-height:1.65; transition:opacity 520ms cubic-bezier(.22,1,.36,1); }
+.art-home .art-hero--cinematic .art-hero-intro { grid-area:1 / 1; max-width:32rem; margin:0; color:#fff; font-size:clamp(.95rem,1.22vw,1.12rem); line-height:1.65; text-shadow:0 .08em .24em rgba(0,0,0,.8); transition:opacity 520ms cubic-bezier(.22,1,.36,1); }
 .art-home .art-hero--cinematic .art-hero-intro-night { opacity:0; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-intro-day { opacity:0; pointer-events:none; }
 .dark .art-home .art-hero--cinematic .art-hero-intro-night { opacity:1; pointer-events:auto; }
