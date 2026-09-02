@@ -77,11 +77,16 @@
 }
 .dark .art-home .art-hero--cinematic .art-button-batwing {
   display: block;
-  position: absolute;
-  inset: 0;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
   object-fit: fill;
   pointer-events: none;
 }
@@ -123,8 +128,16 @@
   .art-home .art-hero--cinematic .art-hero-intro-swap { max-width:22rem; }
   .art-home .art-hero--cinematic .art-hero-intro { max-width:22rem; font-size:clamp(1rem,3.8vw,1.14rem); line-height:1.5; color:#fff; text-shadow:0 .08em .24em rgba(0,0,0,.85); }
   .art-home .art-hero--cinematic .art-hero-actions { gap:.7rem; margin-top:1.5rem; }
-  .dark .art-home .art-hero--cinematic .art-button-main { width:auto; max-width:100%; height:auto; padding:.7rem .85rem; font-size:.52rem; }
-  .dark .art-home .art-hero--cinematic .art-button-label { gap:.4rem; }
+  .dark .art-home .art-hero--cinematic .art-button-main {
+    width: auto !important;
+    max-width: 11rem !important;
+    height: 2.2rem !important;
+    padding: .28rem .5rem !important;
+    font-size: .4rem !important;
+    letter-spacing: .05em;
+  }
+  .dark .art-home .art-hero--cinematic .art-button-label { gap: .28rem; }
+  .dark .art-home .art-hero--cinematic .art-button-label svg { display: none; }
   .art-home .art-hero--cinematic .art-hero-socials { margin-top:1.1rem; color:rgba(255,255,255,.78); }
   .art-home .art-hero--cinematic .art-hero-coordinate { top:6.2rem; left:1.3rem; font-size:.42rem; }
   .art-home .art-hero--cinematic .art-hero-orbit { right:-4rem; bottom:11rem; width:12rem; height:6rem; }
