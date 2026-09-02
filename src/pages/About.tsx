@@ -146,6 +146,15 @@ export const leadership = [
 
 export const studioTeam = [
   {
+    name: "Chakib Taleb",
+    role: "Senior Project Manager · Iris Studio",
+    text: "Senior Project Manager chez Iris Studio. Il accompagne le pilotage de projets et la coordination de leurs étapes de production.",
+    portrait: "assets/chakib-taleb.jpg",
+    profile: "https://dz.linkedin.com/in/chakib-taleb-716abb179",
+    alt: "Portrait de Chakib Taleb",
+    roleIcon: "projectManagement" as const,
+  },
+  {
     name: "Amine Ladjal",
     role: "Chef de projet · Iris Studio",
     text: "Chef de projet chez Iris Studio. Il contribue à la coordination et au suivi des projets au sein de l’agence.",
@@ -171,15 +180,6 @@ export const studioTeam = [
     profile: "https://dz.linkedin.com/in/toukal-ayoub-664429298",
     alt: "Portrait d’Ayoub Toukal à venir",
     roleIcon: "data" as const,
-  },
-  {
-    name: "Chakib Taleb",
-    role: "Senior Project Manager · Iris Studio",
-    text: "Senior Project Manager chez Iris Studio. Il accompagne le pilotage de projets et la coordination de leurs étapes de production.",
-    portrait: undefined,
-    profile: "https://dz.linkedin.com/in/chakib-taleb-716abb179",
-    alt: "Portrait de Chakib Taleb à venir",
-    roleIcon: "projectManagement" as const,
   },
 ];
 
@@ -369,35 +369,8 @@ export default function About() {
           </p>
         </section>
 
-        <section className="about-leadership section-pad" aria-labelledby="leadership-title">
-          <div className="about-leadership-orbit" aria-hidden="true"><i /><i /><i /></div>
-          <div className="about-leadership-route" aria-hidden="true"><span>05 / REGARD</span><i /><b /></div>
-          <div className="about-leadership-heading">
-            <p className="eyebrow">Direction associée à l’histoire du studio</p>
-            <h2 id="leadership-title" className="display-title">Trois parcours publics<br />qui portent <em>la direction.</em></h2>
-            <p>
-              Iris Studio avance grâce à un collectif de métiers. Les fonctions ci-dessous sont reprises d’informations professionnelles publiques afin de présenter la direction avec transparence.
-            </p>
-            <span className="about-direction-source">Dossier / portraits publics &amp; profils professionnels</span>
-          </div>
-          <div className="about-leadership-cards">
-            {leadership.map((person, index) => (
-              <article key={person.name} className="about-person-card">
-                <span className="about-person-archive">FICHE / 0{index + 1}</span>
-                <PersonMedia name={person.name} portrait={"portrait" in person ? person.portrait : undefined} alt={"portrait" in person ? person.alt : undefined} />
-                <RoleBadge icon={person.roleIcon} label={person.role} />
-                <h3>{person.name}</h3>
-                <span className="about-person-line" aria-hidden="true" />
-                <small>{person.text}</small>
-                <a className="about-person-link" href={person.profile} target="_blank" rel="noreferrer">Voir le profil LinkedIn <Linkedin size={14} /><ArrowUpRight size={14} /></a>
-              </article>
-            ))}
-          </div>
-          <p className="about-source-note">Fonctions et portraits issus de résultats publics liés aux profils LinkedIn, consultés en août 2026. Chaque carte renvoie vers le profil professionnel correspondant ; les biographies détaillées et l’attribution formelle du statut de fondateur pourront être complétées après validation d’Iris Studio.</p>
-        </section>
-
         <section className="about-studio-team section-pad" aria-labelledby="studio-team-title">
-          <div className="about-studio-team-route" aria-hidden="true"><span>06</span><i /><b>COLLECTIF IRIS</b></div>
+          <div className="about-studio-team-route" aria-hidden="true"><span>05</span><i /><b>COLLECTIF IRIS</b></div>
           <div className="about-studio-team-heading">
             <p className="eyebrow">Équipe Iris Studio</p>
             <h2 id="studio-team-title" className="display-title">Les métiers qui font<br /><em>avancer le studio.</em></h2>
@@ -420,6 +393,33 @@ export default function About() {
             ))}
           </div>
           <p className="about-studio-team-note">Dossier / les cartes utilisent un portrait seulement lorsqu’il est fourni ou vérifié comme image individuelle. Les autres restent volontairement en placeholder, plutôt que d’afficher une capture de profil. Les fonctions, profils et courtes biographies s’appuient sur les informations professionnelles publiques consultées en août 2026.</p>
+        </section>
+
+        <section className="about-leadership section-pad" aria-labelledby="leadership-title">
+          <div className="about-leadership-orbit" aria-hidden="true"><i /><i /><i /></div>
+          <div className="about-leadership-route" aria-hidden="true"><span>06 / REGARD</span><i /><b /></div>
+          <div className="about-leadership-heading">
+            <p className="eyebrow">Direction associée à l’histoire du studio</p>
+            <h2 id="leadership-title" className="display-title">Trois parcours publics<br />qui portent <em>la direction.</em></h2>
+            <p>
+              Iris Studio avance grâce à un collectif de métiers. Les fonctions ci-dessous sont reprises d’informations professionnelles publiques afin de présenter la direction avec transparence.
+            </p>
+            <span className="about-direction-source">Dossier / portraits publics &amp; profils professionnels</span>
+          </div>
+          <div className="about-leadership-cards">
+            {leadership.map((person, index) => (
+              <article key={person.name} className="about-person-card">
+                <span className="about-person-archive">FICHE / 0{index + 1}</span>
+                <PersonMedia name={person.name} portrait={"portrait" in person ? person.portrait : undefined} alt={"portrait" in person ? person.alt : undefined} />
+                <RoleBadge icon={person.roleIcon} label={person.role} />
+                <h3>{person.name}</h3>
+                <span className="about-person-line" aria-hidden="true" />
+                <small>{person.text}</small>
+                <a className="about-person-link" href={person.profile} target="_blank" rel="noreferrer">Voir le profil LinkedIn <Linkedin size={14} /><ArrowUpRight size={14} /></a>
+              </article>
+            ))}
+          </div>
+          <p className="about-source-note">Fonctions et portraits issus de résultats publics liés aux profils LinkedIn, consultés en août 2026. Chaque carte renvoie vers le profil professionnel correspondant ; les biographies détaillées et l’attribution formelle du statut de fondateur pourront être complétées après validation d’Iris Studio.</p>
         </section>
 
         <section className="about-ecosystem section-pad" aria-labelledby="ecosystem-title">
