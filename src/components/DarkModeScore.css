@@ -1,0 +1,59 @@
+.score-controls {
+  display: none;
+  align-items: center;
+  gap: .45rem;
+}
+html.dark .score-controls {
+  display: flex;
+}
+.score-volume {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.score-volume-label {
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1;
+}
+.score-volume-panel {
+  position: absolute;
+  z-index: 60;
+  right: calc(100% + .45rem);
+  top: 50%;
+  display: flex;
+  align-items: center;
+  width: 7.4rem;
+  height: 2.35rem;
+  padding: 0 .75rem;
+  border: 1px solid rgba(255,255,255,.76);
+  border-radius: 999px;
+  background: rgba(21,21,21,.92);
+  box-shadow: 0 .35rem 1rem rgba(0,0,0,.24);
+  transform: translateY(-50%);
+}
+.score-volume-panel input[type="range"] {
+  width: 100%;
+  margin: 0;
+  accent-color: #f28a43;
+  cursor: pointer;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .score-volume-panel {
+    top: calc(100% + .45rem);
+    right: 0;
+    width: 8rem;
+    height: 2.1rem;
+    transform: none;
+  }
+}
