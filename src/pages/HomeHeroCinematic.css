@@ -135,6 +135,7 @@
 }
 @media (max-width:640px) {
   .art-home .art-hero--cinematic { min-height:max(30rem,calc(100svh - 11.2rem)); padding:7.4rem 1.3rem 2.6rem; }
+  .dark .art-home .art-hero--cinematic .art-button-main { padding:.58rem .72rem; font-size:.48rem; }
 }
 @media (prefers-reduced-motion:reduce) { .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { transition:none; animation:none; } }
 
