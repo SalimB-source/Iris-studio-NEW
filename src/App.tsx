@@ -65,7 +65,7 @@ function AppShell() {
 }
 
 function App() {
-  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><ErrorBoundary><ThemeProvider defaultTheme="light" switchable><AppShell /></ThemeProvider></ErrorBoundary></WouterRouter>;
+  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><ErrorBoundary><ThemeProvider defaultTheme="light" switchable><DarkModeScore /><AppShell /></ThemeProvider></ErrorBoundary></WouterRouter>;
 }
 
 export default App;
