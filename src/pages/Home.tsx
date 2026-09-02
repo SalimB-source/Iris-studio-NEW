@@ -150,7 +150,6 @@ export default function Home() {
           <span className="art-hero-coordinate" data-iris-parallax="14">IRIS STUDIO / ALGER — 36.75° N</span>
           <div className="art-hero-copy">
             <p className="art-kicker art-hero-kicker"><span>01</span> COMMUNICATION AUTREMENT</p>
-            <p className="art-hero-manifesto">[ LE TERRAIN, SANS RACCOURCI ]</p>
             <h1 id="home-title" className="impact-title-lines art-hero-title-swap" data-impact-reveal data-impact-stage="1">
               <span className="art-hero-title art-hero-title-day">
                 <b>L’agence qui</b>
