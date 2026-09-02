@@ -7,6 +7,7 @@ import { Redirect, Route, Router as WouterRouter, Switch, useLocation } from "wo
 import ErrorBoundary from "./components/ErrorBoundary";
 import LaunchScreen from "./components/LaunchScreen";
 import PageNavigationTransition from "./components/PageNavigationTransition";
+import DarkModeScore from "./components/DarkModeScore";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { isPartnerProjectPath, partnerProjectScrollSettleDelay, scrollPartnerProjectToTop, scrollToPageTop } from "./components/partnerProjectNavigation";
