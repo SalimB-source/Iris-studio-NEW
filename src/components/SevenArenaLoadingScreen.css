@@ -68,7 +68,7 @@
 .sevenarena-loading-label,
 .sevenarena-loading-status {
   margin: 0;
-  font-family: Manrope, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: .62rem;
   line-height: 1.2;
   font-weight: 800;
@@ -87,7 +87,7 @@
 }
 
 .sevenarena-wordmark > span {
-  font-family: "DM Serif Display", serif;
+  font-family: "Open Sans", sans-serif;
   color: #e52f38;
   font-size: clamp(6.25rem, 21vw, 9.3rem);
   font-style: italic;
@@ -104,7 +104,7 @@
 
 .sevenarena-wordmark b,
 .sevenarena-wordmark strong {
-  font-family: Manrope, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: clamp(2rem, 8vw, 3.55rem);
   font-weight: 900;
   line-height: .78;
