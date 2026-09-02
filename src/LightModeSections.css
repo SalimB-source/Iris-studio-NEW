@@ -679,3 +679,20 @@ html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-d
 html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member-link, .about-person-link):hover {
   color: #e7433a !important;
 }
+
+/* À propos — planche logos : blanc + couleurs de marque, y compris en thème sombre. */
+.about-brand-scatter,
+.about-brand-scatter-item,
+.dark .about-brand-scatter,
+.dark .about-brand-scatter-item {
+  background: #fff !important;
+  background-color: #fff !important;
+}
+.about-brand-scatter img,
+.about-brand-scatter .mon-logo,
+.dark .about-brand-scatter img,
+.dark .about-brand-scatter .mon-logo,
+.dark .about-page .about-brand-scatter .mon-logo {
+  filter: none !important;
+  -webkit-filter: none !important;
+}

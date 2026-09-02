@@ -17,7 +17,6 @@ import "./AboutPortraitPlaceholders.css";
 import "./AboutLetsPlayLayout.css";
 import "./AboutTeamCardSystem.css";
 import "./AboutLetsPlayGaming.css";
-import "@/components/BrandMarquee.css";
 
 const roleIcons = {
   direction: BriefcaseBusiness,
@@ -423,22 +422,20 @@ export default function About() {
         </section>
 
         <section className="about-ecosystem section-pad" aria-labelledby="ecosystem-title">
-          <div className="about-ecosystem-route" aria-hidden="true"><span>07</span><i /></div>
-          <div className="about-ecosystem-copy">
+          <div className="about-ecosystem-route" aria-hidden="true"><span>07</span><i /><b>MARQUES</b></div>
+          <div className="about-ecosystem-heading">
             <p className="eyebrow">Un écosystème de confiance</p>
-            <h2 id="ecosystem-title" className="display-title">Les objectifs business,<br /><em>marketing et communication.</em></h2>
-            <p>La présence publique d’Iris Studio fait notamment référence à des collaborations avec des marques telles que Coca-Cola, Henkel, Ooredoo, Philip Morris, Bel, Danone, Algérie Télécom, Djezzy et Lafarge.</p>
+            <h2 id="ecosystem-title" className="display-title">Des marques rencontrées<br />sur le <em>terrain.</em></h2>
+            <p>La présence publique d’Iris Studio relie des annonceurs nationaux et internationaux. Leurs logos sont présentés ici en vrac, chacun dans ses couleurs de marque.</p>
           </div>
-            <div className="about-client-dossier">
-              <p className="about-client-source">DOSSIER / MARQUES CITÉES PAR LA PRÉSENTATION PUBLIQUE D’IRIS STUDIO</p>
-              <div className="about-client-marquee" aria-label="Logos des marques citées par Iris Studio">
-                <div className="about-client-marquee-track">
-                  {[0, 1].map((setIndex) => <div className="about-client-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
-                    {brandPartners.map((client) => <span className={client.name === "EGOR" ? "is-egor-logo" : undefined} key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
-                  </div>)}
-                </div>
-              </div>
-            </div>
+          <ul className="about-brand-scatter" aria-label="Logos des marques citées par Iris Studio">
+            {brandPartners.map((client) => (
+              <li key={client.name} className={client.name === "EGOR" ? "about-brand-scatter-item is-egor-logo" : "about-brand-scatter-item"}>
+                <img className="mon-logo" src={client.logo} alt={`Logo ${client.name}`} loading="lazy" decoding="async" />
+              </li>
+            ))}
+          </ul>
+          <p className="about-ecosystem-note">Dossier / logos officiels des marques citées par la présentation publique d’Iris Studio. Couleurs de marque conservées.</p>
         </section>
 
         <section className="about-contact section-pad" aria-labelledby="about-contact-title">
