@@ -4,7 +4,7 @@
  * Thème « Portfolio Iris » : fond blanc, rouge Iris, orange signal et formes inspirées de l’œil du logo officiel.
  * La structure s’inspire du rythme de portfolio de Profilex sans reprendre ses contenus, ses médias ou son code.
  */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,900;1,900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
