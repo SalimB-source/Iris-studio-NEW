@@ -74,7 +74,7 @@
   .art-home .art-hero--cinematic::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.52) 0%,rgba(0,0,0,.42) 32%,rgba(0,0,0,.62) 64%,rgba(0,0,0,.9) 100%); }
   .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { object-position:64% 34%; }
   .art-home .art-hero--cinematic .art-hero-copy { position:relative; z-index:2; max-width:100%; margin:0; }
-  .art-home .art-hero--cinematic .art-hero-copy h1 { max-width:none; font-size:clamp(2.55rem,11.2vw,3.85rem); line-height:.9; text-shadow:0 .06em .28em rgba(0,0,0,.88),0 0 .08em rgba(0,0,0,.95); }
+  .art-home .art-hero--cinematic .art-hero-copy h1 { max-width:none; font-size:clamp(2.15rem,9.6vw,3.25rem); line-height:.94; text-shadow:0 .06em .28em rgba(0,0,0,.88),0 0 .08em rgba(0,0,0,.95); }
   .art-home .art-hero--cinematic .impact-title-lines > .art-hero-title > b { white-space:normal; }
   .art-home .art-hero--cinematic .art-hero-manifesto { margin:1.2rem 0 .75rem; color:rgba(255,255,255,.88); }
   .art-home .art-hero--cinematic .art-hero-intro-swap { max-width:22rem; }
