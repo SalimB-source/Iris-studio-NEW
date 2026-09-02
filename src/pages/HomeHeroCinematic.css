@@ -27,7 +27,7 @@
 .art-home .art-hero--cinematic .art-hero-kicker { color:#fff; }
 .art-home .art-hero--cinematic .art-hero-kicker span { border-color:#e7433a; color:#fff; }
 .art-home .art-hero--cinematic .art-hero-manifesto { margin:clamp(1.6rem,3vw,3.2rem) 0 1rem; color:rgba(255,255,255,.88); font-size:.56rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
-.art-home .art-hero--cinematic .art-hero-copy h1 { display:grid; max-width:none; margin:0 0 1.5rem; color:#fff; font-family:"Open Sans",Arial,sans-serif; font-size:clamp(2.55rem,5.4vw,5.35rem); font-weight:900; letter-spacing:-.04em; line-height:.92; text-shadow:0 .08em .38em rgba(0,0,0,.72),0 0 .05em rgba(0,0,0,.92); }
+.art-home .art-hero--cinematic .art-hero-copy h1 { display:grid; max-width:none; margin:0 0 1.5rem; color:#fff; font-family: Inter, Arial, sans-serif; font-size:clamp(2.55rem,5.4vw,5.35rem); font-weight:900; letter-spacing:-.04em; line-height:.92; text-shadow:0 .08em .38em rgba(0,0,0,.72),0 0 .05em rgba(0,0,0,.92); }
 .art-home .art-hero--cinematic .art-hero-copy h1 em { color:#e7433a; font-style:italic; font-weight:900; }
 .art-home .art-hero--cinematic .impact-title-lines > .art-hero-title { display:grid; grid-area:1 / 1; }
 .art-home .art-hero--cinematic .impact-title-lines > .art-hero-title > b { display:block; font-weight:900; white-space:nowrap; }

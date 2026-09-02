@@ -18,7 +18,7 @@
 .letsplay-member-card-portrait figcaption { position: absolute; z-index: 1; right: .9rem; bottom: .75rem; left: .9rem; color: rgba(255, 249, 255, .68); font-size: .49rem; font-weight: 800; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
 .letsplay-member-card-role { display: flex; align-items: center; gap: .45rem; min-height: 2.6rem; margin: 0; padding: .8rem 1rem 0; color: #ffc633; font-size: .57rem; font-weight: 800; letter-spacing: .07em; line-height: 1.45; text-transform: uppercase; }
 .letsplay-member-card-role svg { flex: 0 0 auto; color: #ed64ff; }
-.letsplay-member-card h3 { margin: .45rem 1rem 0; color: #fff9ff; font-family: "Open Sans", Arial, sans-serif; font-size: clamp(1.75rem, 2.5vw, 2.55rem); font-weight: 900; letter-spacing: -.055em; line-height: .93; }
+.letsplay-member-card h3 { margin: .45rem 1rem 0; color: #fff9ff; font-family: Inter, Arial, sans-serif; font-size: clamp(1.75rem, 2.5vw, 2.55rem); font-weight: 900; letter-spacing: -.055em; line-height: .93; }
 .letsplay-member-card-bio { margin: .75rem 1rem 0; color: rgba(255, 249, 255, .73); font-size: .68rem; line-height: 1.65; }
 .letsplay-member-card-episode, .letsplay-member-card-link { display: inline-flex; align-items: center; gap: .42rem; margin: auto 1rem 0; padding-top: 1rem; color: #ffc633; font-size: .59rem; font-weight: 800; letter-spacing: .05em; line-height: 1.35; text-transform: uppercase; }
 .letsplay-member-card-episode { margin-top: 1rem; border-top: 1px solid rgba(255, 249, 255, .14); }

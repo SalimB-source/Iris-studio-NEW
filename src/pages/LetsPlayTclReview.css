@@ -25,7 +25,7 @@
 .letsplay-tcl-review-card figcaption { position:absolute; z-index:1; right:1.15rem; bottom:1rem; color:#fff; font-size:.56rem; font-weight:800; letter-spacing:.11em; }
 .letsplay-tcl-review-card > div { display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; padding:clamp(1.7rem,3.4vw,2.65rem); border-radius:0 0 1.45rem 1.45rem; background:#2c2059; }
 .letsplay-tcl-review-card > div > p { margin:0; color:#f5d744; font-size:.52rem; font-weight:800; letter-spacing:.11em; }
-.letsplay-tcl-review-card h3 { margin:.75rem 0 1rem; font-family:"Open Sans",Arial,sans-serif; font-size:clamp(1.5rem,2.25vw,2.3rem); font-weight: 900; letter-spacing:-.05em; line-height:.97; }
+.letsplay-tcl-review-card h3 { margin:.75rem 0 1rem; font-family: Inter, Arial, sans-serif; font-size:clamp(1.5rem,2.25vw,2.3rem); font-weight: 900; letter-spacing:-.05em; line-height:.97; }
 .letsplay-tcl-review-card > div > span { color:rgba(255,255,255,.7); font-size:.8rem; line-height:1.65; }
 .letsplay-tcl-review-card strong { display:inline-flex; align-items:center; gap:.5rem; margin-top:1.5rem; color:#fff; font-size:.6rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
 .letsplay-tcl-review-card strong svg { color:#f5d744; }

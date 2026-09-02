@@ -1,4 +1,4 @@
-/* Titres : Open Sans Black partout. Le reste du texte reste Open Sans Regular. */
+/* Titres : Inter Black partout. Le reste du texte reste Open Sans Regular. */
 html body :is(
   h1, h2, h3, h4, h5, h6,
   .display-title, .hero-title, .art-hero-title, .art-hero-copy h1,
@@ -12,7 +12,7 @@ html body :is(
   .display-title, .hero-title, .art-hero-title, .art-hero-copy h1,
   .brand-typemark
 ) * {
-  font-family: "Open Sans", Arial, sans-serif !important;
+  font-family: Inter, "Inter", Arial, sans-serif !important;
   font-weight: 900 !important;
 }
 
