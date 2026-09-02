@@ -167,7 +167,7 @@ export default function Home() {
               <p className="art-hero-intro art-hero-intro-day">Du concept à la production, nous créons des expériences de marque immersives et percutantes.</p>
               <p className="art-hero-intro art-hero-intro-night">Analyse des tendances, surveillance de la concurrence et insights stratégiques pour anticiper les mouvements avant vos adversaires.</p>
             </div>
-            <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact"><img className="art-button-batwing" src="assets/iris-bat-wing.png" alt="" aria-hidden="true" /><span className="art-button-label">Ouvrir un projet <ArrowUpRight size={17} /></span></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
+            <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact">Ouvrir un projet <ArrowUpRight size={17} /></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
             <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
           <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-10">

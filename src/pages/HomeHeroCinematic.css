@@ -56,54 +56,6 @@
 .art-home .art-hero--cinematic .art-hero-socials a:focus-visible { outline:2px solid #f28a43; outline-offset:3px; }
 .art-home .art-hero--cinematic .art-button-main { background:#e7433a; }
 .art-home .art-hero--cinematic .art-button-main:hover { background:#f28a43; color:#202020; }
-.art-home .art-hero--cinematic .art-button-batwing { display:none; }
-.art-home .art-hero--cinematic .art-button-label { display:inline-flex; align-items:center; gap:.65rem; }
-/* Thème sombre : même gabarit que le CTA clair, silhouette bat-wing jaune, texte noir. */
-.dark .art-home .art-hero--cinematic .art-button-main {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  padding: .94rem 1.16rem;
-  overflow: visible;
-  border-radius: 0;
-  background: transparent !important;
-  color: #0a0a0a;
-  white-space: nowrap;
-  filter: drop-shadow(0 .2rem .12rem rgba(0,0,0,.45));
-  transition: transform 160ms cubic-bezier(.23,1,.32,1), filter 160ms cubic-bezier(.23,1,.32,1);
-}
-.dark .art-home .art-hero--cinematic .art-button-batwing {
-  display: block;
-  position: absolute !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  max-height: none !important;
-  object-fit: fill;
-  pointer-events: none;
-}
-.dark .art-home .art-hero--cinematic .art-button-label {
-  position: relative;
-  z-index: 1;
-  color: #0a0a0a !important;
-}
-.dark .art-home .art-hero--cinematic .art-button-main:hover {
-  background: transparent !important;
-  color: #0a0a0a;
-  filter: drop-shadow(0 .28rem .18rem rgba(255,208,0,.4));
-}
-.dark .art-home .art-hero--cinematic .art-button-main:focus-visible {
-  outline: none;
-  filter: drop-shadow(0 0 .4rem #f5c400);
-}
 .art-home .art-hero--cinematic .art-text-link { color:#fff; }
 .art-home .art-hero--cinematic .art-text-link:hover { color:#f28a43; }
 .art-home .art-hero--cinematic .art-hero-coordinate { z-index:3; top:clamp(7rem,10vw,9rem); left:max(1.5rem,4vw); color:rgba(255,255,255,.7); }
@@ -148,7 +100,6 @@
 }
 @media (max-width:640px) {
   .art-home .art-hero--cinematic { min-height:max(30rem,calc(100svh - 11.2rem)); padding:7.4rem 1.3rem 2.6rem; }
-  .dark .art-home .art-hero--cinematic .art-button-main { padding:.58rem .72rem; font-size:.48rem; }
 }
 @media (prefers-reduced-motion:reduce) { .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { transition:none; animation:none; } }
 
