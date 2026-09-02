@@ -1,21 +1,22 @@
-/* Typographie unique : titres Open Sans Black, reste du texte Open Sans Regular. */
-html, body {
-  font-family: "Open Sans", Arial, sans-serif !important;
-  font-weight: 400;
-}
-
-html body,
-html body * {
-  font-family: "Open Sans", Arial, sans-serif !important;
-  font-weight: 400 !important;
-}
-
-html body :is(h1, h2, h3, h4, h5, h6, .display-title, .hero-title, .art-hero-title, .accent-number, .brand-typemark, .iris-figures-grid strong, .art-proof-numbers strong),
-html body :is(h1, h2, h3, h4, h5, h6, .display-title, .hero-title, .art-hero-title, .brand-typemark) * {
+/* Titres : Open Sans Black partout. Le reste du texte reste Open Sans Regular. */
+html body :is(
+  h1, h2, h3, h4, h5, h6,
+  .display-title, .hero-title, .art-hero-title, .art-hero-copy h1,
+  .accent-number, .brand-typemark, .mobile-menu > a:not(.menu-contact),
+  .iris-figures-grid strong, .art-proof-numbers strong,
+  .partner-item strong, .operational-detail-specs strong,
+  .operational-detail-next-link strong, .arena-voice strong
+),
+html body :is(
+  h1, h2, h3, h4, h5, h6,
+  .display-title, .hero-title, .art-hero-title, .art-hero-copy h1,
+  .brand-typemark
+) * {
   font-family: "Open Sans", Arial, sans-serif !important;
   font-weight: 900 !important;
 }
 
-html body :is(h1, h2, h3, h4, h5, h6, .display-title, .hero-title) em {
+html body :is(h1, h2, h3, h4, h5, h6, .display-title, .hero-title, .art-hero-copy h1) em {
   font-style: italic;
+  font-weight: 900 !important;
 }
