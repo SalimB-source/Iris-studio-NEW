@@ -606,18 +606,18 @@ html:not(.dark) .operational-detail-media figcaption {
 
 /* Thème clair : une section sur deux en rouge Iris, texte blanc.
    Héros photo, frises logos, Let’s Play / 7ouma restent hors de cet aplat. */
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) {
   background: #e7433a !important;
   background-color: #e7433a !important;
   color: #fff !important;
   border-top-color: rgba(255, 255, 255, 0.22) !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span) {
   color: #fff !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title) em {
   color: #fff !important;
 }
 
@@ -663,20 +663,20 @@ html:not(.dark) .art-home main > section.art-proof .art-proof-line i {
 }
 
 /* À propos / 06 : cartes blanches. Même spécificité que l’aplat rouge, sinon le texte reste blanc. */
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member, .about-person-card) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(.about-studio-member, .about-person-card) {
   background: #fff !important;
   color: #202020 !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member, .about-person-card) :is(h1, h2, h3, h4, p, small, li, a, strong, b, em, span) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(.about-studio-member, .about-person-card) :is(h1, h2, h3, h4, p, small, li, a, strong, b, em, span) {
   color: #202020 !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member, .about-person-card) small {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(.about-studio-member, .about-person-card) small {
   color: #5f5955 !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member, .about-person-card) :is(.about-studio-member-index, .about-person-archive, .about-role-badge, .about-role-badge span) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(.about-studio-member, .about-person-card) :is(.about-studio-member-index, .about-person-archive, .about-role-badge, .about-role-badge span) {
   color: #e7433a !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team) :is(.about-studio-member-link, .about-person-link):hover {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(.about-studio-member-link, .about-person-link):hover {
   color: #e7433a !important;
 }
 

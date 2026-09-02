@@ -277,36 +277,6 @@ export default function About() {
           </div>
         </section>
 
-        <section className="about-backstage-gallery section-pad" aria-labelledby="backstage-gallery-title">
-          <div className="about-backstage-gallery-route" aria-hidden="true"><span>03</span><i /><b>COULISSES OPÉRATIONNELLES</b></div>
-          <div className="about-backstage-gallery-heading">
-            <div>
-              <p className="eyebrow">Coulisses / archives de terrain</p>
-              <h2 id="backstage-gallery-title" className="display-title">Avant l’impact, il y a<br /><em>le geste juste.</em></h2>
-            </div>
-            <div>
-              <p>Une sélection d’archives de projets accompagne le récit du studio : préparation du point de vente, conception de dispositifs et activation sur le terrain.</p>
-              <span>Dossiers / captures LinkedIn Iris Studio fournies par l’équipe</span>
-            </div>
-          </div>
-          <div className="about-backstage-gallery-grid">
-            {backstageGallery.map((item) => (
-              <figure key={item.id} className={`about-backstage-gallery-item about-backstage-gallery-item-${item.layout}`}>
-                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
-                <figcaption>
-                  <span>{item.index}</span>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                  <small>{item.source}</small>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <Link href="/projets" className="about-backstage-gallery-link">Voir les dossiers opérationnels <ArrowUpRight size={17} /></Link>
-        </section>
-
         <section className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
           <div className="about-letsplay-team-route" aria-hidden="true"><span>04</span><i /><b>CRÉDITS DE FABRICATION</b></div>
           <div className="about-letsplay-brand-stamp">
@@ -436,6 +406,36 @@ export default function About() {
             ))}
           </ul>
           <p className="about-ecosystem-note">Dossier / logos officiels des marques citées par la présentation publique d’Iris Studio. Couleurs de marque conservées.</p>
+        </section>
+
+        <section className="about-backstage-gallery section-pad" aria-labelledby="backstage-gallery-title">
+          <div className="about-backstage-gallery-route" aria-hidden="true"><span>03</span><i /><b>COULISSES OPÉRATIONNELLES</b></div>
+          <div className="about-backstage-gallery-heading">
+            <div>
+              <p className="eyebrow">Coulisses / archives de terrain</p>
+              <h2 id="backstage-gallery-title" className="display-title">Avant l’impact, il y a<br /><em>le geste juste.</em></h2>
+            </div>
+            <div>
+              <p>Une sélection d’archives de projets accompagne le récit du studio : préparation du point de vente, conception de dispositifs et activation sur le terrain.</p>
+              <span>Dossiers / captures LinkedIn Iris Studio fournies par l’équipe</span>
+            </div>
+          </div>
+          <div className="about-backstage-gallery-grid">
+            {backstageGallery.map((item) => (
+              <figure key={item.id} className={`about-backstage-gallery-item about-backstage-gallery-item-${item.layout}`}>
+                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                <figcaption>
+                  <span>{item.index}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                  <small>{item.source}</small>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <Link href="/projets" className="about-backstage-gallery-link">Voir les dossiers opérationnels <ArrowUpRight size={17} /></Link>
         </section>
 
         <section className="about-contact section-pad" aria-labelledby="about-contact-title">

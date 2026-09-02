@@ -56,6 +56,29 @@
 .art-home .art-hero--cinematic .art-hero-socials a:focus-visible { outline:2px solid #f28a43; outline-offset:3px; }
 .art-home .art-hero--cinematic .art-button-main { background:#e7433a; }
 .art-home .art-hero--cinematic .art-button-main:hover { background:#f28a43; color:#202020; }
+/* Thème sombre : le CTA « Ouvrir un projet » prend la silhouette des ailes de Batman. */
+.dark .art-home .art-hero--cinematic .art-button-main {
+  width: 18.4rem;
+  height: 7.1rem;
+  padding: .35rem 2.8rem 1.05rem;
+  border-radius: 0;
+  background: #e7433a;
+  color: #fff;
+  white-space: nowrap;
+  -webkit-clip-path: polygon(50% 100%, 36% 78%, 22% 84%, 8% 64%, 0 40%, 11% 46%, 16% 28%, 25% 40%, 20% 8%, 33% 0, 40% 30%, 50% 10%, 60% 30%, 67% 0, 80% 8%, 75% 40%, 84% 28%, 89% 46%, 100% 40%, 92% 64%, 78% 84%, 64% 78%);
+  clip-path: polygon(50% 100%, 36% 78%, 22% 84%, 8% 64%, 0 40%, 11% 46%, 16% 28%, 25% 40%, 20% 8%, 33% 0, 40% 30%, 50% 10%, 60% 30%, 67% 0, 80% 8%, 75% 40%, 84% 28%, 89% 46%, 100% 40%, 92% 64%, 78% 84%, 64% 78%);
+  filter: drop-shadow(0 .35rem .15rem rgba(0,0,0,.45));
+  transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms cubic-bezier(.23,1,.32,1), color 160ms cubic-bezier(.23,1,.32,1), filter 160ms cubic-bezier(.23,1,.32,1);
+}
+.dark .art-home .art-hero--cinematic .art-button-main:hover {
+  background: #f5c400;
+  color: #0a0a0a;
+  filter: drop-shadow(0 .45rem .2rem rgba(245,196,0,.35));
+}
+.dark .art-home .art-hero--cinematic .art-button-main:focus-visible {
+  outline: none;
+  filter: drop-shadow(0 0 .45rem #f28a43);
+}
 .art-home .art-hero--cinematic .art-text-link { color:#fff; }
 .art-home .art-hero--cinematic .art-text-link:hover { color:#f28a43; }
 .art-home .art-hero--cinematic .art-hero-coordinate { z-index:3; top:clamp(7rem,10vw,9rem); left:max(1.5rem,4vw); color:rgba(255,255,255,.7); }
@@ -80,6 +103,7 @@
   .art-home .art-hero--cinematic .art-hero-intro-swap { max-width:22rem; }
   .art-home .art-hero--cinematic .art-hero-intro { max-width:22rem; font-size:clamp(1rem,3.8vw,1.14rem); line-height:1.5; color:#fff; text-shadow:0 .08em .24em rgba(0,0,0,.85); }
   .art-home .art-hero--cinematic .art-hero-actions { gap:.7rem; margin-top:1.5rem; }
+  .dark .art-home .art-hero--cinematic .art-button-main { width:15.4rem; height:5.7rem; padding:.1rem 2.1rem .7rem; font-size:.58rem; }
   .art-home .art-hero--cinematic .art-hero-socials { margin-top:1.1rem; color:rgba(255,255,255,.78); }
   .art-home .art-hero--cinematic .art-hero-coordinate { top:6.2rem; left:1.3rem; font-size:.42rem; }
   .art-home .art-hero--cinematic .art-hero-orbit { right:-4rem; bottom:11rem; width:12rem; height:6rem; }
