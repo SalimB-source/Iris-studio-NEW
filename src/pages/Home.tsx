@@ -145,7 +145,6 @@ export default function Home() {
     <div className="page-shell art-home">
       <SiteHeader />
       <main className="art-main">
-        <div className="art-trajectory-mark" aria-hidden="true"><i /><i /><i /><b>IRIS / EN MOUVEMENT</b></div>
         <section className="art-hero art-hero--cinematic" aria-labelledby="home-title">
           <span className="art-hero-coordinate" data-iris-parallax="14">IRIS STUDIO / ALGER — 36.75° N</span>
           <div className="art-hero-copy">
@@ -199,7 +198,6 @@ export default function Home() {
 
         <section id="trajectory" className="art-manifesto" aria-labelledby="intro-title">
           <div className="art-manifesto-rail" aria-hidden="true"><span>02</span><i /><b>TRAJECTOIRE</b></div>
-          <div className="art-manifesto-word art-parallax-layer" data-iris-parallax="-14" aria-hidden="true">RENCONTRER</div>
           <div className="art-manifesto-copy">
             <p className="art-kicker"><span>02</span> UNE PRATIQUE DU RÉEL</p>
             <h2 id="intro-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une stratégie n’existe<br />vraiment que lorsqu’elle<br /><em>rencontre son monde.</em></h2>
@@ -225,7 +223,6 @@ export default function Home() {
         </section>
 
         <section className="art-field" aria-labelledby="field-title">
-          <div className="art-field-oversize art-parallax-layer" data-iris-parallax="-22" aria-hidden="true">FAIRE</div>
           <figure className="art-field-image art-parallax-layer" data-iris-parallax="10">
             <picture><source type="image/webp" srcSet={`${trajectoryImages.field.compact} 960w, ${trajectoryImages.field.large} 1440w`} sizes="(max-width: 760px) 100vw, 50vw" /><img src={trajectoryImages.field.large} alt="Scène de préparation stratégique et de travail d’équipe autour de supports de campagne" loading="lazy" decoding="async" width="1440" height="810" /></picture>
             <figcaption><span>ARCHIVE / 04 · STRATÉGIE &amp; TERRAIN</span><b>Les idées changent d’échelle au contact du terrain.</b></figcaption>
