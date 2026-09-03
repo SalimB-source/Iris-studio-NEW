@@ -100,7 +100,8 @@ html:not(.dark) .art-contact-orbit i {
 }
 
 /* Dark-mode override: remove the right-side background image in the home contact (07) section */
-.dark .art-home main > section.art-contact .iris-import-lens {
+.dark .art-home main > section.art-contact .iris-import-lens,
+.dark .art-home main > section.art-contact .iris-import-atmosphere {
   display: none !important;
 }
 
