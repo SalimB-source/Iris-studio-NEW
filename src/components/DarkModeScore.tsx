@@ -45,11 +45,21 @@ export default function DarkModeScore({ children }: { children?: ReactNode }) {
     audio.preload = "auto";
     applyGain(audio);
     audioRef.current = audio;
+    // Expose audio for manual testing and add debug listeners
+    try {
+      (window as any).__irisDarkAudio = audio;
+    } catch (e) {
+      // ignore in non-browser environments
+    }
+    audio.addEventListener('play', () => console.debug('[DarkModeScore] audio play event'));
+    audio.addEventListener('pause', () => console.debug('[DarkModeScore] audio paused'));
+    audio.addEventListener('error', (ev) => console.warn('[DarkModeScore] audio error', ev));
     return () => {
       audio.pause();
       audio.removeAttribute("src");
       audio.load();
       audioRef.current = null;
+      try { delete (window as any).__irisDarkAudio; } catch (e) {}
     };
   }, [applyGain]);
 
