@@ -11,7 +11,7 @@ import {
 import { useTheme } from "@/contexts/ThemeContext";
 import "./DarkModeScore.css";
 
-const DEFAULT_VOLUME = 0.6;
+const DEFAULT_VOLUME = 0.15;
 
 type ScoreApi = {
   muted: boolean;
