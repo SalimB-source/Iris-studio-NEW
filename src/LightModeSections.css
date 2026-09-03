@@ -426,7 +426,7 @@ html:not(.dark) .operation-record h3 em {
   color: #fff !important;
 }
 .dark .art-contact h2 em {
-  color: #202020 !important;
+color: #f28a43 !important;
 }
 
 .dark .operations-ledger-heading h2,
