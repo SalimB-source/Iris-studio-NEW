@@ -40,7 +40,8 @@ export default function DarkModeScore({ children }: { children?: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    const audio = new Audio(`${import.meta.env.BASE_URL}assets/iris-dark-cinematic.mp3`);
+    // Append a cache-busting query param to avoid stale cached copies in browsers
+    const audio = new Audio(`${import.meta.env.BASE_URL}assets/iris-dark-cinematic.mp3?v=${Date.now()}`);
     audio.loop = true;
     audio.preload = "auto";
     applyGain(audio);
