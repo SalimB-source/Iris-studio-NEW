@@ -95,6 +95,16 @@ html:not(.dark) .art-contact-orbit {
 }
 
 html:not(.dark) .art-contact-orbit i {
+
+/* Hide right-side decorative image for contact section in dark mode */
+}
+
+/* Dark-mode override: remove the right-side background image in the home contact (07) section */
+.dark .art-home main > section.art-contact .iris-import-lens {
+  display: none !important;
+}
+
+html:not(.dark) .art-contact-orbit i {
   border-color: rgba(32, 32, 32, 0.16);
 }
 
