@@ -66,8 +66,6 @@
 .art-home .art-hero--cinematic .art-hero-protocol b { margin-left:.8rem; color:#f28a43; font-style:normal; }
 .art-home .art-hero--cinematic .art-scroll-cue { z-index:3; bottom:clamp(1.45rem,2.6vw,2.5rem); left:max(1.5rem,4vw); color:#fff; }
 .art-home .art-hero--cinematic .art-scroll-cue svg { color:#f28a43; }
-@media (prefers-reduced-motion:no-preference) { .art-home .art-hero--cinematic .art-hero-visual .art-hero-image { animation:iris-cinematic-breathe 15s cubic-bezier(.45,0,.2,1) infinite alternate; } }
-@keyframes iris-cinematic-breathe { from { transform:scale(1); } to { transform:scale(1.035); } }
 @media (max-width:760px) {
   .art-home .art-hero--cinematic { min-height:max(32rem,calc(100svh - 8.8rem)); align-items:end; padding:8rem 1.3rem 3.2rem; }
   .art-home .art-hero--cinematic::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.52) 0%,rgba(0,0,0,.42) 32%,rgba(0,0,0,.62) 64%,rgba(0,0,0,.9) 100%); }
