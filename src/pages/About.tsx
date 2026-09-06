@@ -175,9 +175,9 @@ export const studioTeam = [
     name: "Ayoub Toukal",
     role: "Data Engineer · Data Scientist · Big Data Analyst",
     text: "Profil data chez Iris Studio, avec une expertise déclarée en data engineering, data science et big data analytics.",
-    portrait: undefined,
+    portrait: "assets/ayoub-toukal.jpg",
     profile: "https://dz.linkedin.com/in/toukal-ayoub-664429298",
-    alt: "Portrait d’Ayoub Toukal à venir",
+    alt: "Portrait d’Ayoub Toukal",
     roleIcon: "data" as const,
   },
   {
