@@ -63,6 +63,31 @@ html:not(.dark) .contact-form a { color: #202020 !important; }
 @media (prefers-reduced-motion: reduce) { .contact-submit { transition: none; } }
 
 /* Version publique sans formulaire : les canaux directs restent visibles, lisibles et actionnables. */
+
+/* Force readable input text and placeholders across themes. General rule first, then explicit dark-mode override so dark theme remains legible. */
+.contact-form input:not([type="checkbox"]),
+.contact-form textarea,
+.contact-form select,
+.contact-form button {
+  color: #202020 !important;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6b6763 !important;
+  opacity: 1 !important;
+}
+/* Dark-theme override: keep light placeholders/text in dark mode */
+.dark .contact-form input:not([type="checkbox"]),
+.dark .contact-form textarea,
+.dark .contact-form select,
+.dark .contact-form button {
+  color: #f7f2ec !important;
+}
+.dark .contact-form input::placeholder,
+.dark .contact-form textarea::placeholder {
+  color: rgba(247,242,236,.6) !important;
+}
+
 .contact-socials { margin-top: 1rem; }.contact-socials > p { margin: 0 0 .6rem; color: #645e58; font-size: .62rem; font-weight: 800; letter-spacing: .095em; text-transform: uppercase; }.contact-social-list { display: flex; flex-wrap: wrap; gap: .55rem; }.contact-social-list a { display: inline-flex; align-items: center; gap: .42rem; min-height: 2.3rem; border: 1px solid rgba(32,32,32,.18); border-radius: 999px; padding: .48rem .7rem; color: #202020; font-size: .68rem; font-weight: 800; letter-spacing: .035em; text-decoration: none; transition: background 160ms cubic-bezier(.23,1,.32,1),color 160ms cubic-bezier(.23,1,.32,1),transform 160ms cubic-bezier(.23,1,.32,1); }.contact-social-list a:hover { background: #202020; color: #fff; }.contact-social-list a:active { transform: scale(.97); }.contact-social-list a:focus-visible { outline: 2px solid #e7433a; outline-offset: 3px; }.contact-direct-card { border: 1px solid rgba(32,32,32,.2); padding: clamp(1.3rem,3vw,3rem); background: #fff; box-shadow: 1rem 1rem 0 rgba(231,67,58,.12); }.contact-direct-content { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; padding-top: 1.55rem; }.
 
 /* Map preview block */
