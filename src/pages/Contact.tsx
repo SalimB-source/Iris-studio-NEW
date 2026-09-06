@@ -16,29 +16,29 @@ function ContactSpreeForm() {
       <div className="contact-form-grid">
         <label>
           <span>Nom</span>
-          <input type="text" name="name" />
+          <input type="text" name="name" style={{ color: '#202020', WebkitTextFillColor: '#202020', background: 'transparent' }} />
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" required />
+          <input type="email" name="email" required style={{ color: '#202020', WebkitTextFillColor: '#202020', background: 'transparent' }} />
         </label>
         <label className="contact-form-full">
           <span>Sujet</span>
-          <input type="text" name="_subject" />
+          <input type="text" name="_subject" style={{ color: '#202020', WebkitTextFillColor: '#202020', background: 'transparent' }} />
         </label>
         <label className="contact-form-full">
           <span>Message</span>
-          <textarea name="message" required />
+          <textarea name="message" required style={{ color: '#202020', WebkitTextFillColor: '#202020', background: 'transparent' }} />
         </label>
       </div>
 
       <input type="hidden" name="_language" value="fr" />
       <div className="contact-honeypot" aria-hidden="true">
-        <label>Do not fill <input type="text" name="_gotcha" /></label>
+        <label>Do not fill <input type="text" name="_gotcha" style={{ color: '#202020', WebkitTextFillColor: '#202020', background: 'transparent' }} /></label>
       </div>
 
       <div className="contact-submit-wrap">
-        <button type="submit" className="contact-submit">Envoyer</button>
+        <button type="submit" className="contact-submit" style={{ color: '#202020', WebkitTextFillColor: '#202020' }}>Envoyer</button>
       </div>
     </form>
   );
