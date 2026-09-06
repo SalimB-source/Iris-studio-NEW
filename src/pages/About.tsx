@@ -190,6 +190,15 @@ export const studioTeam = [
     roleIcon: "community" as const,
   },
   {
+    name: "Imen Derradji",
+    role: "Spécialiste trade marketing · Iris Studio",
+    text: "Trade marketing specialist chez Iris Studio. Elle accompagne les dispositifs de marque au contact du point de vente et des équipes commerciales.",
+    portrait: "assets/imen-derradji.jpg",
+    profile: "https://dz.linkedin.com/in/imen-derradji-9b5980221",
+    alt: "Portrait d’Imen Derradji",
+    roleIcon: "projectManagement" as const,
+  },
+  {
     name: "Hammou Mohamed Riad",
     role: "Chef de projet senior",
     text: "Chef de projet senior chez Iris Studio, pilotage de programmes et coordination transverse.",
