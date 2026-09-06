@@ -20,8 +20,8 @@ const navigation = [
   { href: "/contact", label: "Contact" },
 ];
 
-const IRIS_NAV_LOGO = "assets/iris-nav-logo-light-static-provided.png";
-const IRIS_LOGO_PROVIDED = "assets/iris-studio-logo-provided.png";
+const IRIS_LOGO_LIGHT = "assets/iris-logo-light.png";
+const IRIS_LOGO_WHITE = "assets/iris-logo-white.png";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ export function SiteHeader() {
   const { theme, toggleTheme } = useTheme();
   const hasCinematicHomeHero = location === "/" && !scrolled;
   const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero;
-  const logo = usesWhiteLogo ? IRIS_LOGO_PROVIDED : IRIS_NAV_LOGO;
+  const logo = usesWhiteLogo ? IRIS_LOGO_WHITE : IRIS_LOGO_LIGHT;
   const logoClassName = `brand-logo${usesWhiteLogo ? " brand-logo--white" : ""}`;
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const logo = IRIS_LOGO_PROVIDED;
+  const logo = IRIS_LOGO_WHITE;
   return (
     <footer className="site-footer page-footer">
       <div className="footer-top">

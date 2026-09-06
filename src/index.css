@@ -890,3 +890,21 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
   filter: none !important;
   -webkit-filter: none !important;
 }
+
+/* Logos officiels : gris/rouge en clair, blanc/rouge en sombre — aucun filtre de substitution. */
+.brand-logo-wrap { width: 13.6rem; }
+.brand-logo { height: 3.15rem; object-fit: contain; filter: none !important; }
+.art-home .brand-logo,
+.brand-logo--white,
+.dark .brand-logo-wrap img.brand-logo--white,
+.dark .art-home .brand-logo,
+.footer-logo-wrap img,
+.dark .footer-logo-wrap img {
+  filter: none !important;
+}
+.footer-logo-wrap { width: 13.6rem; }
+@media (max-width: 720px) {
+  .brand-logo-wrap { width: 11.2rem; }
+  .brand-logo { height: 2.7rem; }
+  .footer-logo-wrap { width: 11.2rem; }
+}

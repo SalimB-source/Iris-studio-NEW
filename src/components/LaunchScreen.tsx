@@ -24,7 +24,7 @@ export default function LaunchScreen({ onComplete }: LaunchScreenProps) {
       <p className="launch-kicker">IRIS STUDIO / ALGER</p>
       <div className="launch-lens-icon" aria-hidden="true"><i /><b /></div>
       <div className="launch-logo-reveal">
-        <img src="assets/iris-nav-logo-light-static-provided.png" alt="Iris Studio" />
+        <img src="assets/iris-logo-light.png" alt="Iris Studio" />
       </div>
       <div className="launch-progress" aria-hidden="true"><i /></div>
       <p className="launch-status">Préparation du terrain <span>01</span></p>
