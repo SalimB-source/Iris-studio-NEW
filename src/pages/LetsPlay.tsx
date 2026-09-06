@@ -3,7 +3,7 @@
  * Direction Let’s Play : une scène violet gaming épurée, à forte lisibilité, sans ornement parasite autour des archives officielles.
  * Chaque média conserve sa provenance publique, sa légende et un repère de campagne clair.
  */
-import { useEffect, useState, type MouseEvent as ReactMouseEvent } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowLeft, ArrowUpRight, Brush, Clapperboard, Instagram, Linkedin, LoaderCircle, Mic2, PenLine, Play, type LucideIcon, UserRound, UsersRound, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
@@ -32,6 +32,7 @@ import "./AboutPortraitPlaceholders.css";
 import "./AboutLetsPlayLayout.css";
 import "./AboutTeamCardSystem.css";
 import "./AboutLetsPlayGaming.css";
+import { paintLetsPlayTeamViolet } from "./paintLetsPlayTeamViolet";
 
 const letsPlayRoleIcons: Record<string, LucideIcon> = {
   editorial: PenLine,
@@ -185,6 +186,11 @@ function LetsPlayInstagramCarousel() {
 export default function LetsPlay() {
   const brand = partnerProjectBranding.letsPlay;
   const [loadingEpisodeUrl, setLoadingEpisodeUrl] = useState<string | null>(null);
+  const letsPlayTeamRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    paintLetsPlayTeamViolet(letsPlayTeamRef.current);
+  }, []);
 
   const handleEpisodeClick = (event: ReactMouseEvent<HTMLAnchorElement>, url: string) => {
     event.preventDefault();

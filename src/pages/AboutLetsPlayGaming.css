@@ -41,7 +41,7 @@
   top: 1.15rem;
   right: clamp(1rem, 4vw, 4.5rem);
   display: flex;
-  width: clamp(14rem, 26vw, 22rem);
+  width: clamp(16rem, 32vw, 26rem);
   min-height: 0;
   align-items: center;
   justify-content: center;

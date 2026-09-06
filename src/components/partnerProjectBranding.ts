@@ -2,7 +2,7 @@
 export const partnerProjectBranding = {
   letsPlay: {
     name: "Let’s Play",
-    logo: "assets/lets-play-logo-provided_dfd031ae.png",
+    logo: "assets/lets-play-wordmark.png",
     alt: "Logo Let’s Play",
     thumbnail: "assets/letsplay-thumbnail-provided_3ed67485.png",
     thumbnailAlt: "Visuel Let’s Play dédié au gaming, à la pop culture et à la technologie",

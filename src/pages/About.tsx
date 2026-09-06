@@ -4,13 +4,14 @@
  * La narration emploie les faits institutionnels vérifiables, présente la direction avec portraits publics
  * crédite Let’s Play séparément et présente l’équipe Iris Studio avec des fonctions et portraits publics attribués avec prudence.
  */
-import { useState, type MouseEvent as ReactMouseEvent } from "react";
+import { useLayoutEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Clapperboard, Linkedin, LoaderCircle, Mic2, MoveRight, PenLine, Play, UserRound, UsersRound } from "lucide-react";
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { brandPartners } from "@/components/brandPartners";
 import { letsPlayTeam } from "./letsPlayContent";
+import { paintLetsPlayTeamViolet } from "./paintLetsPlayTeamViolet";
 import "./About.css";
 import "./AboutRefinement.css";
 import "./AboutPortraitPlaceholders.css";
@@ -220,6 +221,11 @@ export const studioTeam = [
 
 export default function About() {
   const [loadingEpisodeUrl, setLoadingEpisodeUrl] = useState<string | null>(null);
+  const letsPlayTeamRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    paintLetsPlayTeamViolet(letsPlayTeamRef.current);
+  }, []);
 
   const handleEpisodeClick = (event: ReactMouseEvent<HTMLAnchorElement>, url: string) => {
     event.preventDefault();
@@ -313,7 +319,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
+        <section ref={letsPlayTeamRef} className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
           <div className="about-letsplay-team-route" aria-hidden="true"><span>04</span><i /><b>CRÉDITS DE FABRICATION</b></div>
           <div className="about-letsplay-brand-stamp">
             <img src={partnerProjectBranding.letsPlay.logo} alt={partnerProjectBranding.letsPlay.alt} />
