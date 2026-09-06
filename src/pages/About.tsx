@@ -199,6 +199,15 @@ export const studioTeam = [
     roleIcon: "projectManagement" as const,
   },
   {
+    name: "Rania Bradai",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio. Elle contribue à la coordination et au suivi des projets au sein de l’agence.",
+    portrait: "assets/rania-bradai.jpg",
+    profile: undefined,
+    alt: "Portrait de Rania Bradai",
+    roleIcon: "projectManagement" as const,
+  },
+  {
     name: "Hammou Mohamed Riad",
     role: "Chef de projet senior",
     text: "Chef de projet senior chez Iris Studio, pilotage de programmes et coordination transverse.",
@@ -382,9 +391,11 @@ export default function About() {
                 <RoleBadge icon={person.roleIcon} label={person.role} />
                 <h3>{person.name}</h3>
                 <small>{person.text}</small>
-                <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer">
-                  Voir le profil LinkedIn <Linkedin size={14} /> <ArrowUpRight size={14} />
-                </a>
+                {person.profile ? (
+                  <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer">
+                    Voir le profil LinkedIn <Linkedin size={14} /> <ArrowUpRight size={14} />
+                  </a>
+                ) : null}
               </article>
             ))}
           </div>
