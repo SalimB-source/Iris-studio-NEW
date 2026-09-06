@@ -180,6 +180,24 @@ export const studioTeam = [
     alt: "Portrait d’Ayoub Toukal à venir",
     roleIcon: "data" as const,
   },
+  {
+    name: "Brahiti Lilya Rihane",
+    role: "Assistante commerciale · Responsable du club de tennis Ace Academy",
+    text: "Assistante commerciale et responsable du club de tennis Ace Academy, en charge des relations clients et des partenariats sportifs.",
+    portrait: undefined,
+    profile: undefined,
+    alt: "Portrait de Brahiti Lilya Rihane à venir",
+    roleIcon: "community" as const,
+  },
+  {
+    name: "Hammou Mohamed Riad",
+    role: "Chef de projet senior",
+    text: "Chef de projet senior chez Iris Studio, pilotage de programmes et coordination transverse.",
+    portrait: undefined,
+    profile: undefined,
+    alt: "Portrait de Hammou Mohamed Riad à venir",
+    roleIcon: "projectManagement" as const,
+  },
 ];
 
 export default function About() {
