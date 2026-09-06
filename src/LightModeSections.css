@@ -123,6 +123,15 @@ html:not(.dark) .art-contact-orbit i {
   display: none !important;
 }
 
+/* Force dark text for contact direct card and any form elements in light mode */
+html:not(.dark) .art-contact .contact-direct-card,
+html:not(.dark) .art-contact .contact-form,
+html:not(.dark) .art-contact .contact-form-success,
+html:not(.dark) .art-contact .contact-direct-card *,
+html:not(.dark) .art-contact .contact-form * {
+  color: #202020 !important;
+}
+
 /* Agence — chiffres, valeurs. */
 html:not(.dark) .iris-figures-header h2,
 html:not(.dark) .iris-figures-grid span {
