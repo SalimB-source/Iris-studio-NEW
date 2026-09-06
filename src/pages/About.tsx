@@ -203,7 +203,7 @@ export const studioTeam = [
     role: "Chef de projet · Iris Studio",
     text: "Chef de projet chez Iris Studio. Elle contribue à la coordination et au suivi des projets au sein de l’agence.",
     portrait: "assets/rania-bradai.jpg",
-    profile: undefined,
+    profile: "https://www.linkedin.com/in/rania-b-ba098b194/",
     alt: "Portrait de Rania Bradai",
     roleIcon: "projectManagement" as const,
   },
