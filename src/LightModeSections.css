@@ -118,6 +118,11 @@ html:not(.dark) .art-contact-orbit i {
   border-color: rgba(32, 32, 32, 0.16);
 }
 
+/* Remove any decorative card/divs inside the contact section (right-side white box) */
+.art-contact > div {
+  display: none !important;
+}
+
 /* Agence — chiffres, valeurs. */
 html:not(.dark) .iris-figures-header h2,
 html:not(.dark) .iris-figures-grid span {
