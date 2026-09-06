@@ -128,7 +128,18 @@ html:not(.dark) .art-contact .contact-direct-card,
 html:not(.dark) .art-contact .contact-form,
 html:not(.dark) .art-contact .contact-form-success,
 html:not(.dark) .art-contact .contact-direct-card *,
-html:not(.dark) .art-contact .contact-form * {
+html:not(.dark) .art-contact .contact-form *,
+html:not(.dark) .art-home main > section.art-contact > aside,
+html:not(.dark) .art-home main > section.art-contact > aside * {
+  color: #202020 !important;
+  display: none !important;
+}
+
+/* Be more surgical: if the map preview exists, keep it visible but ensure it's dark-text in light mode */
+html:not(.dark) .art-home main > section.art-contact .contact-map-preview {
+  display: block !important;
+}
+html:not(.dark) .art-home main > section.art-contact .contact-map-preview * {
   color: #202020 !important;
 }
 
