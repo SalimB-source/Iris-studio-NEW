@@ -17,7 +17,17 @@ export default function Contact() {
             <p style={{ marginTop: '0.6rem' }}>36.7702907, 3.0348169 — <a href="https://www.google.com/maps/place/IRIS+Studio+El+biar/@36.7702907,3.0348169,17z/data=!3m1!4b1!4m6!3m5!1s0x128fb3001779d72f:0xd7df234865da361c!8m2!3d36.7702907!4d3.0373918!16s%2Fg%2F11zdc5k4yw?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Voir sur Google Maps</a></p>
           </div>
           <div>
-            <a className="art-text-link" href="https://www.google.com/maps/place/IRIS+Studio+El+biar/@36.7702907,3.0348169,17z/data=!3m1!4b1!4m6!3m5!1s0x128fb3001779d72f:0xd7df234865da361c!8m2!3d36.7702907!4d3.0373918!16s%2Fg%2F11zdc5k4yw?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Ouvrir la carte <ArrowUpRight size={14} /></a>
+            <div className="contact-map-preview">
+              <iframe
+                title="IRIS Studio location"
+                src="https://www.google.com/maps?q=36.7702907,3.0348169&z=17&output=embed"
+                width="100%"
+                height="260"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </aside>
