@@ -126,3 +126,14 @@ html:not(.dark) .contact-form a { color: #202020 !important; }
 .dark .static-contact-social-list a { border-color: rgba(247,242,236,.28); color: #f7f2ec; }
 .dark .static-contact-social-list a:hover { background: #f7f2ec; color: #202020; }
 @media (max-width: 560px) { .static-contact-social-list { gap: .45rem; }.static-contact-social-list a { padding: .46rem .6rem; font-size: .64rem; } }
+
+
+/* Light mode readability fixes: keep the index badge and submit label legible on their dark/red backgrounds. */
+html:not(.dark) .contact-form .contact-form-index b {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html:not(.dark) .contact-form button.contact-submit {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
