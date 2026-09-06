@@ -170,6 +170,20 @@ html:not(.dark) #root > div.page-shell > main > section.contact-message-section.
   border: 0 !important;
 }
 
+/* Ensure map preview square in dark mode as well */
+html.dark #root > div.page-shell > main > section.contact-message-section.section-pad > aside .contact-map-preview,
+.dark .contact-map-preview {
+  display: block !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden;
+}
+html.dark #root > div.page-shell > main > section.contact-message-section.section-pad > aside .contact-map-preview iframe,
+.dark .contact-map-preview iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
 /* Agence — chiffres, valeurs. */
 html:not(.dark) .iris-figures-header h2,
 html:not(.dark) .iris-figures-grid span {
