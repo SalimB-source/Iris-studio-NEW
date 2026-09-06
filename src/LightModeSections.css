@@ -78,6 +78,10 @@ html:not(.dark) .art-contact .iris-import-atmosphere {
   display: none;
 }
 
+html:not(.dark) .art-contact :is(h1, h2, h3, p, a, span, strong, input, textarea, label) {
+  color: #202020 !important;
+}
+
 html:not(.dark) .art-contact .art-button-light {
   border-color: #e7433a;
   background: #e7433a;
