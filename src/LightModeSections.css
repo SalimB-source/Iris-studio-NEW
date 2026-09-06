@@ -13,7 +13,7 @@ html:not(.dark) .art-home {
   color: #202020 !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) {
   background: #fff !important;
   background-color: #fff !important;
   color: #202020 !important;
@@ -266,8 +266,7 @@ html:not(.dark) .about-origin,
 html:not(.dark) .about-ecosystem,
 html:not(.dark) .about-hero,
 html:not(.dark) .about-proof,
-html:not(.dark) .about-leadership,
-html:not(.dark) .about-letsplay-team {
+html:not(.dark) .about-leadership {
   background: #fff !important;
   color: #202020 !important;
 }
@@ -587,7 +586,6 @@ html:not(.dark) .about-principles,
 html:not(.dark) .about-backstage-gallery,
 html:not(.dark) .about-studio-team,
 html:not(.dark) .about-contact,
-html:not(.dark) .about-page .about-letsplay-team,
 html:not(.dark) .operational-detail-context,
 html:not(.dark) .operational-detail-focus,
 html:not(.dark) .operational-detail-hero,
@@ -648,7 +646,7 @@ html:not(.dark) .operational-detail-media figcaption {
 }
 
 /* Sombre : fonds sombres + texte ivoire, y compris site-shell. */
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-contact):not(.art-brand-marquee) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-contact):not(.art-brand-marquee):not(.about-letsplay-team) {
   background: #1c1a19 !important;
   color: #f7f2ec !important;
 }
