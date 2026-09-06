@@ -124,23 +124,29 @@ html:not(.dark) .art-contact-orbit i {
 }
 
 /* Force dark text for contact direct card and any form elements in light mode */
-html:not(.dark) .art-contact .contact-direct-card,
-html:not(.dark) .art-contact .contact-form,
-html:not(.dark) .art-contact .contact-form-success,
-html:not(.dark) .art-contact .contact-direct-card *,
-html:not(.dark) .art-contact .contact-form *,
-html:not(.dark) .art-home main > section.art-contact > aside,
-html:not(.dark) .art-home main > section.art-contact > aside * {
+/* High-specificity override: force dark color for all elements inside the home contact section in light mode. */
+html:not(.dark) .art-home main > section.art-contact,
+html:not(.dark) .art-home main > section.art-contact * {
   color: #202020 !important;
-  display: none !important;
 }
 
-/* Be more surgical: if the map preview exists, keep it visible but ensure it's dark-text in light mode */
+/* Hide any decorative aside blocks inside .art-contact (right-side white card) but keep .contact-map-preview visible */
+html:not(.dark) .art-home main > section.art-contact > aside {
+  display: none !important;
+}
+html:not(.dark) .art-home main > section.art-contact > aside * {
+  color: #202020 !important;
+}
+
+/* Ensure map preview remains visible and square */
 html:not(.dark) .art-home main > section.art-contact .contact-map-preview {
   display: block !important;
+  aspect-ratio: 1 / 1 !important;
 }
-html:not(.dark) .art-home main > section.art-contact .contact-map-preview * {
-  color: #202020 !important;
+html:not(.dark) .art-home main > section.art-contact .contact-map-preview iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
 }
 
 /* Agence — chiffres, valeurs. */
