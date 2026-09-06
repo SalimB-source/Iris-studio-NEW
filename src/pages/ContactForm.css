@@ -40,7 +40,23 @@
 .static-contact-socials + .contact-form { margin-top: 1.6rem; }
 
 /* Ensure visibility in light mode (force readable text within the form) */
+html:not(.dark) .contact-message-section, html:not(.dark) .contact-message-section * { color: #202020 !important; }
 html:not(.dark) .contact-form, html:not(.dark) .contact-form * { color: #202020 !important; }
+/* Explicit input/placeholder colors for light mode */
+html:not(.dark) .contact-form-grid input:not([type="checkbox"]),
+html:not(.dark) .contact-form-grid textarea,
+html:not(.dark) .contact-form-grid select {
+  color: #202020 !important;
+  background: transparent !important;
+}
+html:not(.dark) .contact-form-grid input::placeholder,
+html:not(.dark) .contact-form-grid textarea::placeholder {
+  color: #6b6763 !important;
+  opacity: 1 !important;
+}
+/* Ensure links in the form are visible */
+html:not(.dark) .contact-form a { color: #202020 !important; }
+
 
 @media (max-width: 820px) { .contact-message-section { grid-template-columns: 1fr; gap: 3rem; }.contact-form-intro .contact-route-list { max-width: none; }.contact-form { box-shadow: .7rem .7rem 0 rgba(231,67,58,.12); } }
 @media (max-width: 560px) { .contact-message-section { padding-right: 1.3rem; padding-left: 1.3rem; }.contact-form { padding: 1.1rem; }.contact-form-grid { grid-template-columns: 1fr; gap: 1rem; }.contact-form-full { grid-column: auto; } }
