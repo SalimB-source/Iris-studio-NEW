@@ -1,0 +1,69 @@
+/* Let’s Play sur À propos : #root bat l’aplat papier (titres graphite, tampon blanc, padding). */
+#root .site-shell.about-page main > section.about-letsplay-team {
+  background: #281347 !important;
+  background-color: #281347 !important;
+  color: #fff !important;
+  padding-top: clamp(9rem, 15vw, 14rem) !important;
+  padding-bottom: clamp(5.5rem, 9vw, 9.5rem) !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team :is(h1, h2, h3, h4, .display-title) {
+  color: #fff !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team :is(h1, h2, h3, h4, .display-title) em {
+  color: #d4a2ff !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team :is(.eyebrow, .about-letsplay-team-route, .about-letsplay-team-route b, .about-letsplay-team-route span, .about-letsplay-team-route i) {
+  color: #fcca35 !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-team-route i {
+  background: #fcca35 !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-team-heading > p,
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-source-note {
+  color: rgba(247, 242, 255, 0.78) !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp {
+  top: 1.15rem !important;
+  right: clamp(1rem, 4vw, 4.5rem) !important;
+  display: flex !important;
+  width: clamp(14rem, 26vw, 22rem) !important;
+  min-height: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp::before,
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp::after {
+  display: none !important;
+}
+
+#root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp img {
+  width: clamp(14rem, 26vw, 22rem) !important;
+  max-width: 22rem !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 640px) {
+  #root .site-shell.about-page main > section.about-letsplay-team {
+    padding-top: 13.5rem !important;
+  }
+
+  #root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp,
+  #root .site-shell.about-page main > section.about-letsplay-team .about-letsplay-brand-stamp img {
+    width: min(12.5rem, 72vw) !important;
+    max-width: 12.5rem !important;
+  }
+}

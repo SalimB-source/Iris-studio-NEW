@@ -340,10 +340,10 @@ html:not(.dark) .contact-page-hero .light-eyebrow {
 }
 
 /* Titres : graphite sur papier blanc. L’em reste rouge Iris. */
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title, .art-kicker):not(.about-backstage-gallery-item *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title, .art-kicker):not(.about-backstage-gallery-item *) {
   color: #202020 !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *) {
   color: #e7433a !important;
 }
 
@@ -383,7 +383,7 @@ html:not(.dark) .gallery-item span i {
 }
 
 /* Rythme : moins d’air entre les sections papier, filet unique de séparation. */
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.about-letsplay-team) {
   padding-top: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   padding-bottom: clamp(3.1rem, 5.6vw, 5.25rem) !important;
   min-height: 0 !important;
@@ -481,16 +481,16 @@ html:not(.dark) .operation-record h3 em {
   opacity: 0;
 }
 
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) {
   color: #f7f2ec !important;
 }
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *) {
   color: #f28a43 !important;
 }
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(p, small, li) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(p, small, li) {
   color: #d6cec7 !important;
 }
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker, .art-kicker span) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker, .art-kicker span) {
   color: #f28a43 !important;
 }
 .dark .art-project p {
@@ -506,7 +506,7 @@ color: #f28a43 !important;
 
 .dark .operations-ledger-heading h2,
 .dark .iris-figures-header h2,
-.dark .about-page :is(.about-hero, .about-origin, .about-principles, .about-proof, .about-backstage-gallery, .about-letsplay-team, .about-leadership, .about-studio-team, .about-ecosystem, .about-contact) :is(h1, h2, h3, .display-title) {
+.dark .about-page :is(.about-hero, .about-origin, .about-principles, .about-proof, .about-backstage-gallery, .about-leadership, .about-studio-team, .about-ecosystem, .about-contact) :is(h1, h2, h3, .display-title) {
   color: #f7f2ec !important;
 }
 .dark .operations-ledger-heading h2 em,
@@ -594,23 +594,16 @@ html:not(.dark) .operational-project-detail {
   color: #202020 !important;
 }
 
-html:not(.dark) .about-page .about-letsplay-team-heading .display-title,
-html:not(.dark) .about-page .about-letsplay-team-heading .display-title em,
 html:not(.dark) .about-page .about-letsplay-member h3,
 html:not(.dark) .operational-detail-context .display-title,
 html:not(.dark) .operational-detail-copy h1 {
   color: #202020 !important;
 }
-html:not(.dark) .about-page .about-letsplay-team-heading .display-title em,
-html:not(.dark) .about-page .about-letsplay-team-heading .eyebrow,
-html:not(.dark) .about-page .about-letsplay-team-route,
 html:not(.dark) .operational-detail-context .display-title em,
 html:not(.dark) .operational-detail-copy h1 em,
 html:not(.dark) .operational-detail-copy .eyebrow {
   color: #e7433a !important;
 }
-html:not(.dark) .about-page .about-letsplay-team-heading > p:last-child,
-html:not(.dark) .about-page .about-letsplay-source-note,
 html:not(.dark) .operational-detail-context-copy > p,
 html:not(.dark) .operational-detail-copy > p:last-child {
   color: #5f5955 !important;
@@ -620,11 +613,6 @@ html:not(.dark) .about-contact-link {
   color: #202020 !important;
   border-bottom-color: rgba(32, 32, 32, 0.35) !important;
 }
-html:not(.dark) .about-page .about-letsplay-brand-stamp {
-  background: #fff !important;
-  border-color: rgba(32, 32, 32, 0.18) !important;
-  box-shadow: none;
-}
 
 html:not(.dark) .about-principles-list article > span,
 html:not(.dark) .about-studio-member-index,
@@ -633,10 +621,10 @@ html:not(.dark) .about-person-archive {
   color: #e7433a !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(p, small, li, figcaption):not(.eyebrow):not(.art-kicker):not(.light-eyebrow) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(p, small, li, figcaption):not(.eyebrow):not(.art-kicker):not(.light-eyebrow) {
   color: #5f5955;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(.eyebrow, .art-kicker, .light-eyebrow, .section-marker) {
   color: #e7433a !important;
 }
 
@@ -681,11 +669,6 @@ html:not(.dark) .operational-detail-media figcaption {
 .dark .operational-detail-source {
   color: #f7f2ec !important;
   border-bottom-color: rgba(247, 242, 236, 0.45) !important;
-}
-
-.dark .about-page .about-letsplay-team-heading .eyebrow,
-.dark .about-page .about-letsplay-team-route {
-  color: #f28a43 !important;
 }
 
 /* Thème clair : une section sur deux en rouge Iris, texte blanc.
