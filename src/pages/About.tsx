@@ -166,9 +166,9 @@ export const studioTeam = [
     name: "Farouk Lakehal",
     role: "Chef de projet · Iris Studio",
     text: "Chef de projet chez Iris Studio. Il participe à l’organisation et à l’avancement des opérations portées par le studio.",
-    portrait: undefined,
+    portrait: "assets/farouk-lakehal.jpg",
     profile: "https://dz.linkedin.com/in/farouk-lakehal-464666289",
-    alt: "Portrait de Farouk Lakehal à venir",
+    alt: "Portrait de Farouk Lakehal",
     roleIcon: "projectManagement" as const,
   },
   {
