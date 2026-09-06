@@ -149,6 +149,27 @@ html:not(.dark) .art-home main > section.art-contact .contact-map-preview iframe
   border: 0 !important;
 }
 
+/* Target the exact selector the inspector provided to force readable text and visible map preview in light mode */
+html:not(.dark) #root > div.page-shell > main > section.contact-message-section.section-pad > aside {
+  background: #fff !important;
+  color: #202020 !important;
+  display: block !important;
+}
+html:not(.dark) #root > div.page-shell > main > section.contact-message-section.section-pad > aside * {
+  color: #202020 !important;
+}
+/* Ensure the contact map preview inside that aside is square and fills the area */
+html:not(.dark) #root > div.page-shell > main > section.contact-message-section.section-pad > aside .contact-map-preview {
+  display: block !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden;
+}
+html:not(.dark) #root > div.page-shell > main > section.contact-message-section.section-pad > aside .contact-map-preview iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
 /* Agence — chiffres, valeurs. */
 html:not(.dark) .iris-figures-header h2,
 html:not(.dark) .iris-figures-grid span {
