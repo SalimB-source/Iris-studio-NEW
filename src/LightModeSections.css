@@ -33,6 +33,10 @@ html:not(.dark) .art-manifesto-copy .art-text-link {
   color: #202020 !important;
 }
 
+html:not(.dark) .art-contact {
+  color: #202020 !important;
+}
+
 html:not(.dark) .art-manifesto h2 em,
 html:not(.dark) .art-projects h2 em,
 html:not(.dark) .art-contact h2 em,
