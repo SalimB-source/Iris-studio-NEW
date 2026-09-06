@@ -157,9 +157,9 @@ export const studioTeam = [
     name: "Amine Ladjal",
     role: "Chef de projet · Iris Studio",
     text: "Chef de projet chez Iris Studio. Il contribue à la coordination et au suivi des projets au sein de l’agence.",
-    portrait: undefined,
+    portrait: "assets/amine-ladjal.jpg",
     profile: "https://dz.linkedin.com/in/amine-ladjal-2796611a2",
-    alt: "Portrait d’Amine Ladjal à venir",
+    alt: "Portrait d’Amine Ladjal",
     roleIcon: "projectManagement" as const,
   },
   {
