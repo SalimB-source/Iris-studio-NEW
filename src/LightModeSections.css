@@ -816,3 +816,24 @@ html:not(.dark) .about-studio-team-category-title {
 .dark .about-studio-team-category-title {
   color: #f28a43 !important;
 }
+
+/* Agence / FMCG : cartes et logos restent lisibles, y compris sur aplat rouge. */
+html:not(.dark) .agency-fmcg-partners,
+html:not(.dark) .agency-fmcg-partners li,
+html:not(.dark) .agency-fmcg-tree-caption,
+html:not(.dark) .agency-fmcg-stat {
+  background: #fff !important;
+  color: #202020 !important;
+}
+html:not(.dark) .agency-fmcg-stat strong {
+  color: #e7433a !important;
+}
+html:not(.dark) .agency-fmcg-stat span,
+html:not(.dark) .agency-fmcg-intro > p:last-of-type {
+  color: #5f5955 !important;
+}
+html:not(.dark) .agency-fmcg-partners .mon-logo,
+.dark .agency-fmcg-partners .mon-logo {
+  filter: none !important;
+  -webkit-filter: none !important;
+}

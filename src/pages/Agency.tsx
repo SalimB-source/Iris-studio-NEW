@@ -10,6 +10,7 @@ import { brandPartners } from "@/components/brandPartners";
 import "./Operations.css";
 import "./AgencyPartnerMarquee.css";
 import "./AgencyHeroCorporate.css";
+import "./AgencyFmcg.css";
 import "@/components/BrandMarquee.css";
 
 const values = [
@@ -28,6 +29,16 @@ const areas: Array<{ number: string; eyebrow: string; title: string; copy: strin
 ];
 
 const irisFigures = [["3", "directions"], ["268", "employés"], ["180", "véhicules"], ["+25", "clients"], ["+38", "wilayas"], ["4", "missions"]];
+const fmcgLeaders = brandPartners.filter((client) =>
+  client.name === "Philip Morris International" || client.name === "Djezzy" || client.name === "Amir Clean"
+);
+const fmcgFigures = [
+  { figure: "41 844", label: "Audits / POS census", featured: false },
+  { figure: "341 542", label: "Visites / an", featured: false },
+  { figure: "1 872", label: "Jours d’opération trade", featured: true },
+  { figure: "+188", label: "Auditeurs merchandiser", featured: false },
+  { figure: "+432", label: "Opérations sur 6 ans", featured: false },
+];
 const agencyHeroImage = "assets/iris-agency-corporate-hero-1600.webp";
 const agencyHeroImageSmall = "assets/iris-agency-corporate-hero-960.webp";
 
@@ -39,6 +50,31 @@ export default function Agency() {
     <section id="agency-expertises" aria-labelledby="agency-expertises-title"><div className="section-pad"><p className="eyebrow">03 / Nos expertises</p><h2 id="agency-expertises-title" className="display-title">La stratégie est le départ.<br /><em>L’impact est la mesure.</em></h2><p className="large-copy">Une lecture ambitieuse et concrète, du premier diagnostic jusqu’à la réalisation, au plus près des usages.</p></div><div className="expertise-list">{areas.map((area) => <article className="expertise-row" key={area.number}><div className="expertise-row-index">{area.number}</div><div className="expertise-row-title"><div className="expertise-row-icon" aria-hidden="true"><area.icon size={23} strokeWidth={1.7} /></div><div><p>{area.eyebrow}</p><h2>{area.title}</h2></div></div><p className="expertise-row-copy">{area.copy}</p><div className="expertise-tags">{area.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}</div></section>
     <section className="expertise-field section-pad"><div className="field-copy"><p className="eyebrow">Un système, pas une addition</p><h2 className="display-title">Observer. Orchestrer.<br /><em>Activer. Apprendre.</em></h2><p>Chaque mission se construit comme un parcours lisible : le besoin est compris, la réponse prend forme, les équipes s’alignent, puis le terrain permet d’ajuster la suite.</p><Link className="arrow-link" href="/contact">Parler d’un besoin <ArrowUpRight size={17} /></Link></div><figure><img src="assets/iris-field-documentary_b5c5419c.webp" alt="Activation de marque en point de vente" /><figcaption>CE QUI COMPTE : LE CONTEXTE, L’USAGE, LA DÉCISION.</figcaption></figure></section>
     <section className="iris-figures section-pad" aria-labelledby="figures-title"><div className="iris-figures-header"><div><p className="eyebrow">Iris en chiffres</p><h2 id="figures-title" className="display-title">Une présence qui<br />se lit <em>sur le terrain.</em></h2></div><p>Ces repères reprennent la publication institutionnelle « Vision 2025 » d’Iris Studio. Ils donnent une lecture d’échelle de l’organisation et de ses opérations.</p></div><div className="iris-figures-grid">{irisFigures.map(([figure, label]) => <article key={label}><strong>{figure}</strong><span>{label}</span></article>)}</div><p className="iris-figures-note">Repères publiés dans l’archive Iris Studio #Vision2025 ; ils sont présentés comme un instantané de communication, non comme des données mises à jour en temps réel.</p></section>
+    <section className="agency-fmcg section-pad" aria-labelledby="agency-fmcg-title">
+      <div className="agency-fmcg-intro">
+        <p className="eyebrow">Présentation de l’agence</p>
+        <h2 id="agency-fmcg-title" className="agency-fmcg-top"><span>Top</span><em>3</em></h2>
+        <p>Plus de 10 ans de partenariat avec les leaders du FMCG. Un palmarès lu sur le terrain, auprès des marques qui structurent le quotidien des points de vente.</p>
+        <ul className="agency-fmcg-partners" aria-label="Partenaires FMCG">
+          {fmcgLeaders.map((client) => (
+            <li key={client.name}>
+              <img className="mon-logo" src={client.logo} alt={`Logo ${client.name}`} loading="lazy" decoding="async" />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="agency-fmcg-tree">
+        <p className="agency-fmcg-tree-caption">Plus de 10 ans de partenariat<br />avec les leaders du FMCG</p>
+        <div className="agency-fmcg-stats">
+          {fmcgFigures.map((item) => (
+            <article key={item.label} className={item.featured ? "agency-fmcg-stat is-featured" : "agency-fmcg-stat"}>
+              <strong>{item.figure}</strong>
+              <span>{item.label}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
     <section className="proof-section agency-trust-marquee" aria-labelledby="agency-trust-title"><div className="agency-trust-marquee-heading section-pad"><div><p className="eyebrow">Trajectoires partagées</p><h2 id="agency-trust-title" className="display-title">Des marques qui nous font <em>confiance.</em></h2></div><p>Des collaborations qui prolongent les idées sur le terrain, auprès de publics et de contextes différents.</p></div><div className="agency-trust-marquee-window"><div className="agency-trust-marquee-track">{[0, 1].map((setIndex) => <div className="agency-trust-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>{brandPartners.map((client) => <span className={`agency-trust-logo agency-trust-logo--${client.name.toLowerCase().replaceAll(" ", "-")}${client.name === "EGOR" ? " is-egor-logo" : ""}`} key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}</div>)}</div></div></section>
     <section className="page-next section-pad"><p>Prochaine étape / 04</p><Link href="/projets"><span>Voir les formats<br /><em>en mouvement.</em></span><ArrowUpRight size={34} /></Link></section>
   </main><SiteFooter /></div>;

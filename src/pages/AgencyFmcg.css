@@ -1,0 +1,204 @@
+/* Agence — palmarès FMCG et chiffres trade, d’après la présentation institutionnelle. */
+.agency-fmcg {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.92fr) minmax(22rem, 1.08fr);
+  gap: clamp(2.2rem, 6vw, 5.5rem);
+  align-items: start;
+  overflow: hidden;
+}
+
+.agency-fmcg-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.agency-fmcg-top {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.12em;
+  margin: 0.35rem 0 0;
+  color: #202020;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.78;
+  text-transform: uppercase;
+}
+
+.agency-fmcg-top span {
+  font-size: clamp(3.1rem, 8vw, 5.6rem);
+}
+
+.agency-fmcg-top em {
+  font-size: clamp(6.2rem, 16vw, 11.2rem);
+  font-style: normal;
+  color: #e7433a;
+}
+
+.agency-fmcg-intro > p:last-of-type {
+  max-width: 28rem;
+  margin: 1.35rem 0 0;
+  color: #5f5955;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.agency-fmcg-partners {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1.8rem 0 0;
+  padding: 0.85rem;
+  list-style: none;
+  background: #fff !important;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+}
+
+.agency-fmcg-partners li {
+  display: grid;
+  min-height: 4.6rem;
+  place-items: center;
+  padding: 0.45rem 0.55rem;
+  background: #fff !important;
+}
+
+.agency-fmcg-partners .mon-logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 2.7rem;
+  object-fit: contain;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.agency-fmcg-tree {
+  position: relative;
+  z-index: 1;
+}
+
+.agency-fmcg-tree-caption {
+  width: fit-content;
+  max-width: 22rem;
+  margin: 0 auto 1.35rem;
+  border: 1px solid rgba(32, 32, 32, 0.16);
+  border-radius: 999px;
+  padding: 0.55rem 1.05rem;
+  background: #fff;
+  color: #202020;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.agency-fmcg-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 0.9rem;
+}
+
+.agency-fmcg-stat {
+  min-height: 8.4rem;
+  padding: 1.05rem 1.1rem 1.15rem;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  background: #fff;
+  color: #202020;
+}
+
+.agency-fmcg-stat.is-featured {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 18.5rem);
+}
+
+.agency-fmcg-stat strong {
+  display: block;
+  color: #e7433a;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(2.15rem, 4.4vw, 3.15rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.agency-fmcg-stat span {
+  display: block;
+  margin-top: 0.7rem;
+  color: #5f5955;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.dark .agency-fmcg-top {
+  color: #f7f2ec !important;
+}
+
+.dark .agency-fmcg-top em {
+  color: #f28a43 !important;
+}
+
+.dark .agency-fmcg-intro > p:last-of-type {
+  color: #c8c0b9 !important;
+}
+
+.dark .agency-fmcg-partners,
+.dark .agency-fmcg-partners li,
+.dark .agency-fmcg-tree-caption {
+  background: #fff !important;
+  border-color: rgba(32, 32, 32, 0.08);
+  color: #202020 !important;
+}
+
+.dark .agency-fmcg-partners .mon-logo {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.dark .agency-fmcg-stat {
+  background: #25211f !important;
+  border-color: rgba(247, 242, 236, 0.16);
+  color: #f7f2ec !important;
+}
+
+.dark .agency-fmcg-stat strong {
+  color: #f28a43 !important;
+}
+
+.dark .agency-fmcg-stat span {
+  color: #c8c0b9 !important;
+}
+
+@media (max-width: 900px) {
+  .agency-fmcg {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .agency-fmcg-stat.is-featured {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .agency-fmcg-partners {
+    grid-template-columns: 1fr;
+  }
+
+  .agency-fmcg-partners li {
+    min-height: 3.8rem;
+  }
+
+  .agency-fmcg-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .agency-fmcg-stat {
+    min-height: 0;
+  }
+}
