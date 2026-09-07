@@ -61,7 +61,6 @@ export default function SevenArenaLoadingScreen({ onComplete }: SevenArenaLoadin
       aria-label={`Ouverture du projet 7ouma Arena — ${active.label}`}
     >
       <div className="sevenarena-loading-grid" aria-hidden="true" />
-      <div className="sevenarena-loading-radar" aria-hidden="true"><i /></div>
       <div className="sevenarena-loading-content">
         <p className="sevenarena-loading-kicker">7OUMA ARENA × DJEZZY</p>
 
@@ -72,7 +71,7 @@ export default function SevenArenaLoadingScreen({ onComplete }: SevenArenaLoadin
             return (
               <div key={item.id} className={`sevenarena-loading-glyph sevenarena-loading-glyph--${item.id} ${state}`.trim()}>
                 {Icon ? <span className="sevenarena-loading-icon"><Icon size={54} strokeWidth={1.6} /></span> : (
-                  <img src="assets/7ouma-arena-by-djezzy.png" alt="" />
+                  <img src="assets/7ouma-arena-logo.png" alt="" />
                 )}
               </div>
             );

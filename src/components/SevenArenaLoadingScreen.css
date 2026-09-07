@@ -33,41 +33,6 @@
   transform: perspective(32rem) rotateX(61deg) translateY(22%);
 }
 
-.sevenarena-loading-radar {
-  position: absolute;
-  z-index: -2;
-  width: min(49rem, 122vw);
-  aspect-ratio: 1;
-  border: 1px solid rgba(229, 47, 56, .44);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 3.2rem rgba(138, 16, 24, .13), 0 0 0 3.2rem rgba(229, 47, 56, .045);
-}
-
-.sevenarena-loading-radar::before,
-.sevenarena-loading-radar::after {
-  position: absolute;
-  content: "";
-  border-radius: inherit;
-  inset: 16%;
-  border: 1px solid rgba(255, 247, 244, .18);
-}
-
-.sevenarena-loading-radar::after {
-  inset: 34%;
-  border-color: rgba(229, 47, 56, .72);
-}
-
-.sevenarena-loading-radar i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 44%;
-  height: 1px;
-  background: linear-gradient(90deg, #e52f38, transparent);
-  transform-origin: left center;
-  box-shadow: 0 0 1rem rgba(229, 47, 56, .9);
-}
-
 .sevenarena-loading-content {
   position: relative;
   z-index: 2;
@@ -95,8 +60,8 @@
 
 .sevenarena-loading-stage {
   position: relative;
-  width: min(16.5rem, 82vw);
-  height: 7.4rem;
+  width: min(11.5rem, 58vw);
+  height: 11.5rem;
 }
 
 .sevenarena-loading-glyph {
@@ -133,7 +98,7 @@
 
 .sevenarena-loading-glyph--logo img {
   display: block;
-  width: min(16rem, 78vw);
+  width: min(11rem, 52vw);
   height: auto;
   filter: drop-shadow(0 .8rem 1.4rem rgba(0, 0, 0, .55));
 }
@@ -206,10 +171,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .sevenarena-loading-radar i {
-    animation: sevenarena-sweep 1.3s linear infinite;
-  }
-
   .sevenarena-loading-glyph {
     transition: opacity 280ms cubic-bezier(.23, 1, .32, 1), transform 420ms cubic-bezier(.23, 1, .32, 1);
   }
@@ -227,10 +188,6 @@
   }
 }
 
-@keyframes sevenarena-sweep {
-  to { transform: rotate(360deg); }
-}
-
 @keyframes sevenarena-icon-pulse {
   0%, 100% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 47, 56, .1), 0 1rem 2.2rem rgba(0, 0, 0, .4); }
   50% { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(229, 47, 56, .2), 0 1.1rem 2.4rem rgba(0, 0, 0, .45); }
@@ -242,9 +199,8 @@
 
 @media (max-width: 600px) {
   .sevenarena-loading-grid { background-size: 2.25rem 2.25rem; }
-  .sevenarena-loading-radar { width: 125vw; }
   .sevenarena-loading-kicker { margin-bottom: 1.25rem; }
-  .sevenarena-loading-stage { height: 6.6rem; }
+  .sevenarena-loading-stage { width: min(9.5rem, 62vw); height: 9.5rem; }
   .sevenarena-loading-icon { width: 5.8rem; height: 5.8rem; }
   .sevenarena-loading-bar { margin-top: 1.45rem; }
 }
@@ -252,7 +208,6 @@
 @media (prefers-reduced-motion: reduce) {
   .sevenarena-loading-screen,
   .sevenarena-loading-screen.is-exiting .sevenarena-loading-content { transition-duration: 80ms; }
-  .sevenarena-loading-radar i,
   .sevenarena-loading-glyph,
   .sevenarena-loading-icon,
   .sevenarena-loading-bar i { animation: none; transform: none; }
