@@ -680,11 +680,11 @@ html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-d
   border-top-color: rgba(255, 255, 255, 0.22) !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span):not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span):not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *) {
   color: #fff !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *) {
   color: #fff !important;
 }
 
