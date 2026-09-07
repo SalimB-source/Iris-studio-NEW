@@ -348,41 +348,26 @@ export default function About() {
           <div className="about-studio-team-heading">
             <p className="eyebrow">Équipe Iris Studio</p>
             <h2 id="studio-team-title" className="display-title">Les métiers qui font<br /><em>avancer le studio.</em></h2>
-            <p>
-              Cette sélection présente des membres de l’équipe Iris Studio, distinctement des crédits Let’s Play. Les intitulés sont limités aux informations visibles dans les profils professionnels publics fournis.
-            </p>
           </div>
-          <div className="about-studio-team-roster">
-            {studioTeamCategories.map((category) => {
-              const members = studioTeam.filter((person) => person.category === category.id);
-              if (!members.length) return null;
-              return (
-                <div key={category.id} className="about-studio-team-category">
-                  <h3 className="about-studio-team-category-title">{category.label}</h3>
-                  <div className="about-studio-team-grid">
-                    {members.map((person) => {
-                      const memberNumber = String(studioTeam.findIndex((entry) => entry.name === person.name) + 1).padStart(2, "0");
-                      return (
-                        <article key={person.name} className="about-studio-member">
-                          <span className="about-studio-member-index">MEMBRE / {memberNumber}</span>
-                          <PersonMedia name={person.name} portrait={person.portrait} alt={person.alt} variant="studio" />
-                          <RoleBadge icon={person.roleIcon} label={person.role} />
-                          <h3>{person.name}</h3>
-                          <small>{person.text}</small>
-                          {person.profile ? (
-                            <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer">
-                              Voir le profil LinkedIn <Linkedin size={14} /> <ArrowUpRight size={14} />
-                            </a>
-                          ) : null}
-                        </article>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
+          <div className="about-studio-team-grid">
+            {studioTeamCategories.flatMap((category) =>
+              studioTeam
+                .filter((person) => person.category === category.id)
+                .map((person) => (
+                  <article key={person.name} className="about-studio-member">
+                    <span className="about-studio-member-index">{category.label}</span>
+                    <PersonMedia name={person.name} portrait={person.portrait} alt={person.alt} variant="studio" />
+                    <h3>{person.name}</h3>
+                    <RoleBadge icon={person.roleIcon} label={person.role} />
+                    {person.profile ? (
+                      <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer" aria-label={`Profil LinkedIn de ${person.name}`}>
+                        LinkedIn <Linkedin size={13} />
+                      </a>
+                    ) : null}
+                  </article>
+                )),
+            )}
           </div>
-          <p className="about-studio-team-note">Dossier / les cartes utilisent un portrait seulement lorsqu’il est fourni ou vérifié comme image individuelle. Les autres restent volontairement en placeholder, plutôt que d’afficher une capture de profil. Les fonctions, profils et courtes biographies s’appuient sur les informations professionnelles publiques consultées en août 2026.</p>
         </section>
 
         <section className="about-leadership section-pad" aria-labelledby="leadership-title">
