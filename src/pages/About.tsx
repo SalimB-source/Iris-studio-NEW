@@ -211,6 +211,16 @@ export const studioTeam = [
     roleIcon: "hr" as const,
     category: "admin" as const,
   },
+  {
+    name: "Nabil Fettal",
+    role: "Chargé des relations administratives",
+    text: "Chargé des relations administratives chez Iris Studio. Il assure le suivi administratif et les relations avec les interlocuteurs de l’agence.",
+    portrait: undefined,
+    profile: "https://www.linkedin.com/in/nabil-fettal-4582ab332/",
+    alt: "Portrait de Nabil Fettal à venir",
+    roleIcon: "hr" as const,
+    category: "admin" as const,
+  },
 ];
 
 export default function About() {
