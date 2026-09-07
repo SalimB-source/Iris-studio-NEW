@@ -39,8 +39,9 @@
 .page-shell .projects-cards .project-case-media {
   position: relative;
   flex: 0 0 auto;
-  height: 12.5rem;
+  height: auto;
   min-height: 0;
+  aspect-ratio: 16 / 9;
   padding: 0;
   overflow: hidden;
   background: #140d24;
@@ -63,10 +64,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   transform: none !important;
+  transform-origin: center center;
   border-radius: 0;
   box-shadow: none;
+}
+
+.page-shell .projects-cards .project-case-media-letsplay img {
+  object-position: center 46%;
+}
+
+.page-shell .projects-cards .project-case-media-arena img {
+  object-position: center 42%;
 }
 
 .page-shell .projects-cards .project-case:hover .project-case-media img {
