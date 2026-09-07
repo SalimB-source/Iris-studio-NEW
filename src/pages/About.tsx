@@ -209,7 +209,7 @@ export const studioTeam = [
     profile: "https://www.linkedin.com/in/bouchra-kahlouche/",
     alt: "Portrait de Bouchra Kahlouche à venir",
     roleIcon: "hr" as const,
-    category: "hr" as const,
+    category: "admin" as const,
   },
 ];
 
