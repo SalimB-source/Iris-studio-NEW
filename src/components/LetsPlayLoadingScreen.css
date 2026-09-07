@@ -1,5 +1,4 @@
-/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
-/* Transition Let’s Play : typographie violette et jaune, pensée comme une entrée en scène. */
+/* Transition Let’s Play : manette, caméra, tech, puis le logo, avec barre de chargement. */
 .letsplay-loading-screen {
   position: fixed;
   z-index: 999;
@@ -36,7 +35,11 @@
   border: 1px solid rgba(255, 250, 242, .18);
 }
 
-.letsplay-loading-screen.is-exiting { visibility: hidden; opacity: 0; pointer-events: none; }
+.letsplay-loading-screen.is-exiting {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
 .letsplay-loading-grid {
   position: absolute;
@@ -78,7 +81,7 @@
   z-index: 2;
   display: grid;
   justify-items: center;
-  width: min(30rem, calc(100% - 3rem));
+  width: min(32rem, calc(100% - 3rem));
 }
 
 .letsplay-loading-kicker,
@@ -91,115 +94,167 @@
   text-transform: uppercase;
 }
 
-.letsplay-loading-kicker { margin: 0 0 1.45rem; color: #fcca35; }
-
-.letsplay-loading-wordmark {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  width: min(25rem, 86vw);
-  padding: .85rem 0 1.1rem;
-  filter: drop-shadow(0 1rem 1.2rem rgba(12, 3, 27, .42));
-}
-
-.letsplay-loading-word {
-  display: block;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 900;
-  line-height: .71;
-  letter-spacing: -.11em;
-  text-transform: uppercase;
-}
-
-.letsplay-loading-word--lets {
-  z-index: 1;
-  margin-left: -1.2rem;
-  color: #fffaf2;
-  font-size: clamp(3.75rem, 13vw, 6.5rem);
-  font-style: italic;
-  transform: skewX(-10deg);
-  text-shadow: .08em .08em 0 #50269a, .11em .11em 0 rgba(20, 7, 46, .7);
-}
-
-.letsplay-loading-word--play {
-  z-index: 2;
-  margin-top: -.08rem;
-  margin-left: 1.55rem;
+.letsplay-loading-kicker {
+  margin: 0 0 1.6rem;
   color: #fcca35;
-  font-size: clamp(4.9rem, 17vw, 8.5rem);
-  font-style: italic;
-  transform: skewX(-10deg);
-  text-shadow: .07em .07em 0 #5627a6, .11em .11em 0 rgba(20, 7, 46, .78);
 }
 
-.letsplay-loading-swoosh {
+.letsplay-loading-stage {
+  position: relative;
+  width: min(16.5rem, 78vw);
+  height: 9.4rem;
+}
+
+.letsplay-loading-glyph {
   position: absolute;
-  right: 6%;
-  bottom: .35rem;
-  width: 46%;
-  height: .4rem;
-  border-radius: 999px;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(.78);
+  pointer-events: none;
+}
+
+.letsplay-loading-glyph.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.letsplay-loading-glyph.is-done {
+  opacity: 0;
+  transform: scale(1.12);
+}
+
+.letsplay-loading-icon {
+  display: grid;
+  width: 6.6rem;
+  height: 6.6rem;
+  place-items: center;
+  border: 1.5px solid #fcca35;
+  border-radius: 50%;
+  background: rgba(12, 4, 28, .35);
+  color: #fcca35;
+  box-shadow: 0 0 0 8px rgba(252, 202, 53, .08), 0 1rem 2.2rem rgba(8, 2, 22, .35);
+}
+
+.letsplay-loading-glyph--logo img {
+  display: block;
+  width: min(15.5rem, 74vw);
+  height: auto;
+  filter: drop-shadow(0 .8rem 1.4rem rgba(8, 2, 22, .45));
+}
+
+.letsplay-loading-label {
+  min-height: 1rem;
+  margin: 1.15rem 0 0;
+  color: #fffaf2;
+}
+
+.letsplay-loading-dots {
+  display: flex;
+  gap: .45rem;
+  margin: 1.05rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.letsplay-loading-dots li {
+  width: .42rem;
+  height: .42rem;
+  border-radius: 50%;
+  background: rgba(255, 250, 242, .28);
+}
+
+.letsplay-loading-dots li.is-done {
+  background: #fcca35;
+}
+
+.letsplay-loading-dots li.is-active {
   background: #fffaf2;
-  box-shadow: .55rem .55rem 0 #fcca35;
-  transform: skewX(-32deg);
+  box-shadow: 0 0 0 3px rgba(252, 202, 53, .35);
 }
 
-.letsplay-loading-label { margin: 1.35rem 0 0; color: #fffaf2; }
-
-.letsplay-loading-progress {
-  width: min(17rem, 75vw);
-  height: 3px;
-  margin-top: 2.3rem;
+.letsplay-loading-bar {
+  width: min(18rem, 78vw);
+  height: 4px;
+  margin-top: 1.7rem;
   overflow: hidden;
-  background: rgba(255, 255, 255, .26);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .18);
 }
 
-.letsplay-loading-progress i {
+.letsplay-loading-bar i {
   display: block;
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
   background: linear-gradient(90deg, #fcca35, #fffaf2);
+  border-radius: inherit;
 }
 
 .letsplay-loading-status {
   display: flex;
   justify-content: space-between;
-  width: min(17rem, 75vw);
+  width: min(18rem, 78vw);
   margin: .72rem 0 0;
   color: rgba(255, 250, 242, .72);
 }
 
-.letsplay-loading-status b { color: #fcca35; font-weight: 800; }
-.letsplay-loading-screen.is-exiting .letsplay-loading-content { opacity: 0; transform: translateY(-.5rem); transition: transform 240ms cubic-bezier(.23, 1, .32, 1), opacity 240ms cubic-bezier(.23, 1, .32, 1); }
-
-@media (prefers-reduced-motion: no-preference) {
-  .letsplay-loading-word--lets { animation: letsplay-word-lets .52s .1s cubic-bezier(.23, 1, .32, 1) both; }
-  .letsplay-loading-word--play { animation: letsplay-word-play .58s .24s cubic-bezier(.23, 1, .32, 1) both; }
-  .letsplay-loading-swoosh { animation: letsplay-swoosh .42s .66s cubic-bezier(.23, 1, .32, 1) both; }
-  .letsplay-loading-progress i { animation: letsplay-loader-progress 2.1s cubic-bezier(.23, 1, .32, 1) forwards; }
+.letsplay-loading-status b {
+  color: #fcca35;
+  font-weight: 800;
 }
 
-@keyframes letsplay-word-lets { from { opacity: 0; transform: translateX(-1.4rem) skewX(-10deg); } to { opacity: 1; transform: translateX(0) skewX(-10deg); } }
-@keyframes letsplay-word-play { from { opacity: 0; transform: translateX(1.7rem) translateY(.45rem) skewX(-10deg); } to { opacity: 1; transform: translateX(0) translateY(0) skewX(-10deg); } }
-@keyframes letsplay-swoosh { from { opacity: 0; transform: translateX(-2rem) skewX(-32deg); } to { opacity: 1; transform: translateX(0) skewX(-32deg); } }
-@keyframes letsplay-loader-progress { to { transform: translateX(0); } }
+.letsplay-loading-screen.is-exiting .letsplay-loading-content {
+  opacity: 0;
+  transform: translateY(-.5rem);
+  transition: transform 240ms cubic-bezier(.23, 1, .32, 1), opacity 240ms cubic-bezier(.23, 1, .32, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .letsplay-loading-glyph {
+    transition: opacity 280ms cubic-bezier(.23, 1, .32, 1), transform 420ms cubic-bezier(.23, 1, .32, 1);
+  }
+
+  .letsplay-loading-icon {
+    animation: letsplay-icon-pulse 1.15s ease-in-out infinite;
+  }
+
+  .letsplay-loading-glyph:not(.is-active) .letsplay-loading-icon {
+    animation: none;
+  }
+
+  .letsplay-loading-bar i {
+    animation: letsplay-loader-progress linear forwards;
+  }
+}
+
+@keyframes letsplay-icon-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 8px rgba(252, 202, 53, .08), 0 1rem 2.2rem rgba(8, 2, 22, .35); }
+  50% { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(252, 202, 53, .16), 0 1.1rem 2.4rem rgba(8, 2, 22, .4); }
+}
+
+@keyframes letsplay-loader-progress {
+  to { transform: translateX(0); }
+}
 
 @media (max-width: 600px) {
   .letsplay-loading-screen::before { top: -35vw; left: -64vw; width: 118vw; height: 118vw; }
   .letsplay-loading-screen::after { right: -68vw; bottom: -22vw; width: 133vw; height: 133vw; }
   .letsplay-loading-beam { width: 147vw; height: 58vw; }
   .letsplay-loading-grid { background-size: 2.7rem 2.7rem; }
-  .letsplay-loading-kicker { margin-bottom: 1.2rem; }
-  .letsplay-loading-wordmark { width: min(20rem, 90vw); }
-  .letsplay-loading-progress { margin-top: 2rem; }
+  .letsplay-loading-kicker { margin-bottom: 1.25rem; }
+  .letsplay-loading-stage { height: 8.4rem; }
+  .letsplay-loading-icon { width: 5.8rem; height: 5.8rem; }
+  .letsplay-loading-bar { margin-top: 1.45rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .letsplay-loading-screen,
   .letsplay-loading-screen.is-exiting .letsplay-loading-content { transition-duration: 80ms; }
-  .letsplay-loading-word--lets,
-  .letsplay-loading-word--play,
-  .letsplay-loading-swoosh,
-  .letsplay-loading-progress i { animation: none; transform: none; }
+  .letsplay-loading-glyph,
+  .letsplay-loading-icon,
+  .letsplay-loading-bar i { animation: none; transform: none; }
+  .letsplay-loading-glyph { opacity: 0; }
+  .letsplay-loading-glyph.is-active { opacity: 1; }
 }
