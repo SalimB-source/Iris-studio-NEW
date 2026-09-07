@@ -1,0 +1,14 @@
+/* Parallax de lecture : profondeur légère, coupée si l’utilisateur réduit les animations. */
+.iris-parallax {
+  --iris-parallax-y: 0px;
+  transform: translate3d(0, var(--iris-parallax-y), 0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iris-parallax,
+  .art-parallax-layer {
+    transform: none !important;
+    will-change: auto;
+  }
+}

@@ -138,7 +138,6 @@ function useImpactReveals() {
 }
 
 export default function Home() {
-  useParallaxTrajectory();
   useImpactReveals();
 
   return (

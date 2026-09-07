@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import LaunchScreen from "./components/LaunchScreen";
 import PageNavigationTransition from "./components/PageNavigationTransition";
 import DarkModeScore from "./components/DarkModeScore";
+import SiteParallax from "./components/SiteParallax";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { isPartnerProjectPath, partnerProjectScrollSettleDelay, scrollPartnerProjectToTop, scrollToPageTop } from "./components/partnerProjectNavigation";
@@ -63,7 +64,7 @@ function RouteTree() {
 
 function AppShell() {
   const [showLaunch, setShowLaunch] = useState(true);
-  return <TooltipProvider><Toaster />{showLaunch && <LaunchScreen onComplete={() => setShowLaunch(false)} />}<PageNavigationTransition /><RouteTree /></TooltipProvider>;
+  return <TooltipProvider><Toaster />{showLaunch && <LaunchScreen onComplete={() => setShowLaunch(false)} />}<PageNavigationTransition /><SiteParallax /><RouteTree /></TooltipProvider>;
 }
 
 function App() {
