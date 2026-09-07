@@ -340,10 +340,10 @@ html:not(.dark) .contact-page-hero .light-eyebrow {
 }
 
 /* Titres : graphite sur papier blanc. L’em reste rouge Iris. */
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title, .art-kicker):not(.about-backstage-gallery-item *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title, .art-kicker):not(.about-backstage-gallery-item *):not(.project-case-copy *) {
   color: #202020 !important;
 }
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.project-case-copy *) {
   color: #e7433a !important;
 }
 
@@ -484,7 +484,7 @@ html:not(.dark) .operation-record h3 em {
 .dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) {
   color: #f7f2ec !important;
 }
-.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *) {
+.dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.project-case-copy *) {
   color: #f28a43 !important;
 }
 .dark :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-contact):not(.about-letsplay-team) :is(p, small, li) {
@@ -680,11 +680,11 @@ html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-d
   border-top-color: rgba(255, 255, 255, 0.22) !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span):not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title, .art-kicker, .art-kicker span, .eyebrow, .light-eyebrow, .section-marker, p, small, li, a, strong, b, em, .art-text-link, span):not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *):not(.project-case-copy *):not(.field-gallery-card *) {
   color: #fff !important;
 }
 
-html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *) {
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even):not(.art-hero--cinematic):not(.page-hero):not(.detail-hero):not(.art-brand-marquee):not(.agency-trust-marquee):not(.about-letsplay-team):not(.about-ecosystem) :is(h1, h2, h3, h4, .display-title) em:not(.contact-form *):not(.contact-direct-card *):not(.about-studio-member *):not(.about-person-card *):not(.about-proof-media *):not(.operation-record *):not(.expertise-row *):not(.project-case-copy *):not(.field-gallery-card *) {
   color: #fff !important;
 }
 
@@ -867,4 +867,38 @@ html:not(.dark) .operations-ledger .operation-record p {
 html:not(.dark) .operations-ledger .operation-record-index,
 html:not(.dark) .operations-ledger .operation-record h3 em {
   color: #e7433a !important;
+}
+
+/* Projets — Let’s Play / 7ouma : texte clair sur les panneaux d’univers. */
+html:not(.dark) .projects-cards .project-case-copy,
+html:not(.dark) .projects-cards .project-case-copy :is(h2, p, span, a, strong),
+.dark .projects-cards .project-case-copy,
+.dark .projects-cards .project-case-copy :is(h2, p, span, a, strong) {
+  color: #fff !important;
+}
+html:not(.dark) .projects-cards .case-letsplay .project-case-copy h2 em,
+.dark .projects-cards .case-letsplay .project-case-copy h2 em {
+  color: #fcca35 !important;
+}
+html:not(.dark) .projects-cards .case-arena .project-case-copy h2 em,
+.dark .projects-cards .case-arena .project-case-copy h2 em {
+  color: #e7433a !important;
+}
+
+/* Galerie de terrain : cartes blanches + texte graphite si la section tombe sur l’aplat rouge. */
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even) .field-gallery-card {
+  background: #fff !important;
+  color: #202020 !important;
+}
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even) .field-gallery-card :is(h3, a, strong, em, span) {
+  color: #202020 !important;
+}
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even) .field-gallery-card p {
+  color: #5f5955 !important;
+}
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even) .field-gallery-card > div > span {
+  color: #e7433a !important;
+}
+html:not(.dark) :is(.page-shell, .site-shell):not(.letsplay-detail):not(.arena-detail) main > section:nth-of-type(even) .field-gallery-card figcaption {
+  color: #fff !important;
 }

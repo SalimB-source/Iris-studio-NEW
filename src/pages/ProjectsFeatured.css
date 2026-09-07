@@ -1,0 +1,186 @@
+/* Projets — Let’s Play & 7ouma Arena : cartes compactes, univers conservés. */
+.page-shell .projects-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.page-shell .projects-cards .project-case {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  background: #20183c;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.08);
+  isolation: isolate;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), box-shadow 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.page-shell .projects-cards .case-letsplay {
+  background: #20183c;
+  border-color: rgba(252, 202, 53, 0.28);
+}
+
+.page-shell .projects-cards .case-arena {
+  background: #151a22;
+  border-color: rgba(231, 67, 58, 0.38);
+}
+
+.page-shell .projects-cards .project-case:hover {
+  transform: translateY(-0.22rem);
+  box-shadow: 0 0.7rem 0 rgba(0, 0, 0, 0.16);
+}
+
+.page-shell .projects-cards .project-case-media {
+  position: relative;
+  flex: 0 0 auto;
+  height: 12.5rem;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #140d24;
+}
+
+.page-shell .projects-cards .project-case-media-letsplay {
+  background: #281347;
+}
+
+.page-shell .projects-cards .project-case-media-arena {
+  background: #080808;
+}
+
+.page-shell .projects-cards .project-case-media::before,
+.page-shell .projects-cards .project-case-media::after {
+  display: none;
+}
+
+.page-shell .projects-cards .project-case-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: none !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.page-shell .projects-cards .project-case:hover .project-case-media img {
+  transform: scale(1.03) !important;
+}
+
+.page-shell .projects-cards .project-case-media span {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  width: auto;
+  min-width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding-inline: 0.45rem;
+  background: rgba(12, 12, 12, 0.45);
+  color: #fff;
+  box-shadow: none;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.page-shell .projects-cards .project-case-copy {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: flex-start;
+  padding: 0.95rem 1.05rem 1.1rem;
+  color: #fff;
+}
+
+.page-shell .projects-cards .case-letsplay .project-case-copy {
+  background: #20183c;
+  color: #fff;
+}
+
+.page-shell .projects-cards .case-arena .project-case-copy {
+  background: #151a22;
+  color: #fff;
+}
+
+.page-shell .projects-cards .project-case-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-shell .projects-cards .project-case-copy h2 {
+  max-width: 14ch;
+  margin: 0.1rem 0 0.35rem;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.page-shell .projects-cards .project-case-copy h2 em {
+  color: #fff;
+  font-style: italic;
+}
+
+.page-shell .projects-cards .case-letsplay .project-case-copy h2 em {
+  color: #fcca35;
+}
+
+.page-shell .projects-cards .case-arena .project-case-copy h2 em {
+  color: #e7433a;
+}
+
+.page-shell .projects-cards .project-case-copy > span {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2.15rem;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-shell .projects-cards .case-letsplay:hover .project-case-copy > span {
+  background: #fcca35;
+  color: #281347;
+}
+
+.page-shell .projects-cards .case-arena:hover .project-case-copy > span {
+  background: #e7433a;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .page-shell .projects-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell .projects-cards .project-case-media {
+    height: 13.5rem;
+  }
+}
