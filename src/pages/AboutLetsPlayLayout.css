@@ -159,8 +159,8 @@
   gap: 0.55rem;
   margin-top: 1.05rem;
 }
-.about-page .about-letsplay-member-top {
-  display: none;
+.about-page .about-letsplay-member:nth-child(n) .about-letsplay-member-top {
+  display: none !important;
 }
 .about-page .about-letsplay-member,
 .about-page .about-letsplay-member:nth-child(n) {

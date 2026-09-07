@@ -138,13 +138,14 @@
 .about-letsplay-gamepad > svg:nth-of-type(6) { bottom: 8%; left: 42%; width: 2rem; height: 2rem; opacity: 0.3; }
 .about-letsplay-gamepad > svg:nth-of-type(7) { top: 32%; right: 18%; width: 2.5rem; height: 2.5rem; transform: rotate(14deg); }
 .about-letsplay-gamepad > svg:nth-of-type(8) { bottom: 36%; left: 2%; width: 2.1rem; height: 2.1rem; }
-.about-page .about-letsplay-team-route,
-.about-page .about-letsplay-brand-stamp,
 .about-page .about-letsplay-team-heading,
 .about-page .about-letsplay-team-grid,
 .about-page .about-letsplay-source-note {
   position: relative;
   z-index: 1;
+}
+.about-page .about-letsplay-brand-stamp {
+  z-index: 3;
 }
 @media (max-width: 640px) {
   .about-letsplay-gamepad-cluster {

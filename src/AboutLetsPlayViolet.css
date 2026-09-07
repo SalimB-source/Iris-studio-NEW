@@ -15,6 +15,19 @@
   color: #d4a2ff !important;
 }
 
+#root section.about-letsplay-team .about-letsplay-member h3,
+#root section.about-letsplay-team .about-letsplay-member small {
+  color: #202020 !important;
+}
+
+.dark #root section.about-letsplay-team .about-letsplay-member h3 {
+  color: #f7f2ec !important;
+}
+
+.dark #root section.about-letsplay-team .about-letsplay-member small {
+  color: #c8c0b9 !important;
+}
+
 #root section.about-letsplay-team :is(.eyebrow, .about-letsplay-team-route, .about-letsplay-team-route b, .about-letsplay-team-route span, .about-letsplay-team-route i) {
   color: #fcca35 !important;
 }
@@ -54,14 +67,23 @@
   object-fit: contain !important;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   #root section.about-letsplay-team {
-    padding-top: 8.8rem !important;
+    padding-top: 4.4rem !important;
   }
 
-  #root section.about-letsplay-team .about-letsplay-brand-stamp,
+  #root section.about-letsplay-team .about-letsplay-brand-stamp {
+    position: relative !important;
+    top: 0 !important;
+    right: auto !important;
+    left: auto !important;
+    width: min(8.2rem, 46vw) !important;
+    margin: 0 0 1.1rem !important;
+    z-index: 2 !important;
+  }
+
   #root section.about-letsplay-team .about-letsplay-brand-stamp img {
-    width: min(7.5rem, 42vw) !important;
-    max-width: 7.5rem !important;
+    width: min(8.2rem, 46vw) !important;
+    max-width: 8.2rem !important;
   }
 }
