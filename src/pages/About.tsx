@@ -292,8 +292,35 @@ export default function About() {
           </aside>
         </section>
 
+        <section className="about-leadership section-pad" aria-labelledby="leadership-title">
+          <div className="about-leadership-orbit" aria-hidden="true"><i /><i /><i /></div>
+          <div className="about-leadership-route" aria-hidden="true"><span>02 / REGARD</span><i /><b /></div>
+          <div className="about-leadership-heading">
+            <p className="eyebrow">Direction associée à l’histoire du studio</p>
+            <h2 id="leadership-title" className="display-title">Trois parcours publics<br />qui portent <em>la direction.</em></h2>
+            <p>
+              Iris Studio avance grâce à un collectif de métiers. Les fonctions ci-dessous sont reprises d’informations professionnelles publiques afin de présenter la direction avec transparence.
+            </p>
+            <span className="about-direction-source">Dossier / portraits publics &amp; profils professionnels</span>
+          </div>
+          <div className="about-leadership-cards">
+            {leadership.map((person, index) => (
+              <article key={person.name} className="about-person-card">
+                <span className="about-person-archive">FICHE / 0{index + 1}</span>
+                <PersonMedia name={person.name} portrait={"portrait" in person ? person.portrait : undefined} alt={"portrait" in person ? person.alt : undefined} />
+                <RoleBadge icon={person.roleIcon} label={person.role} />
+                <h3>{person.name}</h3>
+                <span className="about-person-line" aria-hidden="true" />
+                <small>{person.text}</small>
+                <a className="about-person-link" href={person.profile} target="_blank" rel="noreferrer">Voir le profil LinkedIn <Linkedin size={14} /><ArrowUpRight size={14} /></a>
+              </article>
+            ))}
+          </div>
+          <p className="about-source-note">Fonctions et portraits issus de résultats publics liés aux profils LinkedIn, consultés en août 2026. Chaque carte renvoie vers le profil professionnel correspondant ; les biographies détaillées et l’attribution formelle du statut de fondateur pourront être complétées après validation d’Iris Studio.</p>
+        </section>
+
         <section ref={letsPlayTeamRef} className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
-          <div className="about-letsplay-team-route" aria-hidden="true"><span>02</span><i /><b>CRÉDITS DE FABRICATION</b></div>
+          <div className="about-letsplay-team-route" aria-hidden="true"><span>03</span><i /><b>CRÉDITS DE FABRICATION</b></div>
           <div className="about-letsplay-brand-stamp">
             <img src={partnerProjectBranding.letsPlay.logo} alt={partnerProjectBranding.letsPlay.alt} />
           </div>
@@ -354,7 +381,7 @@ export default function About() {
         </section>
 
         <section className="about-studio-team section-pad" aria-labelledby="studio-team-title">
-          <div className="about-studio-team-route" aria-hidden="true"><span>03</span><i /><b>COLLECTIF IRIS</b></div>
+          <div className="about-studio-team-route" aria-hidden="true"><span>04</span><i /><b>COLLECTIF IRIS</b></div>
           <div className="about-studio-team-heading">
             <p className="eyebrow">Équipe Iris Studio</p>
             <h2 id="studio-team-title" className="display-title">Les métiers qui font<br /><em>avancer le studio.</em></h2>
@@ -378,33 +405,6 @@ export default function About() {
                 )),
             )}
           </div>
-        </section>
-
-        <section className="about-leadership section-pad" aria-labelledby="leadership-title">
-          <div className="about-leadership-orbit" aria-hidden="true"><i /><i /><i /></div>
-          <div className="about-leadership-route" aria-hidden="true"><span>04 / REGARD</span><i /><b /></div>
-          <div className="about-leadership-heading">
-            <p className="eyebrow">Direction associée à l’histoire du studio</p>
-            <h2 id="leadership-title" className="display-title">Trois parcours publics<br />qui portent <em>la direction.</em></h2>
-            <p>
-              Iris Studio avance grâce à un collectif de métiers. Les fonctions ci-dessous sont reprises d’informations professionnelles publiques afin de présenter la direction avec transparence.
-            </p>
-            <span className="about-direction-source">Dossier / portraits publics &amp; profils professionnels</span>
-          </div>
-          <div className="about-leadership-cards">
-            {leadership.map((person, index) => (
-              <article key={person.name} className="about-person-card">
-                <span className="about-person-archive">FICHE / 0{index + 1}</span>
-                <PersonMedia name={person.name} portrait={"portrait" in person ? person.portrait : undefined} alt={"portrait" in person ? person.alt : undefined} />
-                <RoleBadge icon={person.roleIcon} label={person.role} />
-                <h3>{person.name}</h3>
-                <span className="about-person-line" aria-hidden="true" />
-                <small>{person.text}</small>
-                <a className="about-person-link" href={person.profile} target="_blank" rel="noreferrer">Voir le profil LinkedIn <Linkedin size={14} /><ArrowUpRight size={14} /></a>
-              </article>
-            ))}
-          </div>
-          <p className="about-source-note">Fonctions et portraits issus de résultats publics liés aux profils LinkedIn, consultés en août 2026. Chaque carte renvoie vers le profil professionnel correspondant ; les biographies détaillées et l’attribution formelle du statut de fondateur pourront être complétées après validation d’Iris Studio.</p>
         </section>
 
         <section className="about-ecosystem section-pad" aria-labelledby="ecosystem-title">
