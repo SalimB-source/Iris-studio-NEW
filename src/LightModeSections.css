@@ -850,3 +850,21 @@ html:not(.dark) .agency-fmcg-partners .mon-logo,
   filter: none !important;
   -webkit-filter: none !important;
 }
+
+/* Projets / dossiers : cartes blanches sur l’aplat rouge. */
+html:not(.dark) .operations-ledger .operation-record {
+  background: #fff !important;
+  color: #202020 !important;
+  border-color: rgba(32, 32, 32, 0.1) !important;
+}
+html:not(.dark) .operations-ledger .operation-record h3,
+html:not(.dark) .operations-ledger .operation-record-tag {
+  color: #202020 !important;
+}
+html:not(.dark) .operations-ledger .operation-record p {
+  color: #5f5955 !important;
+}
+html:not(.dark) .operations-ledger .operation-record-index,
+html:not(.dark) .operations-ledger .operation-record h3 em {
+  color: #e7433a !important;
+}

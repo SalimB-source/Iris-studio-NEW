@@ -1,0 +1,166 @@
+/* Projets — dossiers opérationnels : cartes compactes, même langage que le reste du site. */
+.page-shell .operations-ledger {
+  background: #fff;
+}
+
+.page-shell .operations-ledger-heading {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.1fr) minmax(14rem, 0.9fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.page-shell .operations-ledger-heading h2 {
+  max-width: 12ch;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+}
+
+.page-shell .operations-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.7rem;
+  border: 0;
+  background: transparent;
+}
+
+.page-shell .operation-record-link {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell .operation-record,
+.page-shell .operation-record-wide {
+  display: flex;
+  grid-column: auto;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  background: #fff;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.08);
+  transition: transform 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), box-shadow 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), background 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.page-shell .operation-record::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.22rem;
+  height: 100%;
+  background: #e7433a;
+  content: "";
+  transform: scaleY(0.38);
+  transform-origin: top;
+  transition: transform 220ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.page-shell .operation-record:hover,
+.page-shell .operation-record-featured {
+  background: #fff;
+  color: #202020;
+  transform: translateY(-0.22rem);
+  box-shadow: 0 0.7rem 0 rgba(231, 67, 58, 0.14);
+}
+
+.page-shell .operation-record:hover::before {
+  transform: scaleY(1);
+}
+
+.page-shell .operation-record-media {
+  flex: 0 0 auto;
+  height: 10.5rem;
+  background: #202020;
+}
+
+.page-shell .operation-record-media::after {
+  inset: 50% 0 0;
+}
+
+.page-shell .operation-record:hover .operation-record-media img {
+  transform: scale(1.03);
+}
+
+.page-shell .operation-record-content {
+  gap: 0.35rem;
+  padding: 0.9rem 1rem 1.05rem;
+}
+
+.page-shell .operation-record h3 {
+  max-width: none;
+  margin: 0.15rem 0 0.2rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+}
+
+.page-shell .operation-record p {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: none;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.page-shell .operation-record:hover p,
+.page-shell .operation-record-featured p {
+  color: #5f5955;
+}
+
+.page-shell .operation-record:hover .operation-record-tag,
+.page-shell .operation-record-featured .operation-record-tag {
+  color: #746d68;
+}
+
+.page-shell .operation-record-index {
+  font-size: 0.52rem;
+}
+
+.page-shell .operation-record-tag {
+  font-size: 0.48rem;
+}
+
+.dark .page-shell .operation-record,
+.dark .page-shell .operation-record:hover {
+  border-color: rgba(247, 242, 236, 0.16);
+  background: #25211f;
+  color: #f7f2ec;
+}
+
+.dark .page-shell .operation-record h3 {
+  color: #f7f2ec;
+}
+
+.dark .page-shell .operation-record p,
+.dark .page-shell .operation-record:hover p {
+  color: #c8c0b9;
+}
+
+.dark .page-shell .operation-record-tag,
+.dark .page-shell .operation-record:hover .operation-record-tag {
+  color: #c8c0b9;
+}
+
+@media (max-width: 900px) {
+  .page-shell .operations-ledger-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell .operations-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell .operations-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell .operation-record-media {
+    height: 12rem;
+  }
+}

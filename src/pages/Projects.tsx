@@ -12,6 +12,7 @@ import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { operationalProjectPath } from "./operationalProjectDetails";
 import { operationalProjects } from "./operationalProjectsContent";
 import "./Operations.css";
+import "./OperationsDossiers.css";
 
 export default function Projects() {
   return <div className="page-shell"><SiteHeader /><main>

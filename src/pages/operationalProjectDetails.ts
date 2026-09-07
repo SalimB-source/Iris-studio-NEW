@@ -92,6 +92,44 @@ export const operationalProjectDetails: Record<ProjectId, OperationalProjectDeta
     sourceUrl: "https://www.linkedin.com/company/iris-studio-alger",
     sourceLabel: "Consulter la page LinkedIn Iris Studio",
   },
+  hamoud: {
+    id: "hamoud",
+    eyebrow: "Hamoud Boualem · Merchandising",
+    headline: "Une gondole de marque qui donne sa place au linéaire.",
+    summary: "Iris Studio accompagne Hamoud Boualem sur le terrain : meuble de marque, mise en rayon et présence visuelle au point de vente.",
+    context: "Les archives fournies documentent une gondole Hamoud Boualem déployée en magasin, avec le lion 1878, les couleurs jaune et vert de la maison, et un linéaire organisé pour rendre la marque immédiatement lisible. Le geste opérationnel relie identité, merchandising et réalité du rayon.",
+    specifications: [
+      { label: "Territoire", value: "Points de vente et linéaires boissons" },
+      { label: "Intervention", value: "Gondole de marque, merchandising et mise en rayon" },
+      { label: "Repère visuel", value: "Identité Hamoud Boualem 1878" },
+    ],
+    focus: [
+      { title: "Présence de marque", text: "Installer un meuble identifiable, aux couleurs et au blason de Hamoud Boualem." },
+      { title: "Lisibilité du rayon", text: "Organiser les références pour que le linéaire se lise d’un coup d’œil." },
+      { title: "Exécution terrain", text: "Faire tenir l’identité de la marque dans le quotidien du point de vente." },
+    ],
+    sourceUrl: "https://www.linkedin.com/company/iris-studio-alger",
+    sourceLabel: "Consulter la page LinkedIn Iris Studio",
+  },
+  pmi: {
+    id: "pmi",
+    eyebrow: "Philip Morris International · Trade marketing",
+    headline: "Le point de vente comme dispositif de présence.",
+    summary: "Un accompagnement trade et merchandising autour de meubles digitaux et d’une présence de marque au contact du commerce.",
+    context: "Les archives fournies montrent un meuble digital en point de vente, avec écran de campagne, linéaire produits et signalétique d’activation. Iris Studio documente ici une exécution opérationnelle : concevoir et installer un dispositif visible, suivi et lisible dans l’espace réel du commerce.",
+    specifications: [
+      { label: "Territoire", value: "Points de vente et commerces de proximité" },
+      { label: "Intervention", value: "Meuble digital, merchandising et activation POS" },
+      { label: "Format", value: "Dispositif trade au contact du linéaire" },
+    ],
+    focus: [
+      { title: "Meuble digital", text: "Faire du point de vente un support de campagne, avec écran et présence de marque." },
+      { title: "Merchandising", text: "Organiser le linéaire pour une lecture claire des références et de l’activation." },
+      { title: "Coordination terrain", text: "Installer et suivre le dispositif là où se joue le contact commercial." },
+    ],
+    sourceUrl: "https://www.linkedin.com/company/iris-studio-alger",
+    sourceLabel: "Consulter la page LinkedIn Iris Studio",
+  },
 };
 
 export function operationalProjectPath(projectId: ProjectId) {

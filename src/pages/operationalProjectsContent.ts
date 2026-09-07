@@ -1,6 +1,6 @@
 /* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 export type OperationalProject = {
-  id: "gbfoods" | "holcim" | "amir-clean" | "djezzy";
+  id: "gbfoods" | "holcim" | "amir-clean" | "djezzy" | "hamoud" | "pmi";
   index: string;
   tag: string;
   title: string;
@@ -60,5 +60,29 @@ export const operationalProjects: readonly OperationalProject[] = [
     alt: "Dispositifs d’activation terrain Djezzy, issus d’une publication LinkedIn Iris Studio fournie.",
     sourceLabel: "Archive LinkedIn Iris Studio · capture fournie",
     wide: true,
+  },
+  {
+    id: "hamoud",
+    index: "07",
+    tag: "Merchandising",
+    title: "Hamoud",
+    accent: "Boualem",
+    text: "Gondole de marque et mise en rayon pour faire vivre Hamoud Boualem au point de vente, dans le langage visuel de la maison.",
+    image: "assets/hamoud-boualem-gondola.jpg",
+    alt: "Gondole Hamoud Boualem en magasin, linéaire de boissons mis en scène aux couleurs de la marque.",
+    sourceLabel: "Archive terrain Iris Studio · capture fournie",
+    wide: false,
+  },
+  {
+    id: "pmi",
+    index: "08",
+    tag: "Trade marketing",
+    title: "Philip Morris",
+    accent: "International",
+    text: "Meuble digital et merchandising en point de vente pour une présence de marque lisible au contact du commerce.",
+    image: "assets/pmi-marlboro-display.jpg",
+    alt: "Meuble de merchandising digital Philip Morris International en point de vente, avec écran et linéaire produits.",
+    sourceLabel: "Archive terrain Iris Studio · capture fournie",
+    wide: false,
   },
 ];
