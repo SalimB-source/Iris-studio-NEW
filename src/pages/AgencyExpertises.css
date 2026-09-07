@@ -1,0 +1,116 @@
+/* Agence / 03 : expertises en cartes compactes, plus en liste. */
+#agency-expertises .expertise-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1.7rem;
+  border: 0;
+  background: transparent;
+}
+
+#agency-expertises .expertise-row {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  padding: 0.95rem 1rem 1.05rem;
+  background: #fff;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.08);
+}
+
+#agency-expertises .expertise-row::before {
+  width: 0.22rem;
+  transform: scaleY(0.36);
+  transform-origin: top;
+}
+
+#agency-expertises .expertise-card-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+#agency-expertises .expertise-row-index {
+  font-size: 0.52rem;
+}
+
+#agency-expertises .expertise-row-icon {
+  width: 2.15rem;
+  height: 2.15rem;
+}
+
+#agency-expertises .expertise-card-kicker {
+  margin: 0;
+  color: #e7433a;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#agency-expertises .expertise-row h2 {
+  margin: 0;
+  max-width: 14ch;
+  font-size: clamp(1.12rem, 1.55vw, 1.38rem);
+  line-height: 1.05;
+}
+
+#agency-expertises .expertise-row-copy {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0.15rem 0 0.35rem;
+  color: #5f5955;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+#agency-expertises .expertise-tags {
+  margin-top: auto;
+  padding-top: 0.45rem;
+}
+
+#agency-expertises .expertise-tags span {
+  padding: 0.28rem 0.4rem;
+  font-size: 0.48rem;
+}
+
+.dark #agency-expertises .expertise-row {
+  border-color: rgba(247, 242, 236, 0.16);
+  background: #25211f;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.26);
+}
+
+.dark #agency-expertises .expertise-row h2 {
+  color: #f7f2ec;
+}
+
+.dark #agency-expertises .expertise-row-copy,
+.dark #agency-expertises .expertise-tags span {
+  color: #c8c0b9;
+}
+
+.dark #agency-expertises .expertise-card-kicker,
+.dark #agency-expertises .expertise-row-index {
+  color: #f28a43;
+}
+
+@media (max-width: 900px) {
+  #agency-expertises .expertise-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  #agency-expertises .expertise-list {
+    grid-template-columns: 1fr;
+  }
+}
