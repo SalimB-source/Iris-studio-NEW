@@ -6,7 +6,11 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #080808;
+  background:
+    radial-gradient(ellipse 90% 70% at 100% 0%, #e52f38 0%, transparent 58%),
+    radial-gradient(ellipse 80% 75% at 0% 100%, #7a1018 0%, transparent 52%),
+    linear-gradient(165deg, #080808 0%, #160608 46%, #9f1824 100%);
+  background-color: #080808;
   color: #fff7f4;
   isolation: isolate;
   opacity: 1;
