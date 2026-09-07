@@ -29,12 +29,13 @@ const roleIcons = {
   data: BarChart3,
   presentation: Mic2,
   finance: Calculator,
+  hr: UserCog,
 } as const;
 
 type RoleIcon = keyof typeof roleIcons;
 
 function RoleGlyph({ icon }: { icon: RoleIcon }) {
-  const Icon = roleIcons[icon];
+  const Icon = roleIcons[icon] ?? UserRound;
   return <Icon size={16} strokeWidth={1.7} aria-hidden="true" />;
 }
 
