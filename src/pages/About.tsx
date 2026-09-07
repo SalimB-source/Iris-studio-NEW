@@ -28,6 +28,7 @@ const roleIcons = {
   projectManagement: BriefcaseBusiness,
   data: BarChart3,
   presentation: Mic2,
+  finance: Calculator,
 } as const;
 
 type RoleIcon = keyof typeof roleIcons;
@@ -207,6 +208,15 @@ export const studioTeam = [
     profile: "https://www.linkedin.com/in/rania-b-ba098b194/",
     alt: "Portrait de Rania Bradai",
     roleIcon: "projectManagement" as const,
+  },
+  {
+    name: "Lyes Seffari",
+    role: "Accountant & Payroll Specialist",
+    text: "Accountant & Payroll Specialist chez Iris Studio. Il assure la comptabilité et la gestion de la paie au sein de l’agence.",
+    portrait: "assets/lyes-seffari.jpg",
+    profile: "https://www.linkedin.com/in/lyes-seffari-16ba0a258/",
+    alt: "Portrait de Lyes Seffari",
+    roleIcon: "finance" as const,
   },
   {
     name: "Hammou Mohamed Riad",
