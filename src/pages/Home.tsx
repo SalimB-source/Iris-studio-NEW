@@ -53,43 +53,6 @@ const irisPublishedFigures = [
   { index: "06", value: "4", label: "missions" },
 ] as const;
 
-function useParallaxTrajectory() {
-  useEffect(() => {
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const nodes = Array.from(document.querySelectorAll<HTMLElement>("[data-iris-parallax]"));
-    let animationFrame = 0;
-
-    const update = () => {
-      animationFrame = 0;
-      if (reducedMotion.matches || window.innerWidth < 760) {
-        nodes.forEach((node) => node.style.setProperty("--iris-parallax-y", "0px"));
-        return;
-      }
-      const viewportMiddle = window.innerHeight / 2;
-      nodes.forEach((node) => {
-        const bounds = node.getBoundingClientRect();
-        const strength = Number(node.dataset.irisParallax ?? 0);
-        const progress = Math.max(-1, Math.min(1, (bounds.top + bounds.height / 2 - viewportMiddle) / window.innerHeight));
-        node.style.setProperty("--iris-parallax-y", `${-progress * strength}px`);
-      });
-    };
-    const requestUpdate = () => {
-      if (!animationFrame) animationFrame = window.requestAnimationFrame(update);
-    };
-
-    requestUpdate();
-    window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
-    reducedMotion.addEventListener("change", requestUpdate);
-    return () => {
-      window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("resize", requestUpdate);
-      reducedMotion.removeEventListener("change", requestUpdate);
-      if (animationFrame) window.cancelAnimationFrame(animationFrame);
-    };
-  }, []);
-}
-
 function useImpactReveals() {
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
