@@ -221,20 +221,7 @@ export default function LetsPlay() {
     <section className="letsplay-screenings section-pad" aria-labelledby="letsplay-screenings-title"><div className="letsplay-screenings-heading"><div><p className="eyebrow">Sélection d’épisodes</p><h2 className="display-title" id="letsplay-screenings-title">Des sujets qui font<br /><em>vivre la partie.</em></h2></div><p>Sept épisodes de la chaîne officielle Let’s Play, entre gaming, technologie, création et pop culture. Chaque miniature ouvre directement la vidéo associée sur YouTube.</p></div><div className="letsplay-screening-grid">{letsPlayScreenings.map((screening) => <a className="letsplay-screening-card" href={screening.href} target="_blank" rel="noreferrer" key={screening.id} aria-label={`Regarder ${screening.title} sur YouTube`}><figure><img src={screening.image} alt={`Miniature officielle : ${screening.title}`} loading="lazy" decoding="async" width="1280" height="720" /><span className="letsplay-play-mark" aria-hidden="true"><Play size={19} fill="currentColor" /></span><figcaption>{screening.category}</figcaption></figure><div><p>{screening.detail}</p><h3>{screening.title}</h3><p className="letsplay-screening-summary">{screening.summary}</p><span>Regarder sur YouTube <ArrowUpRight size={16} /></span></div></a>)}</div></section>
     <div className="about-page" id="letsplay-members">
       <section className="about-letsplay-team section-pad" aria-labelledby="letsplay-members-title">
-        <div className="about-letsplay-gamepad" aria-hidden="true">
-          <span className="is-triangle" />
-          <span className="is-circle" />
-          <span className="is-square" />
-          <span className="is-cross" />
-          <span className="is-triangle" />
-          <span className="is-circle" />
-          <span className="is-square" />
-          <span className="is-cross" />
-          <span className="is-triangle" />
-          <span className="is-circle" />
-          <span className="is-square" />
-          <span className="is-cross" />
-        </div>
+        <LetsPlayGamepadGlyphs />
         <div className="about-letsplay-team-route" aria-hidden="true"><span>08</span><i /><b>CRÉDITS DE FABRICATION</b></div>
         <div className="about-letsplay-brand-stamp">
           <img src={brand.logo} alt={brand.alt} />

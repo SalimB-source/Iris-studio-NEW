@@ -214,7 +214,13 @@
 .about-page .about-letsplay-team .about-letsplay-source-note {
   margin-top: 1.15rem;
 }
-@media (min-width: 1180px) {
+.about-page .about-letsplay-member-episode-link {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (min-width: 980px) {
   .about-page .about-letsplay-team-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
