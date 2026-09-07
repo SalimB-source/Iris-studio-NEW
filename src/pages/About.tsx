@@ -5,7 +5,7 @@
  * crédite Let’s Play séparément et présente l’équipe Iris Studio avec des fonctions et portraits publics attribués avec prudence.
  */
 import { useLayoutEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
-import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Clapperboard, Linkedin, LoaderCircle, Mic2, MoveRight, PenLine, Play, UserRound, UsersRound } from "lucide-react";
+import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Calculator, Clapperboard, Linkedin, LoaderCircle, Mic2, MoveRight, PenLine, Play, UserCog, UserRound, UsersRound } from "lucide-react";
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
@@ -145,6 +145,27 @@ export const leadership = [
   },
 ];
 
+type StudioCategoryId =
+  | "senior-pm"
+  | "senior-chef"
+  | "chef-projet"
+  | "data"
+  | "trade"
+  | "commercial"
+  | "finance"
+  | "hr";
+
+export const studioTeamCategories: { id: StudioCategoryId; label: string }[] = [
+  { id: "senior-pm", label: "Senior Project Manager" },
+  { id: "senior-chef", label: "Chef de projet senior" },
+  { id: "chef-projet", label: "Chef de projet" },
+  { id: "data", label: "Data" },
+  { id: "trade", label: "Trade marketing" },
+  { id: "commercial", label: "Commercial & partenariats" },
+  { id: "finance", label: "Comptabilité & paie" },
+  { id: "hr", label: "Ressources humaines" },
+];
+
 export const studioTeam = [
   {
     name: "Chakib Taleb",
@@ -154,69 +175,7 @@ export const studioTeam = [
     profile: "https://dz.linkedin.com/in/chakib-taleb-716abb179",
     alt: "Portrait de Chakib Taleb",
     roleIcon: "projectManagement" as const,
-  },
-  {
-    name: "Amine Ladjal",
-    role: "Chef de projet · Iris Studio",
-    text: "Chef de projet chez Iris Studio. Il contribue à la coordination et au suivi des projets au sein de l’agence.",
-    portrait: "assets/amine-ladjal.jpg",
-    profile: "https://dz.linkedin.com/in/amine-ladjal-2796611a2",
-    alt: "Portrait d’Amine Ladjal",
-    roleIcon: "projectManagement" as const,
-  },
-  {
-    name: "Farouk Lakehal",
-    role: "Chef de projet · Iris Studio",
-    text: "Chef de projet chez Iris Studio. Il participe à l’organisation et à l’avancement des opérations portées par le studio.",
-    portrait: "assets/farouk-lakehal.jpg",
-    profile: "https://dz.linkedin.com/in/farouk-lakehal-464666289",
-    alt: "Portrait de Farouk Lakehal",
-    roleIcon: "projectManagement" as const,
-  },
-  {
-    name: "Ayoub Toukal",
-    role: "Data Engineer · Data Scientist · Big Data Analyst",
-    text: "Profil data chez Iris Studio, avec une expertise déclarée en data engineering, data science et big data analytics.",
-    portrait: "assets/ayoub-toukal.jpg",
-    profile: "https://dz.linkedin.com/in/toukal-ayoub-664429298",
-    alt: "Portrait d’Ayoub Toukal",
-    roleIcon: "data" as const,
-  },
-  {
-    name: "Brahiti Lilya Rihane",
-    role: "Assistante commerciale · Responsable du club de tennis Ace Academy",
-    text: "Assistante commerciale et responsable du club de tennis Ace Academy, en charge des relations clients et des partenariats sportifs.",
-    portrait: "assets/brahiti-lilya-rihane.jpg",
-    profile: undefined,
-    alt: "Portrait de Brahiti Lilya Rihane",
-    roleIcon: "community" as const,
-  },
-  {
-    name: "Imen Derradji",
-    role: "Spécialiste trade marketing · Iris Studio",
-    text: "Trade marketing specialist chez Iris Studio. Elle accompagne les dispositifs de marque au contact du point de vente et des équipes commerciales.",
-    portrait: "assets/imen-derradji.jpg",
-    profile: "https://dz.linkedin.com/in/imen-derradji-9b5980221",
-    alt: "Portrait d’Imen Derradji",
-    roleIcon: "projectManagement" as const,
-  },
-  {
-    name: "Rania Bradai",
-    role: "Chef de projet · Iris Studio",
-    text: "Chef de projet chez Iris Studio. Elle contribue à la coordination et au suivi des projets au sein de l’agence.",
-    portrait: "assets/rania-bradai.jpg",
-    profile: "https://www.linkedin.com/in/rania-b-ba098b194/",
-    alt: "Portrait de Rania Bradai",
-    roleIcon: "projectManagement" as const,
-  },
-  {
-    name: "Lyes Seffari",
-    role: "Accountant & Payroll Specialist",
-    text: "Accountant & Payroll Specialist chez Iris Studio. Il assure la comptabilité et la gestion de la paie au sein de l’agence.",
-    portrait: "assets/lyes-seffari.jpg",
-    profile: "https://www.linkedin.com/in/lyes-seffari-16ba0a258/",
-    alt: "Portrait de Lyes Seffari",
-    roleIcon: "finance" as const,
+    category: "senior-pm" as const,
   },
   {
     name: "Hammou Mohamed Riad",
@@ -226,6 +185,87 @@ export const studioTeam = [
     profile: undefined,
     alt: "Portrait de Hammou Mohamed Riad à venir",
     roleIcon: "projectManagement" as const,
+    category: "senior-chef" as const,
+  },
+  {
+    name: "Amine Ladjal",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio. Il contribue à la coordination et au suivi des projets au sein de l’agence.",
+    portrait: "assets/amine-ladjal.jpg",
+    profile: "https://dz.linkedin.com/in/amine-ladjal-2796611a2",
+    alt: "Portrait d’Amine Ladjal",
+    roleIcon: "projectManagement" as const,
+    category: "chef-projet" as const,
+  },
+  {
+    name: "Farouk Lakehal",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio. Il participe à l’organisation et à l’avancement des opérations portées par le studio.",
+    portrait: "assets/farouk-lakehal.jpg",
+    profile: "https://dz.linkedin.com/in/farouk-lakehal-464666289",
+    alt: "Portrait de Farouk Lakehal",
+    roleIcon: "projectManagement" as const,
+    category: "chef-projet" as const,
+  },
+  {
+    name: "Rania Bradai",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio. Elle contribue à la coordination et au suivi des projets au sein de l’agence.",
+    portrait: "assets/rania-bradai.jpg",
+    profile: "https://www.linkedin.com/in/rania-b-ba098b194/",
+    alt: "Portrait de Rania Bradai",
+    roleIcon: "projectManagement" as const,
+    category: "chef-projet" as const,
+  },
+  {
+    name: "Ayoub Toukal",
+    role: "Data Engineer · Data Scientist · Big Data Analyst",
+    text: "Profil data chez Iris Studio, avec une expertise déclarée en data engineering, data science et big data analytics.",
+    portrait: "assets/ayoub-toukal.jpg",
+    profile: "https://dz.linkedin.com/in/toukal-ayoub-664429298",
+    alt: "Portrait d’Ayoub Toukal",
+    roleIcon: "data" as const,
+    category: "data" as const,
+  },
+  {
+    name: "Imen Derradji",
+    role: "Spécialiste trade marketing · Iris Studio",
+    text: "Trade marketing specialist chez Iris Studio. Elle accompagne les dispositifs de marque au contact du point de vente et des équipes commerciales.",
+    portrait: "assets/imen-derradji.jpg",
+    profile: "https://dz.linkedin.com/in/imen-derradji-9b5980221",
+    alt: "Portrait d’Imen Derradji",
+    roleIcon: "projectManagement" as const,
+    category: "trade" as const,
+  },
+  {
+    name: "Brahiti Lilya Rihane",
+    role: "Assistante commerciale · Responsable du club de tennis Ace Academy",
+    text: "Assistante commerciale et responsable du club de tennis Ace Academy, en charge des relations clients et des partenariats sportifs.",
+    portrait: "assets/brahiti-lilya-rihane.jpg",
+    profile: undefined,
+    alt: "Portrait de Brahiti Lilya Rihane",
+    roleIcon: "community" as const,
+    category: "commercial" as const,
+  },
+  {
+    name: "Lyes Seffari",
+    role: "Accountant & Payroll Specialist",
+    text: "Accountant & Payroll Specialist chez Iris Studio. Il assure la comptabilité et la gestion de la paie au sein de l’agence.",
+    portrait: "assets/lyes-seffari.jpg",
+    profile: "https://www.linkedin.com/in/lyes-seffari-16ba0a258/",
+    alt: "Portrait de Lyes Seffari",
+    roleIcon: "finance" as const,
+    category: "finance" as const,
+  },
+  {
+    name: "Bouchra Kahlouche",
+    role: "Généraliste RH",
+    text: "Généraliste RH chez Iris Studio. Elle intervient sur le recrutement, l’administration RH et la formation des équipes.",
+    portrait: undefined,
+    profile: "https://www.linkedin.com/in/bouchra-kahlouche/",
+    alt: "Portrait de Bouchra Kahlouche à venir",
+    roleIcon: "hr" as const,
+    category: "hr" as const,
   },
 ];
 

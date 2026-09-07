@@ -9,3 +9,89 @@
 @media (max-width:900px) { .about-page .about-leadership-cards { grid-template-columns:repeat(2,minmax(0,1fr)); }.about-page .about-person-card { min-height:28rem; } }
 @media (max-width:640px) { .about-page .about-leadership-cards,.about-page .about-studio-team-grid { grid-template-columns:1fr; }.about-page .about-person-card,.about-page .about-studio-member { min-height:28rem; padding:1.45rem; }.about-page .about-person-card .about-person-portrait,.about-page .about-person-card .about-person-placeholder,.about-page .about-studio-member .about-studio-member-portrait,.about-page .about-studio-member .about-person-placeholder { width:7.4rem; margin-top:1.6rem; }.about-page .about-leadership::after { top:6.5rem; bottom:5.8rem; }.about-page .about-leadership-cards::before,.about-page .about-studio-team-grid::before { top:-.75rem; width:9rem; } }
 @media (prefers-reduced-motion:reduce) { .about-page .about-person-card,.about-page .about-studio-member,.about-page .about-person-card::before,.about-page .about-studio-member::before { transition:none; }.about-page .about-person-card:hover,.about-page .about-studio-member:hover { transform:none; }.about-page .about-person-card:hover::before,.about-page .about-studio-member:hover::before { transform:scaleY(.42); } }
+
+/* Collectif Iris : métiers en catégories, cartes plus compactes. */
+.about-page .about-studio-team {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.8rem, 3.4vw, 2.8rem);
+}
+.about-page .about-studio-team-heading {
+  max-width: 38rem;
+}
+.about-page .about-studio-team-roster,
+.about-page .about-studio-team-heading,
+.about-page .about-studio-team-note {
+  position: relative;
+  z-index: 1;
+}
+.about-page .about-studio-team-roster {
+  display: grid;
+  width: 100%;
+  gap: clamp(1.5rem, 3vw, 2.3rem);
+}
+.about-page .about-studio-team-category-title {
+  margin: 0 0 0.8rem;
+  color: #f28a43;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.about-page .about-studio-team-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.15vw, 1rem);
+}
+.about-page .about-studio-team-grid::before {
+  display: none;
+}
+.about-page .about-studio-member {
+  min-height: 0;
+  padding: clamp(0.95rem, 1.35vw, 1.2rem);
+}
+.about-page .about-studio-member .about-studio-member-portrait,
+.about-page .about-studio-member .about-person-placeholder {
+  width: clamp(4.35rem, 5.4vw, 5.15rem);
+  margin: 0.75rem 0 0.85rem;
+}
+.about-page .about-studio-member h3 {
+  max-width: 14ch;
+  font-size: clamp(1.22rem, 1.65vw, 1.5rem);
+}
+.about-page .about-studio-member h3::after {
+  width: 2.1rem;
+  margin: 0.7rem 0 0.6rem;
+}
+.about-page .about-studio-member small {
+  font-size: 0.64rem;
+  line-height: 1.6;
+}
+.about-page .about-studio-member > .about-role-badge {
+  margin: 0 0 0.45rem;
+  font-size: 0.52rem;
+}
+.about-page .about-studio-member-link {
+  padding-top: 0.85rem;
+  font-size: 0.52rem;
+}
+@media (max-width: 900px) {
+  .about-page .about-studio-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .about-page .about-studio-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-page .about-studio-member {
+    min-height: 0;
+    padding: 1.05rem;
+  }
+  .about-page .about-studio-member .about-studio-member-portrait,
+  .about-page .about-studio-member .about-person-placeholder {
+    width: 5.1rem;
+    margin-top: 0.8rem;
+  }
+}
