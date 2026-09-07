@@ -101,8 +101,8 @@
 
 .letsplay-loading-stage {
   position: relative;
-  width: min(16.5rem, 78vw);
-  height: 9.4rem;
+  width: min(11rem, 58vw);
+  height: 7.4rem;
 }
 
 .letsplay-loading-glyph {
@@ -139,7 +139,7 @@
 
 .letsplay-loading-glyph--logo img {
   display: block;
-  width: min(15.5rem, 74vw);
+  width: min(10.5rem, 52vw);
   height: auto;
   filter: drop-shadow(0 .8rem 1.4rem rgba(8, 2, 22, .45));
 }
