@@ -134,3 +134,101 @@
     padding: 0.85rem !important;
   }
 }
+
+/* Densité finale : roster compact, bios masquées, titre plus court. */
+.about-page .about-letsplay-team-heading {
+  display: block;
+  max-width: 34rem;
+}
+.about-page .about-letsplay-team-heading .eyebrow {
+  grid-column: auto;
+  margin-bottom: 0.2rem;
+}
+.about-page .about-letsplay-team-heading .display-title {
+  max-width: 14ch;
+  font-size: clamp(1.7rem, 3.1vw, 2.35rem);
+}
+.about-page .about-letsplay-team-heading > p:last-child {
+  max-width: 34rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.about-page .about-letsplay-team-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 1.05rem;
+}
+.about-page .about-letsplay-member-top {
+  display: none;
+}
+.about-page .about-letsplay-member,
+.about-page .about-letsplay-member:nth-child(n) {
+  padding: 0.7rem 0.75rem 0.72rem !important;
+}
+.about-page .about-letsplay-member:nth-child(n) .about-letsplay-member-portrait,
+.about-page .about-letsplay-member:nth-child(n) .about-person-placeholder {
+  width: 3.3rem !important;
+  height: 3.3rem;
+  margin: 0.28rem 0 0.38rem !important;
+}
+.about-page .about-letsplay-member:nth-child(n) > .about-role-badge {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 0.28rem;
+  font-size: 0.42rem;
+  letter-spacing: 0.05em;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.about-page .about-letsplay-member:nth-child(n) h3 {
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem) !important;
+  line-height: 1.08;
+}
+.about-page .about-letsplay-member:nth-child(n) h3::after {
+  width: 1.15rem;
+  margin: 0.28rem 0 0.22rem;
+}
+.about-page .about-letsplay-member:nth-child(n) small {
+  display: none !important;
+}
+.about-page .about-letsplay-member:nth-child(n) .about-letsplay-member-actions {
+  gap: 0.32rem;
+  margin-top: 0.38rem;
+  padding-top: 0.32rem;
+}
+.about-page .about-letsplay-member-episode-link,
+.about-page .about-letsplay-member:nth-child(n) .about-letsplay-member-link,
+.about-page .about-letsplay-member-pending {
+  font-size: 0.42rem;
+}
+.about-page .about-letsplay-member-pending {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.about-page .about-letsplay-member-episode-link {
+  padding: 0.3rem 0.42rem;
+}
+.about-page .about-letsplay-team .about-letsplay-source-note {
+  margin-top: 1.15rem;
+}
+@media (min-width: 1180px) {
+  .about-page .about-letsplay-team-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .about-page .about-letsplay-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .about-page .about-letsplay-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about-page .about-letsplay-member:nth-child(n) {
+    padding: 0.65rem !important;
+  }
+}

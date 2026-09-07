@@ -80,7 +80,7 @@
 }
 @media (max-width: 640px) {
   .about-page .about-letsplay-team {
-    padding-top: 13.5rem;
+    padding-top: 8.8rem;
   }
   .about-page .about-letsplay-brand-stamp {
     top: 1.15rem;
@@ -90,5 +90,62 @@
   }
   .about-page .about-letsplay-brand-stamp img {
     max-height: none;
+  }
+}
+
+/* Fond gaming : triangle, rond, carré, croix — boutons de manette en filigrane. */
+.about-letsplay-gamepad {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23fcca35' stroke-width='2' stroke-opacity='0.16'%3E%3Cpath d='M28 14 L40 36 H16 Z'/%3E%3Ccircle cx='104' cy='26' r='11'/%3E%3Crect x='17' y='92' width='22' height='22' rx='2'/%3E%3Cpath d='M94 92 L116 114 M116 92 L94 114'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 11.5rem 11.5rem;
+}
+.about-letsplay-gamepad > span {
+  position: absolute;
+  width: 2.55rem;
+  height: 2.55rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.34;
+}
+.about-letsplay-gamepad > .is-triangle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 3.4 21.6 20.6H2.4Z' stroke='%237cff9a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.about-letsplay-gamepad > .is-circle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12' cy='12' r='8.1' stroke='%23ff6b8a' stroke-width='2'/%3E%3C/svg%3E");
+}
+.about-letsplay-gamepad > .is-square {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='5.2' y='5.2' width='13.6' height='13.6' rx='1.2' stroke='%23e9a8ff' stroke-width='2'/%3E%3C/svg%3E");
+}
+.about-letsplay-gamepad > .is-cross {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.6 6.6 17.4 17.4 M17.4 6.6 6.6 17.4' stroke='%237ec8ff' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.about-letsplay-gamepad > :nth-child(1) { top: 7%; left: 3.5%; width: 3.4rem; height: 3.4rem; transform: rotate(-14deg); }
+.about-letsplay-gamepad > :nth-child(2) { top: 14%; right: 24%; width: 2.2rem; height: 2.2rem; opacity: 0.26; }
+.about-letsplay-gamepad > :nth-child(3) { top: 38%; left: 6%; width: 2.7rem; height: 2.7rem; transform: rotate(10deg); }
+.about-letsplay-gamepad > :nth-child(4) { top: 8%; left: 36%; width: 1.7rem; height: 1.7rem; opacity: 0.2; }
+.about-letsplay-gamepad > :nth-child(5) { bottom: 18%; right: 5%; width: 3.8rem; height: 3.8rem; transform: rotate(16deg); }
+.about-letsplay-gamepad > :nth-child(6) { top: 52%; right: 8%; width: 2.3rem; height: 2.3rem; }
+.about-letsplay-gamepad > :nth-child(7) { bottom: 10%; left: 22%; width: 2rem; height: 2rem; opacity: 0.24; transform: rotate(-8deg); }
+.about-letsplay-gamepad > :nth-child(8) { bottom: 32%; left: 3%; width: 2.8rem; height: 2.8rem; }
+.about-letsplay-gamepad > :nth-child(9) { top: 68%; left: 46%; width: 1.9rem; height: 1.9rem; opacity: 0.22; }
+.about-letsplay-gamepad > :nth-child(10) { top: 28%; right: 4%; width: 1.8rem; height: 1.8rem; transform: rotate(-18deg); }
+.about-letsplay-gamepad > :nth-child(11) { bottom: 6%; right: 32%; width: 2.5rem; height: 2.5rem; }
+.about-letsplay-gamepad > :nth-child(12) { top: 78%; right: 18%; width: 1.6rem; height: 1.6rem; opacity: 0.2; }
+.about-page .about-letsplay-team-route,
+.about-page .about-letsplay-brand-stamp,
+.about-page .about-letsplay-team-heading,
+.about-page .about-letsplay-team-grid,
+.about-page .about-letsplay-source-note {
+  position: relative;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-letsplay-gamepad > span {
+    transform: none;
   }
 }

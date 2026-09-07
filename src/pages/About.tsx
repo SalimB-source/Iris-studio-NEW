@@ -320,6 +320,20 @@ export default function About() {
         </section>
 
         <section ref={letsPlayTeamRef} className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
+          <div className="about-letsplay-gamepad" aria-hidden="true">
+            <span className="is-triangle" />
+            <span className="is-circle" />
+            <span className="is-square" />
+            <span className="is-cross" />
+            <span className="is-triangle" />
+            <span className="is-circle" />
+            <span className="is-square" />
+            <span className="is-cross" />
+            <span className="is-triangle" />
+            <span className="is-circle" />
+            <span className="is-square" />
+            <span className="is-cross" />
+          </div>
           <div className="about-letsplay-team-route" aria-hidden="true"><span>03</span><i /><b>CRÉDITS DE FABRICATION</b></div>
           <div className="about-letsplay-brand-stamp">
             <img src={partnerProjectBranding.letsPlay.logo} alt={partnerProjectBranding.letsPlay.alt} />

@@ -3,8 +3,8 @@
   background: #281347 !important;
   background-color: #281347 !important;
   color: #fff !important;
-  padding-top: clamp(7.2rem, 11vw, 10rem) !important;
-  padding-bottom: clamp(5.5rem, 9vw, 9.5rem) !important;
+  padding-top: clamp(4.4rem, 6.4vw, 5.8rem) !important;
+  padding-bottom: clamp(2.8rem, 4.6vw, 4.2rem) !important;
 }
 
 #root section.about-letsplay-team :is(h1, h2, h3, h4, .display-title) {
