@@ -60,7 +60,7 @@ export const letsPlayTeam = [
   },
   {
     name: "Naoufel Amokrane",
-    role: "Senior Community Manager · Let’s Play",
+    role: "Community manager senior · Let’s Play",
     text: "Senior Community Manager de l’équipe Let’s Play, fonction communiquée par Iris Studio.",
     marker: "COMMUNAUTÉ",
     roleIcon: "community" as const,

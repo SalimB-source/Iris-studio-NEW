@@ -41,15 +41,18 @@
   text-transform: uppercase;
 }
 .about-page .about-studio-team-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(0.7rem, 1.15vw, 1rem);
+  grid-template-columns: repeat(auto-fill, minmax(11.4rem, 12.8rem));
+  justify-content: start;
+  gap: clamp(0.65rem, 1vw, 0.9rem);
 }
 .about-page .about-studio-team-grid::before {
   display: none;
 }
 .about-page .about-studio-member {
+  width: 100%;
+  max-width: 12.8rem;
   min-height: 0;
-  padding: clamp(0.95rem, 1.35vw, 1.2rem);
+  padding: clamp(0.85rem, 1.2vw, 1.05rem);
 }
 .about-page .about-studio-member .about-studio-member-portrait,
 .about-page .about-studio-member .about-person-placeholder {

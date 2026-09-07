@@ -96,22 +96,18 @@ export const leadership = [
 ];
 
 type StudioCategoryId =
-  | "senior-chef"
   | "chef-projet"
   | "data"
   | "trade"
   | "commercial"
-  | "finance"
-  | "hr";
+  | "admin";
 
 export const studioTeamCategories: { id: StudioCategoryId; label: string }[] = [
-  { id: "senior-chef", label: "Chef de projet senior" },
   { id: "chef-projet", label: "Chef de projet" },
-  { id: "data", label: "Data" },
-  { id: "trade", label: "Trade marketing" },
-  { id: "commercial", label: "Commercial & partenariats" },
-  { id: "finance", label: "Comptabilité & paie" },
-  { id: "hr", label: "Ressources humaines" },
+  { id: "data", label: "Données" },
+  { id: "trade", label: "Marketing trade" },
+  { id: "commercial", label: "Commercial et partenariats" },
+  { id: "admin", label: "Administratif" },
 ];
 
 export const studioTeam = [
@@ -127,13 +123,13 @@ export const studioTeam = [
   },
   {
     name: "Hammou Mohamed Riad",
-    role: "Chef de projet senior",
-    text: "Chef de projet senior chez Iris Studio, pilotage de programmes et coordination transverse.",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio, pilotage de programmes et coordination transverse.",
     portrait: undefined,
     profile: undefined,
     alt: "Portrait de Hammou Mohamed Riad à venir",
     roleIcon: "projectManagement" as const,
-    category: "senior-chef" as const,
+    category: "chef-projet" as const,
   },
   {
     name: "Amine Ladjal",
@@ -167,8 +163,8 @@ export const studioTeam = [
   },
   {
     name: "Ayoub Toukal",
-    role: "Data Engineer · Data Scientist · Big Data Analyst",
-    text: "Profil data chez Iris Studio, avec une expertise déclarée en data engineering, data science et big data analytics.",
+    role: "Ingénieur data · Scientifique des données · Analyste big data",
+    text: "Profil data chez Iris Studio, avec une expertise en ingénierie data, science des données et analyse big data.",
     portrait: "assets/ayoub-toukal.jpg",
     profile: "https://dz.linkedin.com/in/toukal-ayoub-664429298",
     alt: "Portrait d’Ayoub Toukal",
@@ -177,8 +173,8 @@ export const studioTeam = [
   },
   {
     name: "Imen Derradji",
-    role: "Spécialiste trade marketing · Iris Studio",
-    text: "Trade marketing specialist chez Iris Studio. Elle accompagne les dispositifs de marque au contact du point de vente et des équipes commerciales.",
+    role: "Spécialiste marketing trade · Iris Studio",
+    text: "Spécialiste marketing trade chez Iris Studio. Elle accompagne les dispositifs de marque au contact du point de vente et des équipes commerciales.",
     portrait: "assets/imen-derradji.jpg",
     profile: "https://dz.linkedin.com/in/imen-derradji-9b5980221",
     alt: "Portrait d’Imen Derradji",
@@ -197,13 +193,13 @@ export const studioTeam = [
   },
   {
     name: "Lyes Seffari",
-    role: "Accountant & Payroll Specialist",
-    text: "Accountant & Payroll Specialist chez Iris Studio. Il assure la comptabilité et la gestion de la paie au sein de l’agence.",
+    role: "Comptable et spécialiste paie",
+    text: "Comptable et spécialiste paie chez Iris Studio. Il assure la comptabilité et la gestion de la paie au sein de l’agence.",
     portrait: "assets/lyes-seffari.jpg",
     profile: "https://www.linkedin.com/in/lyes-seffari-16ba0a258/",
     alt: "Portrait de Lyes Seffari",
     roleIcon: "finance" as const,
-    category: "finance" as const,
+    category: "admin" as const,
   },
   {
     name: "Bouchra Kahlouche",
