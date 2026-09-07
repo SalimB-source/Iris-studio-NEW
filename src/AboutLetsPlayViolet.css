@@ -3,7 +3,7 @@
   background: #281347 !important;
   background-color: #281347 !important;
   color: #fff !important;
-  padding-top: clamp(9.5rem, 16vw, 15rem) !important;
+  padding-top: clamp(7.2rem, 11vw, 10rem) !important;
   padding-bottom: clamp(5.5rem, 9vw, 9.5rem) !important;
 }
 
@@ -29,10 +29,10 @@
 }
 
 #root section.about-letsplay-team .about-letsplay-brand-stamp {
-  top: 1rem !important;
-  right: clamp(0.8rem, 4vw, 4rem) !important;
+  top: 1.6rem !important;
+  right: clamp(1.2rem, 5vw, 5rem) !important;
   display: flex !important;
-  width: clamp(16rem, 32vw, 26rem) !important;
+  width: clamp(7.25rem, 13vw, 9.5rem) !important;
   min-height: 0 !important;
   padding: 0 !important;
   border: 0 !important;
@@ -47,8 +47,8 @@
 }
 
 #root section.about-letsplay-team .about-letsplay-brand-stamp img {
-  width: clamp(16rem, 32vw, 26rem) !important;
-  max-width: 26rem !important;
+  width: clamp(7.25rem, 13vw, 9.5rem) !important;
+  max-width: 9.5rem !important;
   height: auto !important;
   max-height: none !important;
   object-fit: contain !important;
@@ -56,12 +56,12 @@
 
 @media (max-width: 640px) {
   #root section.about-letsplay-team {
-    padding-top: 14rem !important;
+    padding-top: 8.8rem !important;
   }
 
   #root section.about-letsplay-team .about-letsplay-brand-stamp,
   #root section.about-letsplay-team .about-letsplay-brand-stamp img {
-    width: min(14rem, 78vw) !important;
-    max-width: 14rem !important;
+    width: min(7.5rem, 42vw) !important;
+    max-width: 7.5rem !important;
   }
 }

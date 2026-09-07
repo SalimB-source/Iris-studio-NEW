@@ -6,10 +6,15 @@ export function paintLetsPlayTeamViolet(node: HTMLElement | null) {
   node.style.setProperty("background-color", "#281347", "important");
   node.style.setProperty("color", "#fff", "important");
 
+  const stamp = node.querySelector<HTMLElement>(".about-letsplay-brand-stamp");
+  if (stamp) {
+    stamp.style.setProperty("width", "clamp(7.25rem, 13vw, 9.5rem)", "important");
+  }
+
   const img = node.querySelector<HTMLImageElement>(".about-letsplay-brand-stamp img");
   if (!img) return;
-  img.style.setProperty("width", "min(26rem, 78vw)", "important");
-  img.style.setProperty("max-width", "26rem", "important");
+  img.style.setProperty("width", "clamp(7.25rem, 13vw, 9.5rem)", "important");
+  img.style.setProperty("max-width", "9.5rem", "important");
   img.style.setProperty("height", "auto", "important");
   img.style.setProperty("max-height", "none", "important");
 }
