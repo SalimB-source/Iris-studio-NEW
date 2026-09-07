@@ -65,39 +65,6 @@ function PersonMedia({ name, portrait, alt, variant = "person" }: { name: string
   );
 }
 
-export const backstageGallery = [
-  {
-    id: "gbfoods-retail",
-    index: "ARCHIVE / 01",
-    title: "Préparer le point de vente.",
-    description: "Exécution retail et suivi de merchandising autour d’un présentoir Jumbo Noodles.",
-    image: "assets/gbfoods-retail-execution_e4762b3b.jpg",
-    alt: "Intervention de merchandising sur un présentoir Jumbo Noodles, archive LinkedIn Iris Studio fournie.",
-    source: "GBfoods Algeria · archive LinkedIn Iris Studio fournie",
-    layout: "retail",
-  },
-  {
-    id: "holcim-stand",
-    index: "ARCHIVE / 02",
-    title: "Composer un espace de marque.",
-    description: "Dispositif Holcim El-Djazaïr présenté au Salon International des Travaux Publics 2024.",
-    image: "assets/holcim-sitp-stand_cd9587e2.jpg",
-    alt: "Stand Holcim El-Djazaïr au Salon International des Travaux Publics 2024, archive LinkedIn Iris Studio fournie.",
-    source: "Holcim / SITP 2024 · archive LinkedIn Iris Studio fournie",
-    layout: "panorama",
-  },
-  {
-    id: "djezzy-activation",
-    index: "ARCHIVE / 03",
-    title: "Déployer dans la ville.",
-    description: "Activation Djezzy déployée sur le terrain avec un dispositif visible au contact du public.",
-    image: "assets/djezzy-trade-activation_1642adb5.jpg",
-    alt: "Dispositif d’activation terrain Djezzy, archive LinkedIn Iris Studio fournie.",
-    source: "Djezzy · archive LinkedIn Iris Studio fournie",
-    layout: "activation",
-  },
-] as const;
-
 export const leadership = [
   {
     name: "Rebai Chentli",
@@ -129,7 +96,6 @@ export const leadership = [
 ];
 
 type StudioCategoryId =
-  | "senior-pm"
   | "senior-chef"
   | "chef-projet"
   | "data"
@@ -139,7 +105,6 @@ type StudioCategoryId =
   | "hr";
 
 export const studioTeamCategories: { id: StudioCategoryId; label: string }[] = [
-  { id: "senior-pm", label: "Senior Project Manager" },
   { id: "senior-chef", label: "Chef de projet senior" },
   { id: "chef-projet", label: "Chef de projet" },
   { id: "data", label: "Data" },
@@ -152,13 +117,13 @@ export const studioTeamCategories: { id: StudioCategoryId; label: string }[] = [
 export const studioTeam = [
   {
     name: "Chakib Taleb",
-    role: "Senior Project Manager · Iris Studio",
-    text: "Senior Project Manager chez Iris Studio. Il accompagne le pilotage de projets et la coordination de leurs étapes de production.",
+    role: "Chef de projet · Iris Studio",
+    text: "Chef de projet chez Iris Studio. Il accompagne le pilotage de projets et la coordination de leurs étapes de production.",
     portrait: "assets/chakib-taleb.jpg",
     profile: "https://dz.linkedin.com/in/chakib-taleb-716abb179",
     alt: "Portrait de Chakib Taleb",
     roleIcon: "projectManagement" as const,
-    category: "senior-pm" as const,
+    category: "chef-projet" as const,
   },
   {
     name: "Hammou Mohamed Riad",
@@ -321,23 +286,8 @@ export default function About() {
           </aside>
         </section>
 
-        <section className="about-proof section-pad" aria-labelledby="proof-title">
-          <div className="about-proof-route" aria-hidden="true"><span>02</span><i /><b>PREUVE TERRAIN</b></div>
-          <figure className="about-proof-media">
-            <span className="about-proof-index">ARCHIVE / 01</span>
-            <img src="assets/letsplay-comiccon_56bebf05.jpg" alt="Games and Comic Con Dzair, publication officielle de Let’s Play" />
-            <figcaption><span>Territoire culture & communauté</span><strong>Let’s Play × Algérie Télécom — Games & Comic Con Dzair</strong></figcaption>
-          </figure>
-          <div className="about-proof-copy">
-            <p className="eyebrow">Une trace, pas un décor</p>
-            <h2 id="proof-title" className="display-title">Le terrain est notre<br />premier <em>document.</em></h2>
-            <p>Les projets d’Iris Studio prennent leur sens au contact des communautés, des usages et des partenaires. Cette archive publique Let’s Play témoigne d’une pratique : observer ce qui se passe, puis donner une forme juste à la conversation.</p>
-            <a className="arrow-link" href="https://www.youtube.com/watch?v=HzigJZOxz2o" target="_blank" rel="noreferrer">Consulter l’archive source <ArrowUpRight size={17} /></a>
-          </div>
-        </section>
-
         <section ref={letsPlayTeamRef} className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
-          <div className="about-letsplay-team-route" aria-hidden="true"><span>04</span><i /><b>CRÉDITS DE FABRICATION</b></div>
+          <div className="about-letsplay-team-route" aria-hidden="true"><span>02</span><i /><b>CRÉDITS DE FABRICATION</b></div>
           <div className="about-letsplay-brand-stamp">
             <img src={partnerProjectBranding.letsPlay.logo} alt={partnerProjectBranding.letsPlay.alt} />
           </div>
@@ -398,7 +348,7 @@ export default function About() {
         </section>
 
         <section className="about-studio-team section-pad" aria-labelledby="studio-team-title">
-          <div className="about-studio-team-route" aria-hidden="true"><span>05</span><i /><b>COLLECTIF IRIS</b></div>
+          <div className="about-studio-team-route" aria-hidden="true"><span>03</span><i /><b>COLLECTIF IRIS</b></div>
           <div className="about-studio-team-heading">
             <p className="eyebrow">Équipe Iris Studio</p>
             <h2 id="studio-team-title" className="display-title">Les métiers qui font<br /><em>avancer le studio.</em></h2>
@@ -441,7 +391,7 @@ export default function About() {
 
         <section className="about-leadership section-pad" aria-labelledby="leadership-title">
           <div className="about-leadership-orbit" aria-hidden="true"><i /><i /><i /></div>
-          <div className="about-leadership-route" aria-hidden="true"><span>06 / REGARD</span><i /><b /></div>
+          <div className="about-leadership-route" aria-hidden="true"><span>04 / REGARD</span><i /><b /></div>
           <div className="about-leadership-heading">
             <p className="eyebrow">Direction associée à l’histoire du studio</p>
             <h2 id="leadership-title" className="display-title">Trois parcours publics<br />qui portent <em>la direction.</em></h2>
@@ -467,7 +417,7 @@ export default function About() {
         </section>
 
         <section className="about-ecosystem section-pad" aria-labelledby="ecosystem-title">
-          <div className="about-ecosystem-route" aria-hidden="true"><span>07</span><i /><b>MARQUES</b></div>
+          <div className="about-ecosystem-route" aria-hidden="true"><span>05</span><i /><b>MARQUES</b></div>
           <div className="about-ecosystem-heading">
             <p className="eyebrow">Un écosystème de confiance</p>
             <h2 id="ecosystem-title" className="display-title">Des marques rencontrées<br />sur le <em>terrain.</em></h2>
@@ -481,36 +431,6 @@ export default function About() {
             ))}
           </ul>
           <p className="about-ecosystem-note">Dossier / logos officiels des marques citées par la présentation publique d’Iris Studio. Couleurs de marque conservées.</p>
-        </section>
-
-        <section className="about-backstage-gallery section-pad" aria-labelledby="backstage-gallery-title">
-          <div className="about-backstage-gallery-route" aria-hidden="true"><span>03</span><i /><b>COULISSES OPÉRATIONNELLES</b></div>
-          <div className="about-backstage-gallery-heading">
-            <div>
-              <p className="eyebrow">Coulisses / archives de terrain</p>
-              <h2 id="backstage-gallery-title" className="display-title">Avant l’impact, il y a<br /><em>le geste juste.</em></h2>
-            </div>
-            <div>
-              <p>Une sélection d’archives de projets accompagne le récit du studio : préparation du point de vente, conception de dispositifs et activation sur le terrain.</p>
-              <span>Dossiers / captures LinkedIn Iris Studio fournies par l’équipe</span>
-            </div>
-          </div>
-          <div className="about-backstage-gallery-grid">
-            {backstageGallery.map((item) => (
-              <figure key={item.id} className={`about-backstage-gallery-item about-backstage-gallery-item-${item.layout}`}>
-                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
-                <figcaption>
-                  <span>{item.index}</span>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                  <small>{item.source}</small>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <Link href="/projets" className="about-backstage-gallery-link">Voir les dossiers opérationnels <ArrowUpRight size={17} /></Link>
         </section>
 
         <section className="about-contact section-pad" aria-labelledby="about-contact-title">
