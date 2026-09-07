@@ -24,6 +24,19 @@ export const sevenArenaDossiers = [
   },
 ] as const;
 
+export const sevenArenaFeaturedEpisode = {
+  eyebrow: "Épisode en vedette",
+  category: "Team Alliance Special",
+  title: "VENOM, capitaine des champions.",
+  description:
+    "Dans l’épisode final de 7ouma Arena by Djezzy, VENOM, capitaine de Team Alliance et champion de la FF Pro League, est accueilli aux côtés de Supreme, manager de l’équipe.",
+  duration: "41:40",
+  videoId: "RxOv92HDMQI",
+  href: "https://www.youtube.com/watch?v=RxOv92HDMQI",
+  embedSrc: "https://www.youtube-nocookie.com/embed/RxOv92HDMQI",
+  poster: "https://i.ytimg.com/vi/RxOv92HDMQI/hqdefault.jpg",
+} as const;
+
 export const sevenArenaScreenings = [
   {
     id: "alliance-special",

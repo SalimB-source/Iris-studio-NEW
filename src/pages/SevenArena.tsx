@@ -21,12 +21,14 @@ import {
   sevenArenaCredits,
   sevenArenaDossiers,
   sevenArenaEcosystem,
+  sevenArenaFeaturedEpisode,
   sevenArenaScreenings,
   sevenArenaVisualFilters,
   sevenArenaVisuals,
   sevenArenaVoices,
 } from "./sevenArenaContent";
 import "./ArenaVoiceRoster.css";
+import "./ArenaFeaturedEpisode.css";
 
 function ArenaVisualCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -203,6 +205,40 @@ export default function SevenArena() {
             les compétitions, les créateurs et les formats communautaires, il rassemble les joueurs là où
             se construit réellement la culture compétitive.
           </p>
+        </section>
+
+        <section className="arena-featured-episode section-pad" aria-labelledby="arena-featured-title">
+          <div className="arena-featured-episode-heading">
+            <div>
+              <p className="eyebrow">{sevenArenaFeaturedEpisode.eyebrow}</p>
+              <h2 id="arena-featured-title" className="display-title">
+                L’épisode final,<br />
+                <em>à l’écran.</em>
+              </h2>
+            </div>
+            <p>{sevenArenaFeaturedEpisode.description}</p>
+          </div>
+          <div className="arena-featured-player" data-no-parallax>
+            <div className="arena-featured-player-frame">
+              <iframe
+                src={`${sevenArenaFeaturedEpisode.embedSrc}?rel=0`}
+                title={sevenArenaFeaturedEpisode.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+            <div className="arena-featured-player-meta">
+              <div>
+                <p>{sevenArenaFeaturedEpisode.category} · {sevenArenaFeaturedEpisode.duration}</p>
+                <strong>{sevenArenaFeaturedEpisode.title}</strong>
+              </div>
+              <a href={sevenArenaFeaturedEpisode.href} target="_blank" rel="noreferrer">
+                Ouvrir sur YouTube <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="arena-attribution" className="arena-attribution section-pad project-progress-target" aria-labelledby="arena-attribution-title">

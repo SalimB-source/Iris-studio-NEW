@@ -1,0 +1,108 @@
+/* 7ouma Arena — épisode YouTube en vedette, jouable sur la page. */
+.arena-featured-episode {
+  position: relative;
+  overflow: hidden;
+  background: #151a22;
+  color: #fff;
+}
+
+.arena-featured-episode-heading {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.1fr) minmax(14rem, 0.9fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.arena-featured-episode-heading .eyebrow,
+.arena-featured-episode-heading h2 em {
+  color: #e52f38;
+}
+
+.arena-featured-episode-heading h2 {
+  max-width: 14ch;
+  margin: 0.55rem 0 0;
+  color: #fff;
+}
+
+.arena-featured-episode-heading > p {
+  max-width: 32rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.arena-featured-player {
+  position: relative;
+  margin-top: 1.7rem;
+  overflow: hidden;
+  border: 1px solid rgba(229, 47, 56, 0.38);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  background: #080808;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.28);
+}
+
+.arena-featured-player-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #080808;
+}
+
+.arena-featured-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.arena-featured-player-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.05rem 1.05rem;
+  background: #151a22;
+}
+
+.arena-featured-player-meta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.arena-featured-player-meta strong {
+  display: block;
+  margin-top: 0.28rem;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.arena-featured-player-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #e52f38;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.arena-featured-player-meta a:hover {
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .arena-featured-episode-heading {
+    grid-template-columns: 1fr;
+  }
+}
