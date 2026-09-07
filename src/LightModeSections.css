@@ -782,3 +782,30 @@ html:not(.dark) .about-page .about-proof .about-proof-media figcaption span {
 html:not(.dark) .about-page .about-proof .about-proof-media figcaption strong {
   color: #202020 !important;
 }
+
+/* Agence / expertises : icônes rouges invisibles sur l’aplat rouge du thème clair. */
+html:not(.dark) #agency-expertises .expertise-row-icon,
+html:not(.dark) #agency-expertises .expertise-row-icon svg {
+  color: #fff !important;
+}
+html:not(.dark) #agency-expertises .expertise-row-icon {
+  border-color: rgba(255, 255, 255, 0.78) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+html:not(.dark) #agency-expertises .expertise-row:hover .expertise-row-icon,
+html:not(.dark) #agency-expertises .expertise-row:focus-within .expertise-row-icon {
+  border-color: #fff !important;
+  background: #fff !important;
+  color: #e7433a !important;
+}
+html:not(.dark) #agency-expertises .expertise-row:hover .expertise-row-icon svg,
+html:not(.dark) #agency-expertises .expertise-row:focus-within .expertise-row-icon svg {
+  color: #e7433a !important;
+}
+html:not(.dark) #agency-expertises .expertise-row-index {
+  color: #fff !important;
+}
+html:not(.dark) #agency-expertises .expertise-tags span {
+  border-color: rgba(255, 255, 255, 0.42) !important;
+  color: #fff !important;
+}
