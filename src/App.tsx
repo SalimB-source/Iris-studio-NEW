@@ -47,7 +47,8 @@ function RouteTree() {
   // make sure to consider if you need authentication for certain routes
   return <><RouteScrollRestoration /><Suspense fallback={<RouteLoadingFallback />}><Switch>
     <Route path="/" component={Home} />
-    <Route path="/a-propos" component={About} />
+    <Route path="/equipe" component={About} />
+    <Route path="/a-propos"><Redirect to="/equipe" /></Route>
     <Route path="/agence" component={Agency} />
     <Route path="/expertises"><Redirect to="/agence#agency-expertises" /></Route>
     <Route path="/projets/lets-play" component={LetsPlay} />

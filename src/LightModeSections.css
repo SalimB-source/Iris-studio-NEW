@@ -811,6 +811,9 @@ html:not(.dark) #agency-expertises .expertise-tags span {
 }
 
 html:not(.dark) .about-studio-team-category-title {
+  color: #e7433a !important;
+}
+html:not(.dark) :is(.page-shell, .site-shell) main > section:nth-of-type(even) .about-studio-team-category-title {
   color: #fff !important;
 }
 .dark .about-studio-team-category-title {

@@ -5,7 +5,7 @@
  * crédite Let’s Play séparément et présente l’équipe Iris Studio avec des fonctions et portraits publics attribués avec prudence.
  */
 import { useLayoutEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
-import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Calculator, Clapperboard, Linkedin, LoaderCircle, Mic2, MoveRight, PenLine, Play, UserCog, UserRound, UsersRound } from "lucide-react";
+import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Calculator, Clapperboard, Linkedin, LoaderCircle, Mic2, PenLine, Play, UserCog, UserRound, UsersRound } from "lucide-react";
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
@@ -64,24 +64,6 @@ function PersonMedia({ name, portrait, alt, variant = "person" }: { name: string
     </div>
   );
 }
-
-const principles = [
-  {
-    number: "01",
-    title: "Écouter avant d’activer.",
-    text: "Chaque réponse utile commence par un contexte compris : la marque, les usages, les équipes et le terrain qui les relie.",
-  },
-  {
-    number: "02",
-    title: "Construire avec les bons alliés.",
-    text: "L’agence rassemble les compétences les plus pertinentes pour donner à une idée la forme qui lui permettra d’agir.",
-  },
-  {
-    number: "03",
-    title: "Faire avancer le réel.",
-    text: "La stratégie se mesure lorsqu’elle devient visible, activable et utile pour les marques comme pour leurs communautés.",
-  },
-];
 
 export const backstageGallery = [
   {
@@ -303,7 +285,7 @@ export default function About() {
         <section className="about-hero section-pad" aria-labelledby="about-title">
           <div className="about-hero-line" aria-hidden="true"><i /><i /><i /></div>
           <div className="about-hero-meta">
-            <p className="eyebrow">À propos / Iris Studio</p>
+            <p className="eyebrow">L’équipe / Iris Studio</p>
             <p>Alger, Algérie<br />Une communication qui part du réel.</p>
           </div>
           <div className="about-hero-main">
@@ -337,22 +319,6 @@ export default function About() {
             <strong>10<span>+</span></strong>
             <p>années d’expérience<br />au contact des marques<br />et du terrain.</p>
           </aside>
-        </section>
-
-        <section className="about-principles section-pad" aria-labelledby="principles-title">
-          <div className="about-principles-heading">
-            <div><p className="eyebrow">Notre ligne de conduite</p><h2 id="principles-title" className="display-title">Une agence organique,<br /><em>éclectique et pragmatique.</em></h2></div>
-            <p>Une même exigence relie nos métiers : faire de la communication un levier lisible pour les équipes, les marques et leurs publics.</p>
-          </div>
-          <div className="about-principles-list">
-            {principles.map((principle) => (
-              <article key={principle.number}>
-                <span>{principle.number}</span>
-                <div><h3>{principle.title}</h3><p>{principle.text}</p></div>
-                <MoveRight size={20} aria-hidden="true" />
-              </article>
-            ))}
-          </div>
         </section>
 
         <section className="about-proof section-pad" aria-labelledby="proof-title">
@@ -440,21 +406,35 @@ export default function About() {
               Cette sélection présente des membres de l’équipe Iris Studio, distinctement des crédits Let’s Play. Les intitulés sont limités aux informations visibles dans les profils professionnels publics fournis.
             </p>
           </div>
-          <div className="about-studio-team-grid">
-            {studioTeam.map((person, index) => (
-              <article key={person.name} className="about-studio-member">
-                <span className="about-studio-member-index">MEMBRE / 0{index + 1}</span>
-                <PersonMedia name={person.name} portrait={person.portrait} alt={person.alt} variant="studio" />
-                <RoleBadge icon={person.roleIcon} label={person.role} />
-                <h3>{person.name}</h3>
-                <small>{person.text}</small>
-                {person.profile ? (
-                  <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer">
-                    Voir le profil LinkedIn <Linkedin size={14} /> <ArrowUpRight size={14} />
-                  </a>
-                ) : null}
-              </article>
-            ))}
+          <div className="about-studio-team-roster">
+            {studioTeamCategories.map((category) => {
+              const members = studioTeam.filter((person) => person.category === category.id);
+              if (!members.length) return null;
+              return (
+                <div key={category.id} className="about-studio-team-category">
+                  <h3 className="about-studio-team-category-title">{category.label}</h3>
+                  <div className="about-studio-team-grid">
+                    {members.map((person) => {
+                      const memberNumber = String(studioTeam.findIndex((entry) => entry.name === person.name) + 1).padStart(2, "0");
+                      return (
+                        <article key={person.name} className="about-studio-member">
+                          <span className="about-studio-member-index">MEMBRE / {memberNumber}</span>
+                          <PersonMedia name={person.name} portrait={person.portrait} alt={person.alt} variant="studio" />
+                          <RoleBadge icon={person.roleIcon} label={person.role} />
+                          <h3>{person.name}</h3>
+                          <small>{person.text}</small>
+                          {person.profile ? (
+                            <a className="about-studio-member-link" href={person.profile} target="_blank" rel="noreferrer">
+                              Voir le profil LinkedIn <Linkedin size={14} /> <ArrowUpRight size={14} />
+                            </a>
+                          ) : null}
+                        </article>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <p className="about-studio-team-note">Dossier / les cartes utilisent un portrait seulement lorsqu’il est fourni ou vérifié comme image individuelle. Les autres restent volontairement en placeholder, plutôt que d’afficher une capture de profil. Les fonctions, profils et courtes biographies s’appuient sur les informations professionnelles publiques consultées en août 2026.</p>
         </section>

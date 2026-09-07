@@ -13,7 +13,7 @@ import "./SiteChromeRefinement.css";
 
 const navigation = [
   { href: "/", label: "Accueil" },
-  { href: "/a-propos", label: "À propos" },
+  { href: "/equipe", label: "L’équipe" },
   { href: "/agence", label: "L’agence" },
   { href: "/projets/lets-play", label: "Let’s Play", className: "is-letsplay-link" },
   { href: "/projets", label: "Projets" },
