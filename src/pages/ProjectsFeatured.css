@@ -71,14 +71,6 @@
   box-shadow: none;
 }
 
-.page-shell .projects-cards .project-case-media-letsplay img {
-  object-position: center 46%;
-}
-
-.page-shell .projects-cards .project-case-media-arena img {
-  object-position: center 42%;
-}
-
 .page-shell .projects-cards .project-case:hover .project-case-media img {
   transform: scale(1.03) !important;
 }
