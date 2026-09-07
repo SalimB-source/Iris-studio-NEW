@@ -1,44 +1,28 @@
-/* Agence — palmarès FMCG et chiffres trade, d’après la présentation institutionnelle. */
+/* Agence — présentation FMCG : palmarès et chiffres en cartes compactes. */
 .agency-fmcg {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(16rem, 0.92fr) minmax(22rem, 1.08fr);
-  gap: clamp(2.2rem, 6vw, 5.5rem);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
   overflow: hidden;
 }
 
-.agency-fmcg-intro {
-  position: relative;
-  z-index: 1;
+.agency-fmcg-heading {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.1fr) minmax(14rem, 0.9fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: end;
 }
 
-.agency-fmcg-top {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.12em;
-  margin: 0.35rem 0 0;
-  color: #202020;
-  font-family: Inter, Arial, sans-serif;
-  font-weight: 900;
-  letter-spacing: -0.08em;
-  line-height: 0.78;
-  text-transform: uppercase;
+.agency-fmcg-heading h2 {
+  max-width: 14ch;
+  margin: 0.55rem 0 0;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
 }
 
-.agency-fmcg-top span {
-  font-size: clamp(3.1rem, 8vw, 5.6rem);
-}
-
-.agency-fmcg-top em {
-  font-size: clamp(6.2rem, 16vw, 11.2rem);
-  font-style: normal;
-  color: #e7433a;
-}
-
-.agency-fmcg-intro > p:last-of-type {
-  max-width: 28rem;
-  margin: 1.35rem 0 0;
+.agency-fmcg-heading > p {
+  max-width: 32rem;
+  margin: 0;
   color: #5f5955;
   font-size: 0.92rem;
   line-height: 1.75;
@@ -48,111 +32,126 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem;
-  margin: 1.8rem 0 0;
-  padding: 0.85rem;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  background: #fff !important;
-  border: 1px solid rgba(32, 32, 32, 0.12);
+  background: transparent;
+  border: 0;
 }
 
 .agency-fmcg-partners li {
-  display: grid;
-  min-height: 4.6rem;
-  place-items: center;
-  padding: 0.45rem 0.55rem;
+  position: relative;
+  display: flex;
+  min-height: 7.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  padding: 0.9rem 1rem 1rem;
   background: #fff !important;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.08);
+}
+
+.agency-fmcg-partners li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.22rem;
+  height: 100%;
+  background: #e7433a;
+  content: "";
+  transform: scaleY(0.38);
+  transform-origin: top;
+}
+
+.agency-fmcg-partner-index {
+  color: #e7433a;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
 .agency-fmcg-partners .mon-logo {
   display: block;
   width: auto;
-  max-width: 100%;
-  height: 2.7rem;
+  max-width: min(100%, 9.5rem);
+  height: 2.4rem;
+  margin: 0.55rem 0;
   object-fit: contain;
   filter: none !important;
   -webkit-filter: none !important;
 }
 
-.agency-fmcg-tree {
-  position: relative;
-  z-index: 1;
-}
-
-.agency-fmcg-tree-caption {
-  width: fit-content;
-  max-width: 22rem;
-  margin: 0 auto 1.35rem;
-  border: 1px solid rgba(32, 32, 32, 0.16);
-  border-radius: 999px;
-  padding: 0.55rem 1.05rem;
-  background: #fff;
+.agency-fmcg-partners strong {
   color: #202020;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1.45;
-  text-align: center;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
 .agency-fmcg-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 0.9rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
 }
 
 .agency-fmcg-stat {
-  min-height: 8.4rem;
-  padding: 1.05rem 1.1rem 1.15rem;
+  position: relative;
+  min-height: 7.2rem;
+  overflow: hidden;
   border: 1px solid rgba(32, 32, 32, 0.12);
+  border-radius: var(--iris-radius-card, 0.35rem);
+  padding: 0.9rem 0.95rem 1rem;
   background: #fff;
   color: #202020;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.08);
 }
 
-.agency-fmcg-stat.is-featured {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(100%, 18.5rem);
+.agency-fmcg-stat::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.22rem;
+  height: 100%;
+  background: #e7433a;
+  content: "";
+  transform: scaleY(0.38);
+  transform-origin: top;
 }
 
 .agency-fmcg-stat strong {
   display: block;
   color: #e7433a;
   font-family: Inter, Arial, sans-serif;
-  font-size: clamp(2.15rem, 4.4vw, 3.15rem);
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
   font-weight: 900;
-  letter-spacing: -0.06em;
-  line-height: 0.92;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
 }
 
 .agency-fmcg-stat span {
   display: block;
-  margin-top: 0.7rem;
+  margin-top: 0.65rem;
   color: #5f5955;
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  line-height: 1.45;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
-.dark .agency-fmcg-top {
-  color: #f7f2ec !important;
-}
-
-.dark .agency-fmcg-top em {
-  color: #f28a43 !important;
-}
-
-.dark .agency-fmcg-intro > p:last-of-type {
-  color: #c8c0b9 !important;
+.dark .agency-fmcg-heading > p {
+  color: #c8c0b9;
 }
 
 .dark .agency-fmcg-partners,
-.dark .agency-fmcg-partners li,
-.dark .agency-fmcg-tree-caption {
+.dark .agency-fmcg-partners li {
   background: #fff !important;
   border-color: rgba(32, 32, 32, 0.08);
-  color: #202020 !important;
 }
 
 .dark .agency-fmcg-partners .mon-logo {
@@ -160,44 +159,44 @@
   -webkit-filter: none !important;
 }
 
+.dark .agency-fmcg-partners strong {
+  color: #202020;
+}
+
 .dark .agency-fmcg-stat {
-  background: #25211f !important;
+  background: #25211f;
   border-color: rgba(247, 242, 236, 0.16);
-  color: #f7f2ec !important;
+  color: #f7f2ec;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.26);
 }
 
 .dark .agency-fmcg-stat strong {
-  color: #f28a43 !important;
+  color: #f28a43;
 }
 
 .dark .agency-fmcg-stat span {
-  color: #c8c0b9 !important;
+  color: #c8c0b9;
+}
+
+@media (max-width: 980px) {
+  .agency-fmcg-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
-  .agency-fmcg {
+  .agency-fmcg-heading {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
-  }
-
-  .agency-fmcg-stat.is-featured {
-    width: 100%;
   }
 }
 
 @media (max-width: 640px) {
-  .agency-fmcg-partners {
-    grid-template-columns: 1fr;
-  }
-
-  .agency-fmcg-partners li {
-    min-height: 3.8rem;
-  }
-
+  .agency-fmcg-partners,
   .agency-fmcg-stats {
     grid-template-columns: 1fr;
   }
 
+  .agency-fmcg-partners li,
   .agency-fmcg-stat {
     min-height: 0;
   }
