@@ -31,7 +31,8 @@ export function SiteHeader() {
   const isLetsPlayPage = location === "/projets/lets-play";
   const isArenaPage = location === "/projets/7ouma-arena";
   const hasCinematicHomeHero = (location === "/" || isLetsPlayPage || isArenaPage) && !scrolled;
-  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero || isLetsPlayPage || isArenaPage;
+  // 7ouma Arena is white/transparent only above the hero. Once scrolled, use the exact normal header branding.
+  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero || isLetsPlayPage;
   const logo = usesWhiteLogo ? IRIS_LOGO_WHITE : IRIS_LOGO_LIGHT;
   const logoClassName = `brand-logo${usesWhiteLogo ? " brand-logo--white" : ""}`;
 
