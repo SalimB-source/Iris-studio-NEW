@@ -29,8 +29,9 @@ export function SiteHeader() {
   const [location] = useLocation();
   const { theme, toggleTheme } = useTheme();
   const isLetsPlayPage = location === "/projets/lets-play";
-  const hasCinematicHomeHero = (location === "/" || isLetsPlayPage) && !scrolled;
-  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero || isLetsPlayPage;
+  const isArenaPage = location === "/projets/7ouma-arena";
+  const hasCinematicHomeHero = (location === "/" || isLetsPlayPage || isArenaPage) && !scrolled;
+  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero || isLetsPlayPage || isArenaPage;
   const logo = usesWhiteLogo ? IRIS_LOGO_WHITE : IRIS_LOGO_LIGHT;
   const logoClassName = `brand-logo${usesWhiteLogo ? " brand-logo--white" : ""}`;
 
@@ -52,7 +53,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className={`site-header page-site-header ${scrolled ? "is-scrolled" : ""} ${hasCinematicHomeHero ? "is-cinematic-hero" : ""}`}>
+      <header className={`site-header page-site-header ${scrolled ? "is-scrolled" : ""} ${hasCinematicHomeHero ? "is-cinematic-hero" : ""} ${isArenaPage ? "is-arena-project" : ""}`}>
         <Link className="brand-lockup" href="/" aria-label="Iris Studio — accueil" onClick={close}>
           <span className="brand-logo-wrap"><img className={logoClassName} src={logo} alt="Iris Studio" /></span>
           <span className="brand-coordinate" aria-hidden="true">ALGER / 36.75°</span>
