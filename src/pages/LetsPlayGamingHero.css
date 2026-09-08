@@ -42,3 +42,48 @@
     width: min(7.2rem, 40vw);
   }
 }
+
+
+/* Barre de navigation : même overlay sombre que l’accueil cinématographique. */
+.letsplay-detail .site-header.page-site-header,
+.letsplay-detail .site-header.page-site-header.is-cinematic-hero {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0) 100%) !important;
+  box-shadow: none;
+  color: #fff !important;
+  backdrop-filter: blur(2px);
+}
+
+.letsplay-detail .site-header.page-site-header.is-scrolled {
+  border-bottom-color: rgba(247, 242, 236, 0.12);
+  background: rgba(21, 21, 21, 0.92) !important;
+  box-shadow: 0 1px 0 rgba(247, 242, 236, 0.08);
+  color: #f7f2ec !important;
+  backdrop-filter: blur(14px);
+}
+
+.letsplay-detail .site-header :is(.desktop-nav a, .brand-coordinate, .theme-toggle, .mobile-toggle, .mobile-toggle span) {
+  color: #fff !important;
+}
+
+.letsplay-detail .site-header .brand-coordinate {
+  border-left-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.letsplay-detail .site-header .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.letsplay-detail .site-header .desktop-nav a:not(.is-active):hover {
+  color: #f28a43 !important;
+}
+
+.letsplay-detail .site-header .desktop-nav a.is-active,
+.letsplay-detail .site-header .desktop-nav .is-letsplay-link,
+.letsplay-detail .site-header .desktop-nav .is-letsplay-link.is-active {
+  color: #fff !important;
+}
+
+.letsplay-detail .site-header .desktop-nav .is-letsplay-link.is-active {
+  color: #f28a43 !important;
+}

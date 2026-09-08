@@ -28,8 +28,9 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const hasCinematicHomeHero = location === "/" && !scrolled;
-  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero;
+  const isLetsPlayPage = location === "/projets/lets-play";
+  const hasCinematicHomeHero = (location === "/" || isLetsPlayPage) && !scrolled;
+  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero || isLetsPlayPage;
   const logo = usesWhiteLogo ? IRIS_LOGO_WHITE : IRIS_LOGO_LIGHT;
   const logoClassName = `brand-logo${usesWhiteLogo ? " brand-logo--white" : ""}`;
 
