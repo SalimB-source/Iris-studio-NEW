@@ -185,6 +185,14 @@ export const letsPlayScreenings = [
 
 export const letsPlayFeaturedScreening = letsPlayScreenings[0];
 
+export const letsPlayGccPlayer = {
+  videoId: "HzigJZOxz2o",
+  title: "Games & Comic Con Dzair 2026 : Guests, Cosplay & Highlights !",
+  poster: "assets/letsplay-episode-gccdz.webp",
+  href: "https://www.youtube.com/watch?v=HzigJZOxz2o",
+  embedSrc: "https://www.youtube-nocookie.com/embed/HzigJZOxz2o",
+} as const;
+
 export const letsPlayTclReview = {
   category: "REVIEW TECH · TCL",
   index: "REVIEW / 03",

@@ -1,0 +1,29 @@
+/* Let’s Play — reportage GCCDZ 2026, muet, avec play / pause. */
+.letsplay-gcc-player {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #0b0319;
+}
+
+.letsplay-gcc-player-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-height: min(80vh, 38rem);
+  margin: 0 auto;
+  background: #08040f;
+}
+
+.letsplay-gcc-player-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .letsplay-gcc-player-frame {
+    max-height: none;
+  }
+}
