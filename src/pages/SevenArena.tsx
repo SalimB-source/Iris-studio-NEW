@@ -143,6 +143,29 @@ function ArenaVisualCarousel() {
 export default function SevenArena() {
   const brand = partnerProjectBranding.sevenArena;
   const voicesGridRef = useRef<HTMLDivElement>(null);
+  const trailerRef = useRef<HTMLIFrameElement>(null);
+
+
+  useEffect(() => {
+    const iframe = trailerRef.current;
+    if (!iframe) return;
+    const command = (func: string) => {
+      iframe.contentWindow?.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
+    };
+    const kick = () => {
+      command("mute");
+      command("playVideo");
+    };
+    iframe.addEventListener("load", kick);
+    const pulse = window.setInterval(kick, 1200);
+    const stop = window.setTimeout(() => window.clearInterval(pulse), 10000);
+    kick();
+    return () => {
+      iframe.removeEventListener("load", kick);
+      window.clearInterval(pulse);
+      window.clearTimeout(stop);
+    };
+  }, []);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -177,11 +200,13 @@ export default function SevenArena() {
       <SiteHeader />
       <main>
         <section className="detail-hero detail-hero--arena-surface" aria-labelledby="arena-title">
-          <div className="arena-hero-video" aria-hidden="true">
+          <div className="arena-hero-video" aria-hidden="true" data-no-parallax>
             <iframe
-              src={`${sevenArenaHeroTrailer.embedSrc}?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${sevenArenaHeroTrailer.videoId}&disablekb=1&fs=0&iv_load_policy=3`}
+              ref={trailerRef}
+              src={`${sevenArenaHeroTrailer.embedSrc}?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${sevenArenaHeroTrailer.videoId}&disablekb=1&fs=0&iv_load_policy=3&enablejsapi=1&origin=${typeof window !== "undefined" ? encodeURIComponent(window.location.origin) : ""}`}
               title={sevenArenaHeroTrailer.title}
               allow="autoplay; encrypted-media"
+              referrerPolicy="origin"
               tabIndex={-1}
             />
           </div>

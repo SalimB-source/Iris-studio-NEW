@@ -8,14 +8,22 @@
   align-items: flex-end;
   padding-top: 6.4rem !important;
   padding-bottom: 2.4rem !important;
+  background-color: #111214 !important;
+}
+
+.arena-detail .detail-hero--arena-surface::before,
+.arena-detail .detail-hero--arena-surface::after {
+  content: none !important;
+  display: none !important;
 }
 
 .arena-detail .detail-hero--arena-surface .arena-hero-video {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
   pointer-events: none;
+  background: #111214 url("https://i.ytimg.com/vi/aNGJj5a4w_o/maxresdefault.jpg") center / cover no-repeat;
 }
 
 .arena-detail .detail-hero--arena-surface .arena-hero-video iframe {
@@ -27,7 +35,7 @@
   min-width: 100%;
   min-height: 120%;
   border: 0;
-  transform: translate(-50%, -50%) scale(1.28);
+  transform: translate(-50%, -50%) scale(1.42);
   pointer-events: none;
 }
 
@@ -37,8 +45,8 @@
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(17, 4, 8, 0.46) 0%, rgba(104, 15, 29, 0.34) 40%, rgba(17, 18, 20, 0.82) 100%),
-    rgba(200, 25, 48, 0.28);
+    linear-gradient(180deg, rgba(17, 4, 8, 0.28) 0%, rgba(104, 15, 29, 0.22) 42%, rgba(17, 18, 20, 0.72) 100%),
+    rgba(200, 25, 48, 0.16);
 }
 
 .arena-detail .detail-hero--arena-surface .detail-hero-overlay,
