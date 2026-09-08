@@ -214,16 +214,18 @@ export default function LetsPlay() {
   };
 
   return <div className="page-shell project-detail letsplay-detail"><SiteHeader /><main>
-    <section className="detail-hero detail-hero--letsplay-surface" aria-labelledby="letsplay-title"><div className="detail-hero-copy"><Link className="back-link" href="/projets"><ArrowLeft size={16} /> Tous les projets</Link><p>01 / Let’s Play × Algérie Télécom</p><h1 id="letsplay-title">La pop culture<br />se joue aussi <em>sur le terrain.</em></h1><span>GAMING · TECH · E-SPORT · CINÉMA</span></div><div className="detail-project-brand detail-project-brand--letsplay"><img src={brand.logo} alt={brand.alt} /></div></section>
-    <section className="letsplay-gcc-player" aria-label={letsPlayGccPlayer.title}>
-      <div className="letsplay-gcc-player-frame" data-no-parallax>
+    <section className="detail-hero detail-hero--letsplay-surface" aria-labelledby="letsplay-title">
+      <div className="letsplay-hero-video" aria-hidden="true">
         <iframe
-          src={`${letsPlayGccPlayer.embedSrc}?autoplay=1&mute=1&controls=1&playsinline=1&rel=0&modestbranding=1`}
+          src={`${letsPlayGccPlayer.embedSrc}?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${letsPlayGccPlayer.videoId}&disablekb=1&fs=0&iv_load_policy=3`}
           title={letsPlayGccPlayer.title}
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowFullScreen
+          allow="autoplay; encrypted-media"
+          tabIndex={-1}
         />
       </div>
+      <div className="letsplay-hero-video-veil" aria-hidden="true" />
+      <div className="detail-hero-copy"><Link className="back-link" href="/projets"><ArrowLeft size={16} /> Tous les projets</Link><p>01 / Let’s Play × Algérie Télécom</p><h1 id="letsplay-title">La pop culture<br />se joue aussi <em>sur le terrain.</em></h1><span>GAMING · TECH · E-SPORT · CINÉMA</span></div>
+      <div className="detail-project-brand detail-project-brand--letsplay"><img src={brand.logo} alt={brand.alt} /></div>
     </section>
     <section id="letsplay-overview" className="detail-overview section-pad project-progress-target"><div><p className="eyebrow">Le projet</p><h2 className="display-title">Une émission qui<br /><em>parle communautés.</em></h2></div><p>Let’s Play est une émission dédiée au gaming et à la pop culture, en partenariat avec Algérie Télécom. Jeux vidéo, technologie, e-sport, cinéma et nouveaux usages y alimentent une conversation pensée pour celles et ceux qui vivent ces univers au quotidien.</p></section>
     <section id="letsplay-terrain" className="detail-framework section-pad project-progress-target"><figure className="detail-framework-image letsplay-launch-image"><span className="detail-archive-index">ARCHIVE / 01</span><img src="assets/letsplay-launch-visual.jpg" alt="Visuel de lancement Let’s Play par IRIS Studio et Algérie Télécom" /><figcaption>Visuel de lancement / Let’s Play × Algérie Télécom</figcaption></figure><div className="detail-framework-copy"><p className="eyebrow">Le terrain éditorial</p><h2 className="display-title">Des passions qui deviennent <em>conversation.</em></h2><div className="detail-pillars"><span>Gaming</span><span>Pop culture</span><span>Tech & IA</span><span>E-sport</span></div><p>Le format rassemble des univers en mouvement dans un langage accessible, utile et proche de ses communautés.</p></div></section>
