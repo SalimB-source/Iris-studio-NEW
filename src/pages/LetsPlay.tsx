@@ -33,6 +33,7 @@ import "./AboutLetsPlayLayout.css";
 import "./AboutTeamCardSystem.css";
 import "./AboutLetsPlayGaming.css";
 import { paintLetsPlayTeamViolet } from "./paintLetsPlayTeamViolet";
+import LetsPlayGamepadGlyphs from "./LetsPlayGamepadGlyphs";
 
 const letsPlayRoleIcons: Record<string, LucideIcon> = {
   editorial: PenLine,
