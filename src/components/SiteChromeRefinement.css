@@ -18,6 +18,23 @@
 .dark .site-header .desktop-nav .is-letsplay-link { color: #f7f2ec !important; }
 .dark .site-header .desktop-nav .is-letsplay-link.is-active { color: #f28a43 !important; }
 
+/* 7ouma Arena : le hero est sombre et cinématique, donc la navigation reste transparente et blanche comme sur l’accueil. */
+.site-header.is-arena-project,
+.site-header.is-arena-project.is-scrolled {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #fffdf9 !important;
+  backdrop-filter: none !important;
+}
+.site-header.is-arena-project .desktop-nav a,
+.site-header.is-arena-project .brand-coordinate,
+.site-header.is-arena-project .header-actions,
+.site-header.is-arena-project .theme-toggle,
+.site-header.is-arena-project .mobile-toggle { color: #fffdf9 !important; }
+.site-header.is-arena-project .brand-coordinate { border-color: rgba(255,253,249,0.42) !important; }
+.site-header.is-arena-project .desktop-nav a::after { background: #df2935 !important; }
+.site-header.is-arena-project::after { background: linear-gradient(90deg, #df2935 0 56%, transparent 56%) !important; }
+
 /* Passage clair / sombre : le glyphe tourne, les surfaces se fondent. */
 .theme-toggle-glyphs {
   position: relative;
