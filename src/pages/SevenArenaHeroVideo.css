@@ -22,7 +22,7 @@
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
   background: #111214 url("https://i.ytimg.com/vi/e6vv15HN_Dg/maxresdefault.jpg") center / cover no-repeat;
 }
 
@@ -35,8 +35,8 @@
   min-width: 100%;
   min-height: 120%;
   border: 0;
-  transform: translate(-50%, -50%) scale(1.62);
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.75);
+  pointer-events: none !important;
 }
 
 .arena-detail .detail-hero--arena-surface .arena-hero-video-veil {

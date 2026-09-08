@@ -234,14 +234,23 @@ export default function SevenArena() {
       command("mute");
       command("playVideo");
     };
+    const onMessage = (event: MessageEvent) => {
+      let payload: unknown = event.data;
+      if (typeof payload === "string") {
+        try { payload = JSON.parse(payload); } catch { return; }
+      }
+      if (!payload || typeof payload !== "object") return;
+      const data = payload as { event?: string; info?: number };
+      if (data.event === "onStateChange" && (data.info === 0 || data.info === 2)) kick();
+    };
     iframe.addEventListener("load", kick);
-    const pulse = window.setInterval(kick, 1200);
-    const stop = window.setTimeout(() => window.clearInterval(pulse), 10000);
+    window.addEventListener("message", onMessage);
+    const pulse = window.setInterval(kick, 2500);
     kick();
     return () => {
       iframe.removeEventListener("load", kick);
+      window.removeEventListener("message", onMessage);
       window.clearInterval(pulse);
-      window.clearTimeout(stop);
     };
   }, []);
 

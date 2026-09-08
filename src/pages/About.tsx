@@ -114,7 +114,7 @@ export const studioTeamCategories: { id: StudioCategoryId; label: string }[] = [
 export const studioTeam = [
   {
     name: "Chakib Taleb",
-    role: "Chef de projet senior · Iris Studio",
+    role: "Chef de projet senior",
     text: "Chef de projet senior chez Iris Studio. Il accompagne le pilotage de projets et la coordination de leurs étapes de production.",
     portrait: "assets/chakib-taleb.jpg",
     profile: "https://dz.linkedin.com/in/chakib-taleb-716abb179",
