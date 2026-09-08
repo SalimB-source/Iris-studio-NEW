@@ -9,8 +9,8 @@ export const partnerProjectBranding = {
   },
   sevenArena: {
     name: "7ouma Arena",
-    logo: "assets/7ouma-arena-official-avatar_b7cba369.png",
-    alt: "Emblème officiel 7ouma Arena",
+    logo: "assets/7ouma-arena-by-djezzy.png",
+    alt: "Logo 7ouma Arena by Djezzy",
     thumbnail: "assets/7ouma-arena-card-logo.jpg",
     thumbnailAlt: "Visuel 7ouma Arena dédié à l’émission e-sport par Djezzy",
   },
