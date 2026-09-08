@@ -25,10 +25,10 @@ export const sevenArenaDossiers = [
 ] as const;
 
 export const sevenArenaHeroTrailer = {
-  videoId: "aNGJj5a4w_o",
-  title: "New Tournament Teaser",
-  href: "https://www.youtube.com/watch?v=aNGJj5a4w_o",
-  embedSrc: "https://www.youtube.com/embed/aNGJj5a4w_o",
+  videoId: "e6vv15HN_Dg",
+  title: "FF PROLEAGUE TEASER",
+  href: "https://www.youtube.com/watch?v=e6vv15HN_Dg",
+  embedSrc: "https://www.youtube.com/embed/e6vv15HN_Dg",
 } as const;
 
 export const sevenArenaFeaturedEpisode = {

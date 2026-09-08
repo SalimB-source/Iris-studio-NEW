@@ -23,7 +23,7 @@
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
-  background: #111214 url("https://i.ytimg.com/vi/aNGJj5a4w_o/maxresdefault.jpg") center / cover no-repeat;
+  background: #111214 url("https://i.ytimg.com/vi/e6vv15HN_Dg/maxresdefault.jpg") center / cover no-repeat;
 }
 
 .arena-detail .detail-hero--arena-surface .arena-hero-video iframe {
@@ -35,7 +35,7 @@
   min-width: 100%;
   min-height: 120%;
   border: 0;
-  transform: translate(-50%, -50%) scale(1.42);
+  transform: translate(-50%, -50%) scale(1.62);
   pointer-events: none;
 }
 
