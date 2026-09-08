@@ -60,7 +60,62 @@ export default function SevenArena() {
   useEffect(() => { if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; const cards = Array.from(voicesGridRef.current?.querySelectorAll<HTMLElement>(".arena-voice") ?? []); if (!cards.length) return; cards.forEach((card) => card.classList.add("is-scroll-reveal-ready")); if (!("IntersectionObserver" in window)) { cards.forEach((card) => card.classList.add("is-revealed")); return; } const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (!entry.isIntersecting) return; entry.target.classList.add("is-revealed"); observer.unobserve(entry.target); }); }, { threshold: 0.18, rootMargin: "0px 0px -6% 0px" }); cards.forEach((card) => observer.observe(card)); return () => observer.disconnect(); }, []);
   return <div className="page-shell project-detail arena-detail"><SiteHeader /><main><section className="detail-hero detail-hero--arena-surface" aria-labelledby="arena-title"><div className="arena-hero-video" aria-hidden="true" data-no-parallax><iframe ref={trailerRef} src={`${sevenArenaHeroTrailer.embedSrc}?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${sevenArenaHeroTrailer.videoId}&disablekb=1&fs=0&iv_load_policy=3&enablejsapi=1&origin=${typeof window !== "undefined" ? encodeURIComponent(window.location.origin) : ""}`} title={sevenArenaHeroTrailer.title} allow="autoplay; encrypted-media" referrerPolicy="origin" tabIndex={-1} /></div><div className="arena-hero-video-veil" aria-hidden="true" /><div className="detail-hero-overlay" /><span className="detail-hero-texture" aria-hidden="true" /><div className="detail-hero-copy"><Link className="back-link" href="/projets"><ArrowLeft size={16} /> Tous les projets</Link><p>02 / 7ouma Arena × Djezzy</p><h1 id="arena-title">L’arène est<br />dans <em>la 7ouma.</em></h1><span>E-SPORT · MOBILE GAMING · COMPÉTITION · COMMUNAUTÉ</span></div></section>
         <section id="arena-overview" className="detail-overview section-pad project-progress-target"><div><p className="eyebrow">Le projet</p><h2 className="display-title">La maison de l’e-sport<br /><em>en Algérie.</em></h2></div><p>7ouma Arena est un projet e-sport en partenariat avec Djezzy. À travers le gaming mobile, les compétitions, les créateurs et les formats communautaires, il rassemble les joueurs là où se construit réellement la culture compétitive.</p></section>
-        <section className="arena-pro-league section-pad" aria-labelledby="arena-pro-league-title"><div className="arena-pro-league-heading"><div><p className="eyebrow">{sevenArenaProLeague.eyebrow}</p><h2 id="arena-pro-league-title" className="display-title">{sevenArenaProLeague.titleLead}<br /><em>{sevenArenaProLeague.titleAccent}</em></h2></div><p>{sevenArenaProLeague.description}</p></div><div className="arena-pro-league-meta"><p className="arena-pro-league-teams">{sevenArenaProLeague.teams}</p><a className="arena-pro-league-source" href={sevenArenaProLeague.href} target="_blank" rel="noreferrer">{sevenArenaProLeague.sourceLabel} <ArrowUpRight size={16} /></a></div><p className="arena-pro-league-note">{sevenArenaProLeague.note}</p><ArenaProLeagueCarousel /></section>
+        <section className="arena-pro-league section-pad" aria-labelledby="arena-pro-league-title">
+          <div className="arena-pro-league-heading">
+            <div>
+              <p className="eyebrow">{sevenArenaProLeague.eyebrow}</p>
+              <h2 id="arena-pro-league-title" className="display-title">{sevenArenaProLeague.titleLead}<br /><em>{sevenArenaProLeague.titleAccent}</em></h2>
+            </div>
+            <p>{sevenArenaProLeague.description}</p>
+          </div>
+          <dl className="arena-pro-league-stats" aria-label="La FF Pro League en chiffres">
+            {sevenArenaProLeague.stats.map((stat) => (
+              <div key={stat.label}>
+                <dt>{stat.label}</dt>
+                <dd>{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <ol className="arena-pro-league-format" aria-label="Le parcours de la saison">
+            {sevenArenaProLeague.format.map((item) => (
+              <li key={item.step}>
+                <span aria-hidden="true">{item.step}</span>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="arena-pro-league-cards">
+            <article className="arena-pro-league-card" aria-label={sevenArenaProLeague.casters.title}>
+              <p className="eyebrow">{sevenArenaProLeague.casters.title}</p>
+              <strong>{sevenArenaProLeague.casters.names}</strong>
+              <p>{sevenArenaProLeague.casters.text}</p>
+            </article>
+            <article className="arena-pro-league-card" aria-label={sevenArenaProLeague.invited.title}>
+              <p className="eyebrow">{sevenArenaProLeague.invited.title}</p>
+              <ul>
+                {sevenArenaProLeague.invited.teams.map((team) => (
+                  <li key={team}>{team}</li>
+                ))}
+              </ul>
+              <p>{sevenArenaProLeague.invited.note}</p>
+            </article>
+          </div>
+          <div className="arena-pro-league-meta">
+            <div>
+              <p className="arena-pro-league-finalists-title">{sevenArenaProLeague.finalistsTitle}</p>
+              <ul className="arena-pro-league-finalists" aria-label={sevenArenaProLeague.finalistsTitle}>
+                {sevenArenaProLeague.finalists.map((team) => (
+                  <li key={team}>{team}</li>
+                ))}
+              </ul>
+            </div>
+            <a className="arena-pro-league-source" href={sevenArenaProLeague.href} target="_blank" rel="noreferrer">{sevenArenaProLeague.sourceLabel} <ArrowUpRight size={16} /></a>
+          </div>
+          <p className="arena-pro-league-editorial">{sevenArenaProLeague.editorial}</p>
+          <p className="arena-pro-league-note">{sevenArenaProLeague.note}</p>
+          <ArenaProLeagueCarousel />
+        </section>
         <section className="arena-featured-episode section-pad" aria-labelledby="arena-featured-title"><div className="arena-featured-episode-heading"><div><p className="eyebrow">{sevenArenaFeaturedEpisode.eyebrow}</p><h2 id="arena-featured-title" className="display-title">L’épisode final,<br /><em>à l’écran.</em></h2></div><p>{sevenArenaFeaturedEpisode.description}</p></div><div className="arena-featured-player" data-no-parallax><div className="arena-featured-player-frame"><iframe src={`${sevenArenaFeaturedEpisode.embedSrc}?rel=0`} title={sevenArenaFeaturedEpisode.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /></div><div className="arena-featured-player-meta"><div><p>{sevenArenaFeaturedEpisode.category} · {sevenArenaFeaturedEpisode.duration}</p><strong>{sevenArenaFeaturedEpisode.title}</strong></div><a href={sevenArenaFeaturedEpisode.href} target="_blank" rel="noreferrer">Ouvrir sur YouTube <ArrowUpRight size={16} /></a></div></div></section>
       </main><SiteFooter /></div>;
 }

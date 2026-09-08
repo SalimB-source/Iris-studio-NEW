@@ -4,6 +4,8 @@
   overflow: hidden;
   background: #151a22;
   color: #fff;
+  padding-top: clamp(4.5rem, 9vw, 8rem);
+  padding-bottom: clamp(4.5rem, 9vw, 8rem);
 }
 
 .arena-pro-league-heading {
@@ -32,15 +34,181 @@
   line-height: 1.8;
 }
 
+/* La saison en chiffres */
+.arena-pro-league-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.arena-pro-league-stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  border-left: 2px solid rgba(229, 47, 56, 0.6);
+}
+
+.arena-pro-league-stats dd {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.arena-pro-league-stats dt {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Le parcours de la saison */
+.arena-pro-league-format {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arena-pro-league-format li {
+  margin: 0;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  background: linear-gradient(160deg, rgba(229, 47, 56, 0.1), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.arena-pro-league-format li > span {
+  display: block;
+  color: #e52f38;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.arena-pro-league-format li > strong {
+  display: block;
+  margin-top: 0.6rem;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.arena-pro-league-format li > p {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Casters & pro teams invitées */
+.arena-pro-league-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.arena-pro-league-card {
+  margin: 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.arena-pro-league-card .eyebrow {
+  margin: 0;
+  color: #e52f38;
+}
+
+.arena-pro-league-card > strong {
+  display: block;
+  margin-top: 0.8rem;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.arena-pro-league-card > p {
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.arena-pro-league-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arena-pro-league-card ul li {
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(229, 47, 56, 0.12);
+  border: 1px solid rgba(229, 47, 56, 0.35);
+}
+
+/* Finalistes + source */
 .arena-pro-league-meta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.5rem 3rem;
   align-items: center;
-  margin-top: 2.2rem;
-  padding: 1.5rem 0;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: 2rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.arena-pro-league-finalists-title {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.arena-pro-league-finalists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arena-pro-league-finalists li {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .arena-pro-league-teams {
@@ -56,7 +224,7 @@
 
 .arena-pro-league-note {
   max-width: 52rem;
-  margin: 1rem 0 0;
+  margin: 1.25rem 0 0;
   color: rgba(255, 255, 255, 0.46);
   font-size: 0.78rem;
   line-height: 1.6;
@@ -66,13 +234,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.15rem;
   color: #e52f38;
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   border: 1px solid rgba(229, 47, 56, 0.45);
   transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
 }
@@ -84,12 +253,11 @@
 }
 
 /* Présentation courte du tournoi */
-.arena-pro-league::after {
-  content: "La FF Pro League est une compétition Free Fire pensée autour du jeu compétitif, des équipes et de la communauté. 7ouma Arena accompagne le tournoi en donnant de la visibilité aux matchs, aux résultats et aux acteurs de la scène e-sport algérienne.";
+.arena-pro-league-editorial {
   display: block;
   max-width: 56rem;
-  margin: 2.6rem auto 0;
-  padding: clamp(1.5rem, 3vw, 2.4rem);
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  padding: clamp(1.75rem, 3vw, 2.6rem);
   color: rgba(255, 255, 255, 0.78);
   background: linear-gradient(135deg, rgba(229, 47, 56, 0.12), rgba(255, 255, 255, 0.025));
   border-left: 3px solid #e52f38;
@@ -105,6 +273,20 @@
   display: none !important;
 }
 
+@media (max-width: 960px) {
+  .arena-pro-league-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .arena-pro-league-format {
+    grid-template-columns: 1fr;
+  }
+
+  .arena-pro-league-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .arena-pro-league-heading {
     grid-template-columns: 1fr;
@@ -115,18 +297,23 @@
     font-size: 0.92rem;
   }
 
+  .arena-pro-league-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+  }
+
   .arena-pro-league-meta {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .arena-pro-league-source {
     width: fit-content;
   }
 
-  .arena-pro-league::after {
-    margin-top: 2rem;
-    padding: 1.25rem;
+  .arena-pro-league-editorial {
+    padding: 1.5rem 1.25rem;
     font-size: 0.9rem;
   }
 }
