@@ -22,6 +22,7 @@ import {
   sevenArenaDossiers,
   sevenArenaEcosystem,
   sevenArenaFeaturedEpisode,
+  sevenArenaHeroTrailer,
   sevenArenaScreenings,
   sevenArenaVisualFilters,
   sevenArenaVisuals,
@@ -29,6 +30,7 @@ import {
 } from "./sevenArenaContent";
 import "./ArenaVoiceRoster.css";
 import "./ArenaFeaturedEpisode.css";
+import "./SevenArenaHeroVideo.css";
 
 function ArenaVisualCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -175,6 +177,15 @@ export default function SevenArena() {
       <SiteHeader />
       <main>
         <section className="detail-hero detail-hero--arena-surface" aria-labelledby="arena-title">
+          <div className="arena-hero-video" aria-hidden="true">
+            <iframe
+              src={`${sevenArenaHeroTrailer.embedSrc}?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${sevenArenaHeroTrailer.videoId}&disablekb=1&fs=0&iv_load_policy=3`}
+              title={sevenArenaHeroTrailer.title}
+              allow="autoplay; encrypted-media"
+              tabIndex={-1}
+            />
+          </div>
+          <div className="arena-hero-video-veil" aria-hidden="true" />
           <div className="detail-hero-overlay" />
           <span className="detail-hero-texture" aria-hidden="true" />
           <div className="detail-hero-copy">

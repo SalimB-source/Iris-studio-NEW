@@ -24,6 +24,13 @@ export const sevenArenaDossiers = [
   },
 ] as const;
 
+export const sevenArenaHeroTrailer = {
+  videoId: "aNGJj5a4w_o",
+  title: "New Tournament Teaser",
+  href: "https://www.youtube.com/watch?v=aNGJj5a4w_o",
+  embedSrc: "https://www.youtube-nocookie.com/embed/aNGJj5a4w_o",
+} as const;
+
 export const sevenArenaFeaturedEpisode = {
   eyebrow: "Épisode en vedette",
   category: "Team Alliance Special",

@@ -1,0 +1,65 @@
+/* 7ouma Arena — bande-annonce en fond de héros : muette, sans contrôles. */
+.arena-detail .detail-hero--arena-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100svh !important;
+  height: 100svh !important;
+  align-items: flex-end;
+  padding-top: 6.4rem !important;
+  padding-bottom: 2.4rem !important;
+}
+
+.arena-detail .detail-hero--arena-surface .arena-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.arena-detail .detail-hero--arena-surface .arena-hero-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 120%;
+  border: 0;
+  transform: translate(-50%, -50%) scale(1.28);
+  pointer-events: none;
+}
+
+.arena-detail .detail-hero--arena-surface .arena-hero-video-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(17, 4, 8, 0.46) 0%, rgba(104, 15, 29, 0.34) 40%, rgba(17, 18, 20, 0.82) 100%),
+    rgba(200, 25, 48, 0.28);
+}
+
+.arena-detail .detail-hero--arena-surface .detail-hero-overlay,
+.arena-detail .detail-hero--arena-surface .detail-hero-texture {
+  display: none !important;
+}
+
+.arena-detail .detail-hero--arena-surface .detail-hero-copy,
+.arena-detail .detail-hero--arena-surface .detail-project-brand {
+  z-index: 3;
+}
+
+.arena-detail .detail-hero--arena-surface .detail-hero-copy {
+  position: relative;
+  text-shadow: 0 0.14rem 1.2rem rgba(8, 0, 2, 0.75);
+}
+
+@media (max-width: 760px) {
+  .arena-detail .detail-hero--arena-surface {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    padding: 5.4rem 1.2rem 2.1rem !important;
+  }
+}
