@@ -1,0 +1,189 @@
+/* 7ouma Arena — FF Pro League : présentation du tournoi et carrousel d’affiches officielles. */
+.arena-pro-league {
+  position: relative;
+  overflow: hidden;
+  background: #151a22;
+  color: #fff;
+}
+
+.arena-pro-league-heading {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.15fr) minmax(14rem, 0.85fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.arena-pro-league-heading .eyebrow,
+.arena-pro-league-heading h2 em {
+  color: #e52f38;
+}
+
+.arena-pro-league-heading h2 {
+  max-width: 14ch;
+  margin: 0.55rem 0 0;
+  color: #fff;
+}
+
+.arena-pro-league-heading > p {
+  max-width: 34rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.arena-pro-league-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.35rem;
+}
+
+.arena-pro-league-teams {
+  max-width: 44rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.arena-pro-league-note {
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.arena-pro-league-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #e52f38;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.arena-pro-league-source:hover {
+  color: #fff;
+}
+
+.arena-pro-league-carousel {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.2rem;
+}
+
+.arena-pro-league-carousel-track {
+  margin-left: -0.85rem;
+}
+
+.arena-pro-league-carousel-item {
+  flex-basis: min(78vw, 28rem);
+  padding-left: 0.85rem;
+}
+
+.arena-pro-league-carousel-item a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.arena-pro-league-carousel-item figure {
+  margin: 0;
+}
+
+.arena-pro-league-carousel-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid rgba(229, 47, 56, 0.34);
+  background: #080808;
+}
+
+.arena-pro-league-carousel-item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  padding: 0.85rem 0.1rem 0.2rem;
+}
+
+.arena-pro-league-carousel-item figcaption span {
+  color: #e52f38;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.arena-pro-league-carousel-item figcaption strong {
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.arena-pro-league-carousel-item[data-wide="true"] {
+  flex-basis: min(86vw, 42rem);
+}
+
+.arena-pro-league-carousel-item[data-wide="true"] img {
+  aspect-ratio: 16 / 9;
+}
+
+.arena-pro-league-carousel .carousel-swipe-status {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.arena-pro-league-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.arena-pro-league-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.arena-pro-league-dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+}
+
+.arena-pro-league-dots button.is-active {
+  background: #e52f38;
+}
+
+@media (max-width: 760px) {
+  .arena-pro-league-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .arena-pro-league-carousel-item,
+  .arena-pro-league-carousel-item[data-wide="true"] {
+    flex-basis: min(86vw, 22rem);
+  }
+
+  .arena-pro-league-carousel-item[data-wide="true"] figure {
+    aspect-ratio: 16 / 10;
+  }
+}

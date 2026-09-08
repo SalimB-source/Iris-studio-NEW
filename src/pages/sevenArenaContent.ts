@@ -379,3 +379,82 @@ export const sevenArenaVisualFilters = [
   { id: "annonce", label: "Annonces" },
   { id: "resultat", label: "Résultats" },
 ] as const;
+
+export const sevenArenaProLeague = {
+  eyebrow: "FF PRO LEAGUE · FREE FIRE",
+  titleLead: "La ligue où se joue",
+  titleAccent: "le titre.",
+  description:
+    "7ouma Arena by Djezzy porte la FF Pro League featuring Free Fire : une saison de compétition e-sport mobile, des qualifications jusqu’à la Grand Final. Douze équipes s’y affrontent. Une seule peut être championne.",
+  teams:
+    "Wanted DZ · Victors · DNA · All Down · Alliance DZ · HZ Team · Cicatrice CG · USMA ESP · Strikers · Elite Stars · Hooligans · Wrath Esport",
+  note: "Tournoi présenté d’après la publication officielle 7ouma Arena. Le règlement complet n’est pas repris ici.",
+  href: "https://www.instagram.com/p/DUBmgNcCCBT/",
+  sourceLabel: "Voir la publication Instagram",
+} as const;
+
+export const sevenArenaProLeagueVisuals = [
+  {
+    id: "grand-final",
+    category: "GRAND FINAL",
+    title: "Only one can be the champion.",
+    image: "assets/ff-pro-league-grand-final.jpg",
+    alt: "Affiche Grand Final de la FF Pro League featuring Free Fire, 7ouma Arena by Djezzy, avec les douze équipes.",
+  },
+  {
+    id: "lockup",
+    category: "IDENTITÉ",
+    title: "Pro League featuring Free Fire.",
+    image: "assets/ff-pro-league-lockup.jpg",
+    alt: "Logo Pro League featuring Free Fire.",
+  },
+  {
+    id: "j7",
+    category: "COUNTDOWN · J-7",
+    title: "Le compte à rebours est lancé.",
+    image: "assets/ff-pro-league-j7.jpg",
+    alt: "Visuel 7ouma Arena : 7 days to go avant la FF Pro League.",
+  },
+  {
+    id: "j6",
+    category: "COUNTDOWN · J-6",
+    title: "Before registration.",
+    image: "assets/ff-pro-league-j6.jpg",
+    alt: "Visuel 7ouma Arena : 6 days to go before registration.",
+  },
+  {
+    id: "j5",
+    category: "COUNTDOWN · J-5",
+    title: "Le rendez-vous se rapproche.",
+    image: "assets/ff-pro-league-j5.jpg",
+    alt: "Visuel 7ouma Arena : 5 days to go avant la FF Pro League.",
+  },
+  {
+    id: "j4",
+    category: "COUNTDOWN · J-4",
+    title: "هل أنت مستعد؟",
+    image: "assets/ff-pro-league-j4.jpg",
+    alt: "Visuel 7ouma Arena : 4 days to go avant la FF Pro League.",
+  },
+  {
+    id: "j4-registration",
+    category: "COUNTDOWN · J-4",
+    title: "Before registration.",
+    image: "assets/ff-pro-league-j4-registration.jpg",
+    alt: "Visuel 7ouma Arena : 4 days to go before registration.",
+  },
+  {
+    id: "j3",
+    category: "COUNTDOWN · J-3",
+    title: "الخط الأخير.",
+    image: "assets/ff-pro-league-j3.jpg",
+    alt: "Visuel 7ouma Arena : 3 days to go avant la FF Pro League.",
+  },
+  {
+    id: "j2",
+    category: "COUNTDOWN · J-2",
+    title: "راكوم وجدين؟",
+    image: "assets/ff-pro-league-j2.jpg",
+    alt: "Visuel 7ouma Arena : 2 days before registration.",
+  },
+] as const;

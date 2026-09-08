@@ -23,6 +23,8 @@ import {
   sevenArenaEcosystem,
   sevenArenaFeaturedEpisode,
   sevenArenaHeroTrailer,
+  sevenArenaProLeague,
+  sevenArenaProLeagueVisuals,
   sevenArenaScreenings,
   sevenArenaVisualFilters,
   sevenArenaVisuals,
@@ -31,6 +33,7 @@ import {
 import "./ArenaVoiceRoster.css";
 import "./ArenaFeaturedEpisode.css";
 import "./SevenArenaHeroVideo.css";
+import "./ArenaProLeague.css";
 
 function ArenaVisualCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -140,6 +143,81 @@ function ArenaVisualCarousel() {
   );
 }
 
+
+function ArenaProLeagueCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    const updateActiveSlide = () => setActiveSlide(api.selectedScrollSnap());
+    updateActiveSlide();
+    api.on("select", updateActiveSlide);
+    api.on("reInit", updateActiveSlide);
+    return () => {
+      api.off("select", updateActiveSlide);
+      api.off("reInit", updateActiveSlide);
+    };
+  }, [api]);
+
+  return (
+    <Carousel
+      className="arena-pro-league-carousel"
+      opts={{ align: "start", loop: true, duration: 30 }}
+      setApi={setApi}
+      aria-label="Carrousel FF Pro League"
+    >
+      <CarouselContent className="arena-pro-league-carousel-track">
+        {sevenArenaProLeagueVisuals.map((visual, index) => (
+          <CarouselItem
+            className="arena-pro-league-carousel-item"
+            data-active={index === activeSlide}
+            data-wide={visual.id === "grand-final" ? "true" : undefined}
+            key={visual.id}
+          >
+            <a
+              href={sevenArenaProLeague.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Ouvrir ${visual.title} sur Instagram`}
+            >
+              <figure>
+                <img src={visual.image} alt={visual.alt} />
+                <figcaption>
+                  <span>{visual.category}</span>
+                  <strong>{visual.title}</strong>
+                </figcaption>
+              </figure>
+            </a>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <p className="carousel-swipe-status" aria-live="polite">
+        <span aria-hidden="true">←</span>
+        <span>Balayez pour explorer</span>
+        <strong>{String(activeSlide + 1).padStart(2, "0")} / {String(sevenArenaProLeagueVisuals.length).padStart(2, "0")}</strong>
+        <span aria-hidden="true">→</span>
+      </p>
+      <div className="arena-pro-league-nav">
+        <CarouselPrevious aria-label="Visuel précédent" />
+        <div className="arena-pro-league-dots" aria-label="Choisir un visuel">
+          {sevenArenaProLeagueVisuals.map((visual, index) => (
+            <button
+              type="button"
+              onClick={() => api?.scrollTo(index)}
+              className={index === activeSlide ? "is-active" : ""}
+              aria-label={`Afficher ${visual.title}`}
+              aria-current={index === activeSlide ? "true" : undefined}
+              key={visual.id}
+            />
+          ))}
+        </div>
+        <CarouselNext aria-label="Visuel suivant" />
+      </div>
+    </Carousel>
+  );
+}
+
 export default function SevenArena() {
   const brand = partnerProjectBranding.sevenArena;
   const voicesGridRef = useRef<HTMLDivElement>(null);
@@ -241,6 +319,27 @@ export default function SevenArena() {
             les compétitions, les créateurs et les formats communautaires, il rassemble les joueurs là où
             se construit réellement la culture compétitive.
           </p>
+        </section>
+
+        <section className="arena-pro-league section-pad" aria-labelledby="arena-pro-league-title">
+          <div className="arena-pro-league-heading">
+            <div>
+              <p className="eyebrow">{sevenArenaProLeague.eyebrow}</p>
+              <h2 id="arena-pro-league-title" className="display-title">
+                {sevenArenaProLeague.titleLead}<br />
+                <em>{sevenArenaProLeague.titleAccent}</em>
+              </h2>
+            </div>
+            <p>{sevenArenaProLeague.description}</p>
+          </div>
+          <div className="arena-pro-league-meta">
+            <p className="arena-pro-league-teams">{sevenArenaProLeague.teams}</p>
+            <a className="arena-pro-league-source" href={sevenArenaProLeague.href} target="_blank" rel="noreferrer">
+              {sevenArenaProLeague.sourceLabel} <ArrowUpRight size={16} />
+            </a>
+          </div>
+          <p className="arena-pro-league-note">{sevenArenaProLeague.note}</p>
+          <ArenaProLeagueCarousel />
         </section>
 
         <section className="arena-featured-episode section-pad" aria-labelledby="arena-featured-title">
