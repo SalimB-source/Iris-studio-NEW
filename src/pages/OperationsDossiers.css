@@ -164,3 +164,8 @@
     height: 12rem;
   }
 }
+
+.page-shell a[href$="/amir-clean"] .operation-record-media img,
+.operational-detail-media img[src*="amir-clean-merchandising"] {
+  object-position: center 36%;
+}
