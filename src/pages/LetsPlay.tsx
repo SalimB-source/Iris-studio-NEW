@@ -214,7 +214,7 @@ export default function LetsPlay() {
   };
 
   return <div className="page-shell project-detail letsplay-detail"><SiteHeader /><main>
-    <section className="detail-hero detail-hero--letsplay-surface" aria-labelledby="letsplay-title"><div className="detail-hero-copy"><Link className="back-link" href="/projets"><ArrowLeft size={16} /> Tous les projets</Link><p>01 / Let’s Play × Algérie Télécom</p><h1 id="letsplay-title">La pop culture<br />se joue aussi <em>sur le terrain.</em></h1><span>GAMING · TECH · E-SPORT · CINÉMA</span></div><div className="detail-project-brand detail-project-brand--letsplay"><img src={brand.logo} alt={brand.alt} /></div><div className="detail-stamp">LP<i>IRIS / 01</i></div></section>
+    <section className="detail-hero detail-hero--letsplay-surface" aria-labelledby="letsplay-title"><div className="detail-hero-copy"><Link className="back-link" href="/projets"><ArrowLeft size={16} /> Tous les projets</Link><p>01 / Let’s Play × Algérie Télécom</p><h1 id="letsplay-title">La pop culture<br />se joue aussi <em>sur le terrain.</em></h1><span>GAMING · TECH · E-SPORT · CINÉMA</span></div><div className="detail-project-brand detail-project-brand--letsplay"><img src={brand.logo} alt={brand.alt} /></div></section>
     <section className="letsplay-gcc-player" aria-label={letsPlayGccPlayer.title}>
       <div className="letsplay-gcc-player-frame" data-no-parallax>
         <iframe
