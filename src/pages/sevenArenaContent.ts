@@ -385,9 +385,59 @@ export const sevenArenaProLeague = {
   titleLead: "La ligue où se joue",
   titleAccent: "le titre.",
   description:
-    "7ouma Arena by Djezzy porte la FF Pro League featuring Free Fire : une saison de compétition e-sport mobile, des qualifications jusqu’à la Grand Final. Douze équipes s’y affrontent. Une seule peut être championne.",
+    "7ouma Arena by Djezzy porte la FF Pro League featuring Free Fire : une saison de compétition e-sport mobile qui mène les équipes des inscriptions jusqu’à la Grand Final. Un compte à rebours officiel rythme l’ouverture des inscriptions, puis les qualifications désignent les douze finalistes. En Grand Final, une seule équipe peut être championne — « Only one can be the champion ».",
+  stats: [
+    { value: "500 000 DA", label: "Cash prize" },
+    { value: "12", label: "Équipes en Grand Final" },
+    { value: "04", label: "Casters officiels" },
+    { value: "01", label: "Champion" },
+  ],
+  format: [
+    {
+      step: "01",
+      title: "Inscriptions",
+      text: "Un compte à rebours officiel, de J-7 à J-2, annonce l’ouverture des inscriptions à la Pro League.",
+    },
+    {
+      step: "02",
+      title: "Qualifications",
+      text: "Les équipes s’affrontent pour décrocher leur place parmi les finalistes de la saison.",
+    },
+    {
+      step: "03",
+      title: "Grand Final",
+      text: "Douze équipes, un seul titre : la Grand Final désigne le champion de la FF Pro League.",
+    },
+  ],
+  casters: {
+    title: "Aux micros",
+    names: "Seven · Niso · Siyaha · Flash",
+    text: "Quatre casters accompagnent la compétition et font vivre les matchs à la communauté.",
+  },
+  invited: {
+    title: "Pro teams invitées",
+    teams: ["USMA Esports", "Dragons Esport", "MCA Esports", "DNA", "Esports Miracles", "Stars DZ"],
+    note: "La communauté est invitée à soutenir son équipe favorite.",
+  },
+  finalistsTitle: "Les 12 finalistes de la Grand Final",
+  finalists: [
+    "Wanted DZ",
+    "Victors",
+    "DNA",
+    "All Down",
+    "Alliance DZ",
+    "HZ Team",
+    "Cicatrice CG",
+    "USMA ESP",
+    "Strikers",
+    "Elite Stars",
+    "Hooligans",
+    "Wrath Esport",
+  ],
   teams:
     "Wanted DZ · Victors · DNA · All Down · Alliance DZ · HZ Team · Cicatrice CG · USMA ESP · Strikers · Elite Stars · Hooligans · Wrath Esport",
+  editorial:
+    "La FF Pro League est une compétition Free Fire pensée autour du jeu compétitif, des équipes et de la communauté. 7ouma Arena accompagne le tournoi en donnant de la visibilité aux matchs, aux résultats et aux acteurs de la scène e-sport algérienne.",
   note: "Tournoi présenté d’après la publication officielle 7ouma Arena. Le règlement complet n’est pas repris ici.",
   href: "https://www.instagram.com/p/DUBmgNcCCBT/",
   sourceLabel: "Voir la publication Instagram",
