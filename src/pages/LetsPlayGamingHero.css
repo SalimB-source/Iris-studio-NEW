@@ -4,7 +4,8 @@
 .letsplay-detail .detail-hero--letsplay-surface::before,.letsplay-detail .detail-hero--letsplay-surface::after { content:"" !important; position:absolute; pointer-events:none; }.letsplay-detail .detail-hero--letsplay-surface::before { z-index:0; inset:0; background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px); background-size:2.55rem 2.55rem; opacity:.46; mask-image:linear-gradient(90deg,transparent 0%,#000 42%,#000 100%); }.letsplay-detail .detail-hero--letsplay-surface::after { z-index:0; top:14%; right:-10rem; width:min(38vw,34rem); aspect-ratio:1; border:1px solid rgba(223,207,255,.22); border-radius:50%; box-shadow:inset 0 0 0 2.5rem rgba(255,255,255,.024),inset 0 0 0 7.25rem rgba(255,255,255,.018); }
 .letsplay-detail .detail-hero--letsplay-surface .detail-hero-overlay,.letsplay-detail .detail-hero--letsplay-surface .detail-hero-texture,.letsplay-detail .detail-hero--letsplay-surface .iris-eye-hero,.letsplay-detail .detail-hero--letsplay-surface :is(.letsplay-hero-grid,.letsplay-hero-glyphs,.letsplay-hero-pixels) { display:none !important; }
 .letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy { position:relative; z-index:2; max-width:45rem; color:#fff; text-shadow:0 .14rem 1.2rem rgba(4,0,12,.75); }.letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy h1 { color:#fff; }.letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy h1 em { color:#fcca35 !important; }.letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy > :is(p,span) { color:rgba(255,255,255,.85); }.letsplay-detail .detail-hero--letsplay-surface .back-link { border-color:rgba(255,255,255,.64); color:#fff; }
-.letsplay-detail .detail-hero--letsplay-surface .detail-project-brand,.letsplay-detail .detail-hero--letsplay-surface .detail-stamp { z-index:2; }.letsplay-detail .detail-hero--letsplay-surface .detail-stamp { background:#fcca35; color:#281347; }
+.letsplay-detail .detail-hero--letsplay-surface .detail-project-brand { z-index:2; }
+.letsplay-detail .detail-hero--letsplay-surface .detail-stamp { display: none !important; }
 @media (max-width:760px) { .letsplay-detail .detail-hero--letsplay-surface::before { background-size:2rem 2rem; mask-image:linear-gradient(90deg,transparent 0%,#000 24%,#000 100%); opacity:.35; }.letsplay-detail .detail-hero--letsplay-surface::after { top:9%; right:-7rem; width:15rem; }.letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy { max-width:31rem; } }
 
 /* Le héros sombre ne doit plus forcer 76vh : le texte remonte sous le header. */
@@ -13,8 +14,8 @@
 .dark .page-shell.project-detail.letsplay-detail main > section.detail-hero--letsplay-surface {
   min-height: 0 !important;
   align-items: flex-start;
-  padding-top: 6.1rem !important;
-  padding-bottom: 2.1rem !important;
+  padding-top: 6.5rem !important;
+  padding-bottom: 2.8rem !important;
 }
 
 .letsplay-detail .detail-hero--letsplay-surface .detail-hero-copy > p {
