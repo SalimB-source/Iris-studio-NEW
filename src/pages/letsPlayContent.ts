@@ -195,6 +195,8 @@ export const letsPlayTclReview = {
   image: "assets/letsplay-tcl-c6k-review.jpg",
   imageAlt: "Miniature officielle de la review Let’s Play consacrée à la TCL C6K QD-MiniLED",
   href: "https://www.youtube.com/watch?v=OEc9V9s3qu4",
+  videoId: "OEc9V9s3qu4",
+  embedSrc: "https://www.youtube-nocookie.com/embed/OEc9V9s3qu4",
 } as const;
 
 export const letsPlayInstagramVisuals = [
