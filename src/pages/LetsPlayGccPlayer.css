@@ -1,31 +1,6 @@
 /* Let’s Play — vidéo GCCDZ 2026 en fond de héros : muette, sans contrôles. */
-.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 177.78vh;
-  height: 56.25vw;
-  min-width: 100%;
-  min-height: 120%;
-  border: 0;
-  transform: translate(-50%, -50%) scale(1.28);
-  pointer-events: none;
-}
-
-.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video-veil {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(11, 3, 25, 0.42) 0%, rgba(40, 19, 71, 0.36) 38%, rgba(19, 5, 38, 0.78) 100%),
-    rgba(61, 25, 112, 0.34);
-}
+.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video iframe { position:absolute; top:50%; left:50%; width:177.78vh; height:56.25vw; min-width:100%; min-height:120%; border:0; transform:translate(-50%,-50%) scale(1.28); pointer-events:none; }
+.letsplay-detail .detail-hero--letsplay-surface .letsplay-hero-video-veil { position:absolute; inset:0; z-index:2; pointer-events:none; background:rgba(0,0,0,.34); }
+.letsplay-detail .letsplay-featured-play,
+.letsplay-detail .letsplay-play-mark { display:none !important; }
